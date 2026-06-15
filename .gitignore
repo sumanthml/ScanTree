@@ -26,8 +26,6 @@ venv/
 backend/venv/
 backend/uploads/*
 !backend/uploads/.gitkeep
-backend/storage/*
-!backend/storage/.gitkeep
 backend/serviceAccountKey.json
 
 # Exclude E2E Excel reports and E2E runner scripts (per user request)
