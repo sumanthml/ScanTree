@@ -21,6 +21,7 @@ import {
   Droplets,
   Calendar,
   Settings,
+  ChevronRight,
 } from "lucide-react-native";
 import AppText from "@/components/ui/AppText";
 import { useAuthStore } from "@/store/authStore";
@@ -150,6 +151,30 @@ export default function ProfileScreen() {
             )}
           </View>
         </LinearGradient>
+      )}
+
+      {/* ACCESS CONTROL - MOBILE NATIVE ONLY */}
+      {Platform.OS !== "web" && (
+        <Pressable
+          onPress={() => router.push("/access")}
+          style={({ pressed }) => [pressed && { opacity: 0.85 }]}
+        >
+          <LinearGradient
+            colors={["rgba(129, 140, 248, 0.12)", "rgba(129, 140, 248, 0.04)"]}
+            style={styles.accessCard}
+          >
+            <View style={{ flexDirection: "row", alignItems: "center", gap: 14 }}>
+              <View style={styles.accessIconBox}>
+                <Users size={20} color="#818CF8" />
+              </View>
+              <View style={{ flex: 1 }}>
+                <AppText style={styles.accessTitle}>Share & Access Control</AppText>
+                <AppText style={styles.accessDesc}>Manage who can view your reports</AppText>
+              </View>
+              <ChevronRight size={18} color="#64748B" />
+            </View>
+          </LinearGradient>
+        </Pressable>
       )}
     </View>
   );
@@ -513,5 +538,30 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(255, 255, 255, 0.05)",
     borderWidth: 1,
     borderColor: "rgba(255, 255, 255, 0.08)",
+  },
+  accessCard: {
+    borderRadius: 22,
+    borderWidth: 1,
+    borderColor: "rgba(129, 140, 248, 0.25)",
+    padding: 18,
+    marginTop: 12,
+  },
+  accessIconBox: {
+    width: 42,
+    height: 42,
+    borderRadius: 12,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "rgba(129, 140, 248, 0.08)",
+  },
+  accessTitle: {
+    fontSize: 15,
+    fontWeight: "800",
+    color: "#F8FAFC",
+  },
+  accessDesc: {
+    fontSize: 12,
+    color: "#94A3B8",
+    marginTop: 3,
   },
 });
