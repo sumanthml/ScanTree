@@ -3,11 +3,10 @@
     "name": "ScanTrace",
     "slug": "scantrace",
     "version": "1.0.0",
-    "icon": "./assets/images/logo.png",
+    "icon": "./assets/images/logo_square.png",
     "orientation": "portrait",
     "scheme": "scantrace",
     "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
     "web": {
       "bundler": "metro"
     },
@@ -15,13 +14,21 @@
       "**/*"
     ],
     "plugins": [
-      "expo-router"
+      "expo-router",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true
     },
     "splash": {
-      "image": "./assets/images/logo.png",
+      "image": "./assets/images/logo_square.png",
       "resizeMode": "contain",
       "backgroundColor": "#0F172A"
     },
@@ -30,8 +37,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#0F172A",
-        "usesCleartextTraffic": true
+        "backgroundColor": "#0F172A"
       },
       "package": "com.scantrace.app"
     },
