@@ -125,7 +125,7 @@ export default function LoginScreen() {
   // Developer Options State
   const [tapCount, setTapCount] = useState(0);
   const [showDevOptions, setShowDevOptions] = useState(false);
-  const [currentApiUrl, setCurrentApiUrl] = useState("http://10.87.203.5:8000");
+  const [currentApiUrl, setCurrentApiUrl] = useState("https://scantree.onrender.com");
   const [newApiUrl, setNewApiUrl] = useState("");
 
   useEffect(() => {
@@ -135,7 +135,7 @@ export default function LoginScreen() {
         setCurrentApiUrl(url);
         setNewApiUrl(url);
       } else {
-        const defaultUrl = "http://10.87.203.5:8000";
+        const defaultUrl = "https://scantree.onrender.com";
         setCurrentApiUrl(defaultUrl);
         setNewApiUrl(defaultUrl);
         await AsyncStorage.setItem("backend_url", defaultUrl);

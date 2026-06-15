@@ -12,7 +12,7 @@ AXIOS INSTANCE
 */
 
 const API = axios.create({
-  baseURL: "http://localhost:8000",
+  baseURL: "https://scantree.onrender.com",
   timeout: 30000,
 });
 
