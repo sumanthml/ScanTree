@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "ScanTrace",
+    "slug": "scantrace",
+    "version": "1.0.0",
+    "icon": "./assets/images/logo.png",
+    "orientation": "portrait",
+    "scheme": "scantrace",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "web": {
+      "bundler": "metro"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "plugins": [
+      "expo-router"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "splash": {
+      "image": "./assets/images/logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0F172A"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0F172A",
+        "usesCleartextTraffic": true
+      },
+      "package": "com.scantrace.app"
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "1e73e8bb-522c-4330-b16c-e7dc6fac209b"
+      }
+    }
+  }
+}

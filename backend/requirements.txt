@@ -1,0 +1,49 @@
+# =====================================================
+# ScanTrace Backend — Python Dependencies
+# =====================================================
+
+# Web framework
+fastapi
+uvicorn[standard]
+
+# Database
+sqlalchemy
+psycopg2-binary
+asyncpg
+alembic
+
+# Settings / validation
+pydantic
+pydantic-settings
+python-dotenv
+
+# Auth
+firebase-admin
+
+# AI
+google-genai
+
+# File handling
+python-multipart
+aiofiles
+pillow
+PyMuPDF
+
+# PDF
+pdfplumber
+
+# HTTP / utils
+httpx
+
+# Supabase client
+supabase
+
+# Security / hashing
+passlib[bcrypt]
+python-jose[cryptography]
+
+# Email
+email-validator
+
+# Scheduling (optional — background jobs)
+apscheduler
