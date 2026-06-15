@@ -26,11 +26,6 @@ function ProfileAvatar() {
   const insets = useSafeAreaInsets();
   const pathname = usePathname();
 
-  // ONLY render on native mobile app (iOS / Android)
-  if (Platform.OS === "web") {
-    return null;
-  }
-
   // Hide the avatar if we are already on settings, profile, or access screens
   if (
     pathname === "/settings" ||

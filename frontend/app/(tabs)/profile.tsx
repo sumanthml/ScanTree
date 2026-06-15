@@ -81,7 +81,7 @@ export default function ProfileScreen() {
             </View>
           )}
         </View>
-        {Platform.OS !== "web" && (
+        {isMobile && (
           <Pressable
             onPress={() => router.push("/settings")}
             style={({ pressed }) => [
@@ -153,8 +153,8 @@ export default function ProfileScreen() {
         </LinearGradient>
       )}
 
-      {/* ACCESS CONTROL - MOBILE NATIVE ONLY */}
-      {Platform.OS !== "web" && (
+      {/* ACCESS CONTROL - MOBILE ONLY */}
+      {isMobile && (
         <Pressable
           onPress={() => router.push("/access")}
           style={({ pressed }) => [pressed && { opacity: 0.85 }]}
