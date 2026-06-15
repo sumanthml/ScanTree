@@ -1,7 +1,9 @@
 import {
   useState,
   useRef,
+  useEffect,
 } from "react";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 import {
   ActivityIndicator,
@@ -119,6 +121,49 @@ export default function LoginScreen() {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+
+  // Developer Options State
+  const [tapCount, setTapCount] = useState(0);
+  const [showDevOptions, setShowDevOptions] = useState(false);
+  const [currentApiUrl, setCurrentApiUrl] = useState("http://10.87.203.5:8000");
+  const [newApiUrl, setNewApiUrl] = useState("");
+
+  useEffect(() => {
+    const loadUrl = async () => {
+      const url = await AsyncStorage.getItem("backend_url");
+      if (url) {
+        setCurrentApiUrl(url);
+        setNewApiUrl(url);
+      } else {
+        const defaultUrl = "http://10.87.203.5:8000";
+        setCurrentApiUrl(defaultUrl);
+        setNewApiUrl(defaultUrl);
+        await AsyncStorage.setItem("backend_url", defaultUrl);
+      }
+    };
+    loadUrl();
+  }, []);
+
+  const handleLogoPress = () => {
+    const nextCount = tapCount + 1;
+    if (nextCount >= 5) {
+      setTapCount(0);
+      setShowDevOptions(true);
+      Alert.alert("Developer Mode", "Backend URL Configuration opened.");
+    } else {
+      setTapCount(nextCount);
+    }
+  };
+
+  const saveBackendUrl = async (url: string) => {
+    let cleanUrl = url.trim();
+    if (cleanUrl.endsWith("/")) {
+      cleanUrl = cleanUrl.slice(0, -1);
+    }
+    await AsyncStorage.setItem("backend_url", cleanUrl);
+    setCurrentApiUrl(cleanUrl);
+    setNewApiUrl(cleanUrl);
+  };
 
   const login = useAuthStore((state) => state.login);
 
@@ -251,22 +296,24 @@ export default function LoginScreen() {
             {/* BRAND HEADER */}
             <View style={{ marginBottom: 36 }}>
 
-              {/* LOGO BADGE */}
-              <LinearGradient
-                colors={["#22C55E", "#2563EB"]}
-                start={{ x: 0, y: 0 }}
-                end={{ x: 1, y: 1 }}
-                style={{
-                  width: 52,
-                  height: 52,
-                  borderRadius: 16,
-                  justifyContent: "center",
-                  alignItems: "center",
-                  marginBottom: 20,
-                }}
-              >
-                <Text style={{ fontSize: 24 }}>🌿</Text>
-              </LinearGradient>
+              {/* LOGO BADGE (TAPPING 5 TIMES OPENS DEV OPTIONS) */}
+              <Pressable onPress={handleLogoPress}>
+                <LinearGradient
+                  colors={["#22C55E", "#2563EB"]}
+                  start={{ x: 0, y: 0 }}
+                  end={{ x: 1, y: 1 }}
+                  style={{
+                    width: 52,
+                    height: 52,
+                    borderRadius: 16,
+                    justifyContent: "center",
+                    alignItems: "center",
+                    marginBottom: 20,
+                  }}
+                >
+                  <Text style={{ fontSize: 24 }}>🌿</Text>
+                </LinearGradient>
+              </Pressable>
 
               <Text
                 style={{
@@ -291,6 +338,75 @@ export default function LoginScreen() {
               </Text>
 
             </View>
+
+            {/* DEVELOPER OPTIONS PANEL */}
+            {showDevOptions && (
+              <View
+                style={{
+                  backgroundColor: "rgba(239, 68, 68, 0.08)",
+                  borderColor: "rgba(239, 68, 68, 0.25)",
+                  borderWidth: 1,
+                  borderRadius: 20,
+                  padding: 16,
+                  marginBottom: 24,
+                }}
+              >
+                <Text style={{ color: "#EF4444", fontSize: 13, fontWeight: "800", marginBottom: 6 }}>
+                  ⚙️ DEVELOPER OPTIONS
+                </Text>
+                <Text style={{ color: "#94A3B8", fontSize: 11, marginBottom: 12, lineHeight: 16 }}>
+                  Active API Endpoint:{"\n"}{currentApiUrl}
+                </Text>
+                <TextInput
+                  value={newApiUrl}
+                  onChangeText={setNewApiUrl}
+                  placeholder="https://your-backend.onrender.com"
+                  placeholderTextColor="#475569"
+                  autoCapitalize="none"
+                  style={{
+                    backgroundColor: "rgba(15,23,42,0.6)",
+                    color: "white",
+                    borderRadius: 12,
+                    paddingHorizontal: 14,
+                    paddingVertical: 10,
+                    fontSize: 14,
+                    borderWidth: 1,
+                    borderColor: "rgba(255,255,255,0.08)",
+                    marginBottom: 12,
+                  }}
+                />
+                <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
+                  <Pressable
+                    onPress={async () => {
+                      if (newApiUrl.trim()) {
+                        await saveBackendUrl(newApiUrl.trim());
+                        Alert.alert("Success", "Backend API endpoint saved.");
+                        setShowDevOptions(false);
+                      }
+                    }}
+                    style={{
+                      backgroundColor: "#22C55E",
+                      borderRadius: 10,
+                      paddingVertical: 8,
+                      paddingHorizontal: 16,
+                    }}
+                  >
+                    <Text style={{ color: "white", fontSize: 12, fontWeight: "700" }}>Save</Text>
+                  </Pressable>
+                  <Pressable
+                    onPress={() => setShowDevOptions(false)}
+                    style={{
+                      backgroundColor: "#475569",
+                      borderRadius: 10,
+                      paddingVertical: 8,
+                      paddingHorizontal: 16,
+                    }}
+                  >
+                    <Text style={{ color: "white", fontSize: 12, fontWeight: "700" }}>Cancel</Text>
+                  </Pressable>
+                </View>
+              </View>
+            )}
 
             {/* EMAIL */}
             <View style={{ marginBottom: 20 }}>

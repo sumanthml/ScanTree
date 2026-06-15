@@ -27,6 +27,15 @@ REQUEST INTERCEPTOR
 API.interceptors.request.use(
   async (config: InternalAxiosRequestConfig) => {
     try {
+      // Load dynamic backend URL if set by developer
+      const storedUrl = await AsyncStorage.getItem("backend_url");
+      if (storedUrl) {
+        config.baseURL = storedUrl;
+      }
+
+      // Add localtunnel bypass header in case they use localtunnel
+      config.headers["Bypass-Tunnel-Reminder"] = "true";
+
       const token = await AsyncStorage.getItem("access_token");
 
       // Let auth.ts pass its own header — don't override it
