@@ -44,9 +44,9 @@ export default function BottomBar() {
 
       <BlurView
 
-        intensity={90}
+        intensity={95}
 
-        tint="light"
+        tint="dark"
 
         style={[
 
@@ -54,7 +54,8 @@ export default function BottomBar() {
 
           {
             borderColor:
-              theme.border,
+              "rgba(255, 255, 255, 0.08)",
+            backgroundColor: "rgba(15, 23, 42, 0.85)",
           },
         ]}
       >
