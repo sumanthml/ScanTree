@@ -302,7 +302,7 @@ export default function NotificationsScreen() {
 
   return (
     <Screen scrollable={false}>
-      <View style={Platform.OS === "web" ? { maxWidth: 720, alignSelf: "center", width: "100%", flex: 1 } : { flex: 1 }}>
+      <View style={Platform.OS === "web" ? { maxWidth: 1100, alignSelf: "center", width: "100%", flex: 1 } : { flex: 1 }}>
         {/* HEADER */}
         <View style={styles.header}>
           <View style={{ flex: 1 }}>

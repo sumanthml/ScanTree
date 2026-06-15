@@ -296,7 +296,7 @@ const styles = StyleSheet.create({
   container: {
     padding: 20,
     paddingBottom: 140,
-    maxWidth: IS_WEB ? 720 : undefined,
+    maxWidth: IS_WEB ? 1100 : undefined,
     alignSelf: IS_WEB ? "center" : undefined,
     width: "100%",
   },
