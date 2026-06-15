@@ -54,8 +54,8 @@ export default function BottomBar() {
 
           {
             borderColor:
-              "rgba(255, 255, 255, 0.08)",
-            backgroundColor: "rgba(15, 23, 42, 0.85)",
+              "rgba(74, 222, 128, 0.2)",
+            backgroundColor: "rgba(4, 28, 18, 0.9)",
           },
         ]}
       >
