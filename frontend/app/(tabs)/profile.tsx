@@ -20,6 +20,7 @@ import {
   CheckCircle2,
   Droplets,
   Calendar,
+  Settings,
 } from "lucide-react-native";
 import AppText from "@/components/ui/AppText";
 import { useAuthStore } from "@/store/authStore";
@@ -79,6 +80,17 @@ export default function ProfileScreen() {
             </View>
           )}
         </View>
+        {Platform.OS !== "web" && (
+          <Pressable
+            onPress={() => router.push("/settings")}
+            style={({ pressed }) => [
+              styles.settingsBtn,
+              pressed && { opacity: 0.7 }
+            ]}
+          >
+            <Settings size={20} color="#94A3B8" />
+          </Pressable>
+        )}
       </LinearGradient>
 
       {/* ACTIVE PROFILE DETAIL */}
@@ -494,5 +506,12 @@ const styles = StyleSheet.create({
     color: "#F87171",
     fontWeight: "800",
     fontSize: 15,
+  },
+  settingsBtn: {
+    padding: 8,
+    borderRadius: 12,
+    backgroundColor: "rgba(255, 255, 255, 0.05)",
+    borderWidth: 1,
+    borderColor: "rgba(255, 255, 255, 0.08)",
   },
 });
