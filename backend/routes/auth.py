@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, status, BackgroundTasks
 # pyrefly: ignore [missing-import]
 from sqlalchemy.orm import Session
 from pydantic import BaseModel, EmailStr
@@ -279,6 +279,7 @@ class ForgotPasswordRequest(BaseModel):
 @router.post("/forgot-password")
 def forgot_password(
     payload: ForgotPasswordRequest,
+    background_tasks: BackgroundTasks,
     db: Session = Depends(get_db)
 ):
     email = payload.email.strip().lower()
@@ -298,19 +299,13 @@ def forgot_password(
         
     try:
         reset_link = firebase_auth.generate_password_reset_link(email)
-        success = send_password_reset_email(email, reset_link)
-        if not success:
-            raise HTTPException(
-                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                detail="Failed to send password reset email via SMTP."
-            )
+        # Use background task to send email asynchronously without blocking the client
+        background_tasks.add_task(send_password_reset_email, email, reset_link)
             
         return {
             "success": True,
             "message": "Password reset link sent successfully."
         }
-    except HTTPException:
-        raise
     except Exception as e:
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,

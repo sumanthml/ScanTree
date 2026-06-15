@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, status, BackgroundTasks
 # pyrefly: ignore [missing-import]
 from sqlalchemy.orm import Session
 from uuid import UUID
@@ -24,6 +24,7 @@ class InviteRequest(BaseModel):
 @router.post("/invite", status_code=status.HTTP_201_CREATED)
 def invite_member(
     payload: InviteRequest,
+    background_tasks: BackgroundTasks,
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db)
 ):
@@ -67,8 +68,9 @@ def invite_member(
     db.commit()
     db.refresh(shared)
 
-    # Send SMTP invitation email
-    send_invitation_email(
+    # Send SMTP invitation email via BackgroundTasks to prevent blocking the client
+    background_tasks.add_task(
+        send_invitation_email,
         to_email=shared.shared_user_email,
         owner_name=current_user.name or current_user.email.split("@")[0],
         permission_level=shared.permission_level
