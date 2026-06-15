@@ -50,6 +50,24 @@ app = FastAPI(
     description="Medical lab report intelligence platform"
 )
 
+import time
+from fastapi import Request
+
+@app.middleware("http")
+async def log_request_time(request: Request, call_next):
+    start_time = time.time()
+    path = request.url.path
+    print(f"[Request Start] {request.method} {path}", flush=True)
+    try:
+        response = await call_next(request)
+        process_time = time.time() - start_time
+        print(f"[Request End] {request.method} {path} - Completed in {process_time:.4f}s with status {response.status_code}", flush=True)
+        return response
+    except Exception as e:
+        process_time = time.time() - start_time
+        print(f"[Request Error] {request.method} {path} - Failed in {process_time:.4f}s: {e}", flush=True)
+        raise
+
 
 # =====================================================
 # CORS

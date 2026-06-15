@@ -27,7 +27,7 @@ class RegisterRequest(BaseModel):
     password: str
 
 @router.post("/register")
-async def register_user(
+def register_user(
     payload: RegisterRequest,
     db: Session = Depends(get_db),
 ):
@@ -134,7 +134,7 @@ async def register_user(
 # =====================================================
 
 @router.get("/me")
-async def me(
+def me(
     db: Session = Depends(get_db),
     user=Depends(verify_firebase_token)
 ):
@@ -179,7 +179,7 @@ async def me(
 # =====================================================
 
 @router.post("/sync")
-async def sync_user(
+def sync_user(
     db: Session = Depends(get_db),
     user=Depends(verify_firebase_token)
 ):
@@ -277,7 +277,7 @@ class ForgotPasswordRequest(BaseModel):
     email: EmailStr
 
 @router.post("/forgot-password")
-async def forgot_password(
+def forgot_password(
     payload: ForgotPasswordRequest,
     db: Session = Depends(get_db)
 ):
