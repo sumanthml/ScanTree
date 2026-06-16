@@ -80,6 +80,8 @@ async def log_request_time(request: Request, call_next):
 # =====================================================
 # CORS
 # =====================================================
+from settings import settings
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
@@ -89,12 +91,15 @@ app.add_middleware(
         "http://127.0.0.1:19006",
         "http://localhost:3000",
         "http://127.0.0.1:3000",
-        "*",  # allow Expo Go / physical devices during dev
+        "https://scantree.vercel.app",
+        settings.FRONTEND_URL,
     ],
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 
 # =====================================================

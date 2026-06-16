@@ -37,6 +37,7 @@ import { router } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 
 import { loginUser } from "@/services/auth";
+import { getDefaultApiUrl } from "@/services/api";
 
 import { useAuthStore } from "@/store/authStore";
 
@@ -125,20 +126,19 @@ export default function LoginScreen() {
   // Developer Options State
   const [tapCount, setTapCount] = useState(0);
   const [showDevOptions, setShowDevOptions] = useState(false);
-  const [currentApiUrl, setCurrentApiUrl] = useState("https://scantree.onrender.com");
+  const [currentApiUrl, setCurrentApiUrl] = useState(getDefaultApiUrl());
   const [newApiUrl, setNewApiUrl] = useState("");
 
   useEffect(() => {
     const loadUrl = async () => {
       const url = await AsyncStorage.getItem("backend_url");
+      const defaultUrl = getDefaultApiUrl();
       if (url) {
         setCurrentApiUrl(url);
         setNewApiUrl(url);
       } else {
-        const defaultUrl = "https://scantree.onrender.com";
         setCurrentApiUrl(defaultUrl);
         setNewApiUrl(defaultUrl);
-        await AsyncStorage.setItem("backend_url", defaultUrl);
       }
     };
     loadUrl();

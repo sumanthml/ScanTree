@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   View,
   StyleSheet,
@@ -10,12 +10,15 @@ import {
 } from "react-native";
 import { router } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import Screen from "@/components/ui/Screen";
 import AppText from "@/components/ui/AppText";
 import { useAuthStore } from "@/store/authStore";
 import { useProfileStore } from "@/store/profileStore";
 import { forgotPassword } from "@/services/auth";
 import { useAlertStore } from "@/store/alertStore";
+import { getDefaultApiUrl } from "@/services/api";
+import { useResponsive } from "@/hooks/useResponsive";
 import {
   Lock,
   ChevronRight,
@@ -118,7 +121,43 @@ export default function SettingsScreen() {
   const logout = useAuthStore((state) => state.logout);
   const user = useAuthStore((state) => state.user);
   const { activeProfile } = useProfileStore();
+  const { isMobile } = useResponsive();
   const [sendingReset, setSendingReset] = useState(false);
+  const [currentApiUrl, setCurrentApiUrl] = useState(getDefaultApiUrl());
+
+  useEffect(() => {
+    const loadUrl = async () => {
+      const url = await AsyncStorage.getItem("backend_url");
+      if (url) {
+        setCurrentApiUrl(url);
+      } else {
+        setCurrentApiUrl(getDefaultApiUrl());
+      }
+    };
+    loadUrl();
+  }, []);
+
+  function handleChangeApiUrl() {
+    const defaultUrl = getDefaultApiUrl();
+    Alert.alert(
+      "API Connection Settings",
+      `Active Endpoint:\n${currentApiUrl}\n\nWould you like to reset it to the default server (${defaultUrl})?`,
+      [
+        { text: "Cancel", style: "cancel" },
+        {
+          text: "Reset to Default",
+          onPress: async () => {
+            await AsyncStorage.removeItem("backend_url");
+            setCurrentApiUrl(defaultUrl);
+            Alert.alert(
+              "Reset Successful",
+              "API endpoint has been reset to default. Please close and restart the app."
+            );
+          },
+        },
+      ]
+    );
+  }
 
   async function handleChangePassword() {
     if (!user?.email) {
@@ -196,7 +235,7 @@ export default function SettingsScreen() {
         contentContainerStyle={styles.container}
       >
         {/* HEADER */}
-        <View style={styles.header}>
+        <View style={[styles.header, isMobile && { paddingRight: 60 }]}>
           <AppText variant="heading" style={styles.headingText}>
             Settings
           </AppText>
@@ -269,6 +308,8 @@ export default function SettingsScreen() {
             onPress={handleChangePassword}
           />
         </Section>
+
+
 
         {/* LOGOUT BUTTON */}
         <Pressable

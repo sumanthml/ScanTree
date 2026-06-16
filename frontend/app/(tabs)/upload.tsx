@@ -188,7 +188,7 @@ export default function UploadScreen() {
   return (
     <Screen scrollable={false}>
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.container}>
-        <View style={styles.header}>
+        <View style={[styles.header, isMobile && { paddingRight: 60 }]}>
           <AppText variant="heading" style={styles.headingText}>
             Upload Report
           </AppText>

@@ -16,6 +16,7 @@ import { LineChart } from "react-native-chart-kit";
 import { LinearGradient } from "expo-linear-gradient";
 import { useProfileStore } from "@/store/profileStore";
 import { useDashboardStore } from "@/store/dashboardStore";
+import { useResponsive } from "@/hooks/useResponsive";
 import AppText from "@/components/ui/AppText";
 import { getBiomarkerExplanation } from "@/utils/biomarkers";
 import {
@@ -140,6 +141,7 @@ function DashboardSkeleton() {
 export default function DashboardScreen() {
   const { activeProfile } = useProfileStore();
   const { dashboard, isLoading, fetchDashboard } = useDashboardStore();
+  const { isMobile } = useResponsive();
   const [showGuide, setShowGuide] = useState(false);
 
   useEffect(() => {
@@ -213,8 +215,10 @@ export default function DashboardScreen() {
         showsVerticalScrollIndicator={false}
       >
         {/* ── GREETING ── */}
-        <AppText style={styles.heading}>{activeProfile.full_name}</AppText>
-        <AppText style={styles.sub}>Healthcare Dashboard</AppText>
+        <View style={isMobile && { paddingRight: 60 }}>
+          <AppText style={styles.heading}>{activeProfile.full_name}</AppText>
+          <AppText style={styles.sub}>Healthcare Dashboard</AppText>
+        </View>
 
         {/* ── FIRST TIME USER GUIDE ── */}
         {showGuide && (

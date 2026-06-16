@@ -198,7 +198,7 @@ export default function ReportsScreen() {
         showsVerticalScrollIndicator={false}
       >
         {/* HEADER */}
-        <View style={styles.header}>
+        <View style={[styles.header, isMobile && { paddingRight: 60 }]}>
           <AppText variant="heading" style={styles.headingText}>
             Medical Reports
           </AppText>

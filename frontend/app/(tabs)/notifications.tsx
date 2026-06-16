@@ -28,6 +28,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import Screen from "@/components/ui/Screen";
 import AppText from "@/components/ui/AppText";
 import { useTheme } from "@/hooks/useTheme";
+import { useResponsive } from "@/hooks/useResponsive";
 import { NotificationService, Notification } from "@/services/notification";
 import {
   Bell,
@@ -176,6 +177,7 @@ function NotificationCard({
 // ─────────────────────────────────────────────
 export default function NotificationsScreen() {
   const theme = useTheme();
+  const { isMobile } = useResponsive();
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [unreadCount, setUnreadCount] = useState(0);
   const [loading, setLoading] = useState(true);
@@ -304,7 +306,7 @@ export default function NotificationsScreen() {
     <Screen scrollable={false}>
       <View style={Platform.OS === "web" ? { maxWidth: 1100, alignSelf: "center", width: "100%", flex: 1 } : { flex: 1 }}>
         {/* HEADER */}
-        <View style={styles.header}>
+        <View style={[styles.header, isMobile && { paddingRight: 60 }]}>
           <View style={{ flex: 1 }}>
             <AppText variant="heading" style={styles.heading}>
               Notifications

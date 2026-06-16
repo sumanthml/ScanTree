@@ -4,6 +4,14 @@ import axios, {
 } from "axios";
 
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { Platform } from "react-native";
+
+export function getDefaultApiUrl(): string {
+  const isLocalDev = Platform.OS === "web"
+    ? (typeof window !== "undefined" && (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"))
+    : __DEV__;
+  return isLocalDev ? "http://localhost:8000" : "https://scantree.onrender.com";
+}
 
 /*
 =====================================
@@ -29,8 +37,36 @@ API.interceptors.request.use(
     try {
       // Load dynamic backend URL if set by developer
       const storedUrl = await AsyncStorage.getItem("backend_url");
-      if (storedUrl) {
-        config.baseURL = storedUrl;
+      let activeUrl = storedUrl;
+
+      // If the stored URL is the hardcoded production URL, or if we are running locally in dev,
+      // allow dynamic defaulting to localhost:8000 instead of holding onto the production URL.
+      const isLocalDev = Platform.OS === "web"
+        ? (typeof window !== "undefined" && (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"))
+        : __DEV__;
+
+      if (!activeUrl || activeUrl === "https://scantree.onrender.com" || (isLocalDev && activeUrl.includes("onrender.com"))) {
+        activeUrl = getDefaultApiUrl();
+      }
+
+      // Safety fallback: if stored URL is local but we are in a production release, ignore it
+      const isLocalUrl = activeUrl && (
+        activeUrl.includes("localhost") || 
+        activeUrl.includes("127.0.0.1") || 
+        activeUrl.includes("192.168.") || 
+        activeUrl.includes("10.0.2.2")
+      );
+      
+      const isProduction = Platform.OS === "web" 
+        ? (typeof window !== "undefined" && window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1")
+        : !__DEV__;
+
+      if (isLocalUrl && isProduction) {
+        activeUrl = "https://scantree.onrender.com";
+      }
+
+      if (activeUrl) {
+        config.baseURL = activeUrl;
       }
 
       // Add localtunnel bypass header in case they use localtunnel
@@ -45,9 +81,24 @@ API.interceptors.request.use(
 
       config.headers.Accept = "application/json";
 
-      // Don't set Content-Type for FormData — let Axios handle boundary
-      if (config.data instanceof FormData) {
-        delete config.headers["Content-Type"];
+      // Don't set Content-Type for FormData on Web — let Axios handle boundary.
+      // On React Native, we must set it to multipart/form-data explicitly so the native layer handles it.
+      const isFormData =
+        config.data instanceof FormData ||
+        (config.data &&
+          typeof config.data === "object" &&
+          (config.data.constructor?.name === "FormData" || "_parts" in config.data));
+
+      if (isFormData) {
+        if (Platform.OS === "web") {
+          if (typeof config.headers.delete === "function") {
+            config.headers.delete("Content-Type");
+          } else {
+            delete config.headers["Content-Type"];
+          }
+        } else {
+          config.headers["Content-Type"] = "multipart/form-data";
+        }
       }
 
       return config;

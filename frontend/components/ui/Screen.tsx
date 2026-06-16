@@ -1,102 +1,58 @@
 import React from "react";
-
 import {
-  SafeAreaView,
   ScrollView,
   StyleSheet,
   ViewStyle,
+  View,
 } from "react-native";
-
-import {
-  useTheme,
-} from "@/hooks/useTheme";
-
-import {
-  useResponsive,
-} from "@/hooks/useResponsive";
-
-import {
-  LAYOUT,
-} from "@/constants/layout";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { useTheme } from "@/hooks/useTheme";
+import { useResponsive } from "@/hooks/useResponsive";
+import { LAYOUT } from "@/constants/layout";
 
 interface Props {
-
-  children:
-    React.ReactNode;
-
+  children: React.ReactNode;
   scrollable?: boolean;
-
   style?: ViewStyle;
 }
 
 export default function Screen({
-
   children,
-
   scrollable = true,
-
   style,
-
 }: Props) {
+  const theme = useTheme();
+  const { isMobile } = useResponsive();
+  const insets = useSafeAreaInsets();
 
-  const theme =
-    useTheme();
-
-  const {
-    isMobile,
-  } = useResponsive();
+  const containerStyle = [
+    styles.container,
+    {
+      backgroundColor: theme.background,
+      paddingTop: isMobile ? insets.top : 0,
+    },
+    style,
+  ];
 
   if (scrollable) {
-
     return (
-
-      <SafeAreaView
-        style={[
-          styles.container,
-          {
-            backgroundColor:
-              theme.background,
-          },
-        ]}
-      >
-
+      <View style={containerStyle}>
         <ScrollView
           contentContainerStyle={{
-
-            padding:
-              isMobile
-                ? LAYOUT.mobilePadding
-                : LAYOUT.screenPadding,
+            padding: isMobile ? LAYOUT.mobilePadding : LAYOUT.screenPadding,
           }}
-
-          showsVerticalScrollIndicator={
-            false
-          }
+          showsVerticalScrollIndicator={false}
         >
           {children}
         </ScrollView>
-
-      </SafeAreaView>
+      </View>
     );
   }
 
   return (
-
-    <SafeAreaView
-      style={[
-
-        styles.container,
-
-        {
-          backgroundColor:
-            theme.background,
-        },
-
-        style,
-      ]}
-    >
+    <View style={containerStyle}>
       {children}
-    </SafeAreaView>
+    </View>
   );
 }
 

@@ -373,7 +373,7 @@ export default function AccessScreen() {
         showsVerticalScrollIndicator={false}
       >
         {/* HEADER */}
-        <View style={styles.header}>
+        <View style={[styles.header, isMobile && { paddingRight: 60 }]}>
           <AppText variant="heading" style={styles.headingText}>
             Family Access
           </AppText>

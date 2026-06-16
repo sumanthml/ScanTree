@@ -284,10 +284,12 @@ export default function AnalyticsScreen() {
           }
         >
           {/* HEADER */}
-          <AppText style={styles.heading}>Analytics</AppText>
-          <AppText style={styles.sub}>
-            {activeProfile.full_name} · AI Healthcare Intelligence
-          </AppText>
+          <View style={isMobile && { paddingRight: 60 }}>
+            <AppText style={styles.heading}>Analytics</AppText>
+            <AppText style={styles.sub}>
+              {activeProfile.full_name} · AI Healthcare Intelligence
+            </AppText>
+          </View>
 
           {/* BEAUTIFUL EMPTY STATE BOX */}
           <LinearGradient
@@ -394,10 +396,12 @@ export default function AnalyticsScreen() {
         }
       >
         {/* ── HEADER ── */}
-        <AppText style={styles.heading}>Analytics</AppText>
-        <AppText style={styles.sub}>
-          {activeProfile.full_name} · AI Healthcare Intelligence
-        </AppText>
+        <View style={isMobile && { paddingRight: 60 }}>
+          <AppText style={styles.heading}>Analytics</AppText>
+          <AppText style={styles.sub}>
+            {activeProfile.full_name} · AI Healthcare Intelligence
+          </AppText>
+        </View>
 
         {/* ── ERROR BANNER ── */}
         {error && (
