@@ -1,0 +1,72 @@
+name: Security Assessment & DevSecOps Review
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  security-scan:
+    name: Security Scan & Pentest Execution
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    # --- Setup Python & Backend Environment ---
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r backend/requirements.txt
+        pip install openpyxl requests httpx
+
+    # --- Run Local Server for DAST Verification ---
+    - name: Start backend server for DAST
+      env:
+        DATABASE_URL: sqlite:///./test.db
+        SUPABASE_URL: https://mock-url.supabase.co
+        SUPABASE_ANON_KEY: mock-key
+        SUPABASE_SERVICE_ROLE_KEY: mock-key
+        SUPABASE_BUCKET_NAME: mock-bucket
+        FIREBASE_CREDENTIALS_JSON: '{"type": "service_account", "project_id": "mock-project-id", "private_key": "-----BEGIN RSA PRIVATE KEY-----\nMIIEogIBAAKCAQEAxk5E4eHvbLojWe5xtRPI193ko0aMMmuUGlsSCtjMqd76vXWU\nir64LGyc6oEZ5jzhLhBStPk26WB3wmpMCgWiwCobYeTKkfxGed9wnayT1fCDIfsD\nv5vKl7Wzt/sd62gBi/3fI4VVBxirq017ET2jmf6T9Wkw044lVfEJJgHXnX51JybJ\nVzfA4SDe1SwViY/BLu0rGJTR/X0zJbiEcplmz6e6J2b6810l4qPjSr3tjwpfxiHv\nXRIfBITKXHu2SiljJUrX4QxSyPnNFtzzyKyIFi3s2XsR4PrPTMlJ15+sleFZsda4\n5uDtEKjx9XQjSDt9A5CxzPq+S1vJjGcv9qGj/wIDAQABAoIBAGEaVFpzQsTvxH21\n55HudStW6S0WT3IlAWmCbKxJCranjAoXuDvUNeTy7kdaHi+CYhUnQwiA++V9KkdV\nu5QwvEfylmPyH0sqx+vHgKKErgNVeTC7dFNv2t08yRru6PCrhg5hqtD+6erGptED\n6J5Bm4m9gf/qmVEOSrPxijRFNKpWM8OS7kqXxpGcQxYO2QkuLciV9tksp3JAjRFw\nXGPki3zsITKRqoq177Gr6Xxr/yQLUueMA/U5DVIK0g4udSGzww6ySW8/W3Ivx3S8\neCQ9Dde9AfL7dVIDM1z78XZSPtPLWBYeUqm2Odt9TlX+KZJZ/nhHRtc7yZRh2elb\nDVycJ8ECgYEA7zj3+MHZ8eMPTwoFdzbVboiISuLGtyEPCZbWn2rpnPeC1AGu7aEr\nzZqKyLG3Kj3C6HJk4z5gFdJES2f5a4JqWA+gPcGGmu8DaA2NbXxHiPy1rZ5fF5R7\nWgCHbQFsxTPk3KPj1Q5ExsfPM/qKpdtKl0BcFpkg9MJaTGeZC+4TcGECgYEA1Das\n12p0t9bWZ4N3nIMXspZIKXkEl897sHZrqABlW2keccTJpivft73GSkaHducImOmi\nAhk3B4Uy7Px3Wkt8Bx3CuXIfATTarSWttrcOwMpT9e93E4Ty/ZrSynqS4LKMPZty\ndwkIfCOB58FDltZRGvgSu89KqvDZ3wQK7h4Q8F8CgYA25ws6QztC4YrE6BbjCmmn\niZxGG4/hvauW1tCBG+drx/51q8E69m94K4zIjMjt3+jYslBnOwyQVYapC77Zpr/D\nYCq1obHD4zET83BO/WPpk54ar6tBXSmGOXLbWKVfCQ7weIi0gCbWvErYshqaAB85\nYWMBKLnAks5olKoya7x4YQKBgDBNZZf+liSGFPUoul/4grtWc4RlFEONqWSn/6cU\nt/1PduuEVDWrhNdoraqYVRseSRmtDAAYRytCCS5h5LS7u7ZO8tSNAjufESsaCWku\nT4BYTTYMVHkv6LMKu3H05luYqE0ZhbtMZg8Dcf0TQ1Qg4gMWdgUjkKZJ/f1CCU7b\nrxVXAoGARXAUM2DJSpc0LYzBM3KXieZ0eMq3tJh+z4p56XbKqpiD6lz500+GGaSH\nuheuoxdnvTuY0XOCqaajpZJeuA0YW4yu1O1432U7HELd2BBc2zAbdKJUxbuBlp8Y\nmN0gQ+hJFyqmyehHFbyi6ZBfyaTLmks3Q8MHuDa2OjdmpxhAzhM=\n-----END RSA PRIVATE KEY-----", "client_email": "mock-email@mock-project.iam.gserviceaccount.com", "token_uri": "https://oauth2.googleapis.com/token"}'
+      run: |
+        cd backend
+        python -m uvicorn main:app --host 0.0.0.0 --port 8000 &
+        echo "Waiting for backend server to become responsive..."
+        timeout 30s bash -c 'until curl -s http://localhost:8000/health > /dev/null; do sleep 2; done'
+        echo "Backend is responsive for DAST!"
+
+    # --- Run Security Scanner & Pentest Reports ---
+    - name: Run DevSecOps Security Scan
+      run: |
+        python tests/security_scan.py
+
+    # --- Publish GitHub Actions Job Summary ---
+    - name: Publish Security Job Summary
+      run: |
+        echo "### ScanTrace Security Review Summary 🛡️" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        cat "Vulnerability Test Results/executive-summary.md" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### Dependency Issues 📦" >> $GITHUB_STEP_SUMMARY
+        cat "Vulnerability Test Results/dependency-report.md" >> $GITHUB_STEP_SUMMARY
+
+    # --- Upload Review Reports as Artifacts ---
+    - name: Upload Security Reports Artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: vulnerability-test-results
+        path: |
+          Vulnerability Test Results/security-review.md
+          Vulnerability Test Results/executive-summary.md
+          Vulnerability Test Results/dependency-report.md
+          Vulnerability Test Results/findings.xlsx
+          Vulnerability Test Results/endpoint-inventory.xlsx
