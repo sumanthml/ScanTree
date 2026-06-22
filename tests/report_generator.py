@@ -29,12 +29,27 @@ def generate_reports():
     if os.path.exists(app_path):
         with open(app_path, "r") as f:
             app_results = json.load(f)
+
+    # 3. Load Load Test results
+    load_path = os.path.join(RESULTS_DIR, "load_results.json")
+    load_result = None
+    if os.path.exists(load_path):
+        with open(load_path, "r") as f:
+            load_result = json.load(f)
             
     all_results = []
     for r in sel_results:
         all_results.append({**r, "type": "Web (Selenium)"})
     for r in app_results:
         all_results.append({**r, "type": "Mobile (Appium)"})
+    if load_result:
+        all_results.append({
+            "name": load_result["name"],
+            "status": load_result["status"],
+            "duration_ms": load_result["duration_ms"],
+            "error": load_result["error"],
+            "type": load_result["type"]
+        })
         
     if not all_results:
         print("[Reporter] No test results found! Generating dummy results for verification.")
@@ -162,7 +177,9 @@ def generate_reports():
         err_col = f'<div class="error-msg">{r["error"]}</div>' if r["error"] else '<span class="no-error">-</span>'
         safe_screenshot_name = r["name"].replace(" ", "_").lower()
         screenshot_link = ""
-        if r["status"] == "Failed":
+        if r.get("type") == "Load (httpx)":
+            screenshot_link = '<span class="no-error">N/A</span>'
+        elif r["status"] == "Failed":
             screenshot_link = f'<a href="../Screenshots/{safe_screenshot_name}_error.png" target="_blank" class="screenshot-btn">View Error Screenshot</a>'
         else:
             # We also save success screenshots for some tests
@@ -178,6 +195,176 @@ def generate_reports():
             <td>{err_col}</td>
             <td style="text-align: center;">{screenshot_link}</td>
         </tr>
+        """
+
+    html_content = f"""<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ScanTrace E2E Test Report</title>
+    <style>
+        :root {{
+            --bg: #0F172A;
+            --panel: #1E293B;
+            --primary: #3B82F6;
+            --success: #10B981;
+            --fail: #EF4444;
+            --text: #F8FAFC;
+            --text-dim: #94A3B8;
+        }}
+        body {{
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Outfit', 'Inter', -apple-system, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+        }}
+        .container {{
+            max-width: 1200px;
+            margin: 0 auto;
+        }}
+        .header {{
+            text-align: center;
+            margin-bottom: 40px;
+        }}
+        .header h1 {{
+            font-size: 2.5rem;
+            margin: 0;
+            background: linear-gradient(135deg, #60A5FA, #34D399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }}
+        .header p {{
+            color: var(--text-dim);
+            font-size: 1.1rem;
+        }}
+        .stats-grid {{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }}
+        .stat-card {{
+            background: var(--panel);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.05);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }}
+        .stat-card h3 {{
+            margin: 0 0 10px 0;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }}
+        .stat-card .value {{
+            font-size: 2rem;
+            font-weight: bold;
+        }}
+        .stat-card.pass-rate .value {{
+            color: var(--success);
+        }}
+        .table-panel {{
+            background: var(--panel);
+            border-radius: 16px;
+            padding: 24px;
+            border: 1px solid rgba(255,255,255,0.05);
+            overflow-x: auto;
+        }}
+        table {{
+            width: 100%;
+            border-collapse: collapse;
+        }}
+        th, td {{
+            padding: 14px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            text-align: left;
+        }}
+        th {{
+            color: var(--text-dim);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }}
+        .badge {{
+            padding: 6px 12px;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+        }}
+        .badge.pass {{
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--success);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }}
+        .badge.fail {{
+            background: rgba(239, 68, 68, 0.15);
+            color: var(--fail);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }}
+        .error-msg {{
+            color: var(--fail);
+            font-family: monospace;
+            font-size: 0.85rem;
+            background: rgba(239, 68, 68, 0.05);
+            padding: 6px;
+            border-radius: 6px;
+            max-width: 300px;
+            word-break: break-all;
+        }}
+        .no-error {{
+            color: var(--text-dim);
+        }}
+        .screenshot-btn {{
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid var(--primary);
+            padding: 4px 8px;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }}
+        .screenshot-btn:hover {{
+            background: var(--primary);
+            color: white;
+        }}
+    </style>
+</head>
+    # Prepare Load Test panel if exists
+    load_test_panel_html = ""
+    if load_result and "metrics" in load_result:
+        m = load_result["metrics"]
+        load_test_panel_html = f"""
+        <div class="table-panel" style="margin-bottom: 40px; border: 1px solid rgba(255,255,255,0.05); background: var(--panel);">
+            <h2 style="margin-top: 0;">Baseline/Load Test Metrics (100 Concurrent Users, 1 Minute)</h2>
+            <div class="stats-grid" style="margin-top: 20px; margin-bottom: 0;">
+                <div class="stat-card" style="background: rgba(255,255,255,0.02);">
+                    <h3>Requests per Second</h3>
+                    <div class="value" style="color: #60A5FA;">{m['rps']} RPS</div>
+                </div>
+                <div class="stat-card" style="background: rgba(255,255,255,0.02);">
+                    <h3>Average Latency</h3>
+                    <div class="value">{m['avg_ms']} ms</div>
+                </div>
+                <div class="stat-card" style="background: rgba(255,255,255,0.02);">
+                    <h3>Min Latency</h3>
+                    <div class="value" style="color: var(--success);">{m['min_ms']} ms</div>
+                </div>
+                <div class="stat-card" style="background: rgba(255,255,255,0.02);">
+                    <h3>Max Latency</h3>
+                    <div class="value" style="color: var(--fail);">{m['max_ms']} ms</div>
+                </div>
+            </div>
+            <div style="margin-top: 20px; font-size: 0.95rem; color: var(--text-dim);">
+                <span>Total Requests: <strong>{m['total_requests']}</strong></span> | 
+                <span>Successful: <strong style="color: var(--success);">{m['successful_requests']}</strong></span> | 
+                <span>Failed: <strong style="color: var(--fail);">{m['failed_requests']}</strong></span>
+            </div>
+        </div>
         """
 
     html_content = f"""<!DOCTYPE html>
@@ -342,6 +529,8 @@ def generate_reports():
                 <div class="value">{pass_rate:.1f}%</div>
             </div>
         </div>
+
+        {load_test_panel_html}
         
         <div class="table-panel">
             <h2>Detailed Test Execution</h2>
@@ -383,6 +572,17 @@ def generate_reports():
         f.write(f"- **Failed:** {failed}\n")
         f.write(f"- **Pass Rate:** {pass_rate:.2f}%\n\n")
         
+        if load_result and "metrics" in load_result:
+            m = load_result["metrics"]
+            f.write("## Baseline/Load Testing Metrics\n\n")
+            f.write(f"- **Requests per Second (RPS):** {m['rps']} req/sec\n")
+            f.write(f"- **Average Response Time:** {m['avg_ms']} ms\n")
+            f.write(f"- **Min Response Time:** {m['min_ms']} ms\n")
+            f.write(f"- **Max Response Time:** {m['max_ms']} ms\n")
+            f.write(f"- **Total Requests Sent:** {m['total_requests']}\n")
+            f.write(f"- **Successful Requests:** {m['successful_requests']}\n")
+            f.write(f"- **Failed Requests:** {m['failed_requests']}\n\n")
+
         if failed > 0:
             f.write("## Failed Tests\n\n")
             for r in all_results:

@@ -13,7 +13,7 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from pom import (
     LoginPage, RegisterPage, ForgotPasswordPage, DashboardPage,
     ReportsPage, UploadPage, AnalyticsPage, NotificationsPage,
-    AccessPage, ProfilePage, SettingsPage
+    AccessPage, ProfilePage, SettingsPage, MOCK_SCRIPT
 )
 
 # Output Directories
@@ -68,6 +68,11 @@ def run_tests():
     log(f"Initializing Chrome WebDriver. Target URL: {BASE_URL}")
     driver = webdriver.Chrome(options=chrome_options)
     driver.implicitly_wait(5)
+    
+    # Register network interceptor script via CDP to execute on every page creation before load
+    driver.execute_cdp_cmd('Page.addScriptToEvaluateOnNewDocument', {
+        'source': MOCK_SCRIPT
+    })
 
     test_runs = []
     

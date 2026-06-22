@@ -79,7 +79,40 @@ async def main():
     print(f"Min:                    {min_time:.2f} ms")
     print(f"Max:                    {max_time:.2f} ms")
     print(f"============================================================")
+    # Save results to json
+    results_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "Test Results"))
+    os.makedirs(results_dir, exist_ok=True)
+    load_results_json = os.path.join(results_dir, "load_results.json")
     
+    status_str = "Passed"
+    error_str = ""
+    if failed_requests > total_requests * 0.05:
+        status_str = "Failed"
+        error_str = f"High failure rate: {failed_requests} failed requests out of {total_requests}"
+
+    load_data = {
+        "name": "Test 15: Baseline/Load Testing",
+        "status": status_str,
+        "duration_ms": actual_duration * 1000.0,
+        "error": error_str,
+        "type": "Load (httpx)",
+        "metrics": {
+            "total_requests": total_requests,
+            "successful_requests": successful_requests,
+            "failed_requests": failed_requests,
+            "rps": round(rps, 2),
+            "avg_ms": round(avg_time, 2),
+            "min_ms": round(min_time, 2),
+            "max_ms": round(max_time, 2)
+        }
+    }
+    
+    with open(load_results_json, "w") as f:
+        import json
+        json.dump(load_data, f, indent=4)
+        
+    print(f"Stored load test results to {load_results_json}")
+
     # Check if there's any failure
     if failed_requests > total_requests * 0.05:
         print("Warning: More than 5% of requests failed.")

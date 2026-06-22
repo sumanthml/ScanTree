@@ -73,6 +73,13 @@ jobs:
       run: |
         python tests/selenium_test.py
 
+    - name: Run Baseline/Load Test
+      env:
+        LOAD_TEST_URL: http://localhost:8081/index.html
+        LOAD_TEST_DURATION: 60
+      run: |
+        python tests/load_test.py
+
     - name: Run Appium Mobile Simulation
       run: |
         python tests/appium_test.py
