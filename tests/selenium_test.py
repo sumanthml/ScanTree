@@ -121,7 +121,10 @@ def run_tests():
 
         # Test 3: Register Navigation
         def test3():
-            login_page.navigate_to(BASE_URL + "/register")
+            login_page.navigate_to(BASE_URL)
+            time.sleep(2)
+            reg_link = driver.find_element(By.XPATH, "//*[contains(text(), 'Register') or contains(text(), 'Sign Up') or contains(text(), 'Create Account')]")
+            reg_link.click()
             time.sleep(1)
             reg_page = RegisterPage(driver)
             assert reg_page.check_inputs_present(), "Register input fields not found"
@@ -129,7 +132,10 @@ def run_tests():
 
         # Test 4: Forgot Password Navigation
         def test4():
-            login_page.navigate_to(BASE_URL + "/forgot-password")
+            login_page.navigate_to(BASE_URL)
+            time.sleep(2)
+            fp_link = driver.find_element(By.XPATH, "//*[contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'forgot password')]")
+            fp_link.click()
             time.sleep(1)
             fp_page = ForgotPasswordPage(driver)
             assert fp_page.check_inputs_present(), "Forgot password input fields not found"
@@ -137,20 +143,17 @@ def run_tests():
 
         # Test 5: Authenticated Session Initialization
         def test5():
-            # Inject credentials in localStorage and reload
             login_page.navigate_to(BASE_URL)
-            time.sleep(1)
+            time.sleep(2)
             login_page.inject_mock_auth()
             driver.refresh()
-            time.sleep(2)
-            # Should redirect to /dashboard
-            current_url = driver.current_url
-            log(f"Current URL after session restoration: {current_url}")
+            time.sleep(3)
+            # Inject API mocks immediately after reload before any screen renders
+            login_page.mock_api_calls()
         run_case("Test 5: Authenticated Session Initialization", test5)
 
         # Test 6: Dashboard View
         def test6():
-            # Ensure mock API works
             login_page.mock_api_calls()
             db_page = DashboardPage(driver)
             assert db_page.is_loaded(), "Dashboard failed to load"
@@ -158,7 +161,9 @@ def run_tests():
 
         # Test 7: Reports Screen
         def test7():
-            driver.get(BASE_URL + "/reports")
+            login_page.mock_api_calls()
+            reports_btn = driver.find_element(By.XPATH, "//*[text()='Reports' or contains(text(), 'Reports')]")
+            reports_btn.click()
             time.sleep(1)
             login_page.mock_api_calls()
             rep_page = ReportsPage(driver)
@@ -167,7 +172,9 @@ def run_tests():
 
         # Test 8: Upload Screen
         def test8():
-            driver.get(BASE_URL + "/upload")
+            login_page.mock_api_calls()
+            upload_btn = driver.find_element(By.XPATH, "//*[text()='Upload' or contains(text(), 'Upload')]")
+            upload_btn.click()
             time.sleep(1)
             login_page.mock_api_calls()
             up_page = UploadPage(driver)
@@ -176,7 +183,9 @@ def run_tests():
 
         # Test 9: Analytics Screen
         def test9():
-            driver.get(BASE_URL + "/analytics")
+            login_page.mock_api_calls()
+            analytics_btn = driver.find_element(By.XPATH, "//*[text()='Analytics' or contains(text(), 'Analytics')]")
+            analytics_btn.click()
             time.sleep(1)
             login_page.mock_api_calls()
             an_page = AnalyticsPage(driver)
@@ -185,7 +194,9 @@ def run_tests():
 
         # Test 10: Notifications Screen
         def test10():
-            driver.get(BASE_URL + "/notifications")
+            login_page.mock_api_calls()
+            notif_btn = driver.find_element(By.XPATH, "//*[text()='Notifications' or contains(text(), 'Notifications')]")
+            notif_btn.click()
             time.sleep(1)
             login_page.mock_api_calls()
             notif_page = NotificationsPage(driver)
@@ -194,7 +205,9 @@ def run_tests():
 
         # Test 11: Access Screen
         def test11():
-            driver.get(BASE_URL + "/access")
+            login_page.mock_api_calls()
+            access_btn = driver.find_element(By.XPATH, "//*[text()='Access' or contains(text(), 'Access')]")
+            access_btn.click()
             time.sleep(1)
             login_page.mock_api_calls()
             ac_page = AccessPage(driver)
@@ -203,7 +216,9 @@ def run_tests():
 
         # Test 12: Profile Screen
         def test12():
-            driver.get(BASE_URL + "/profile")
+            login_page.mock_api_calls()
+            profile_btn = driver.find_element(By.XPATH, "//*[text()='Profile' or contains(text(), 'Profile')]")
+            profile_btn.click()
             time.sleep(1)
             login_page.mock_api_calls()
             prof_page = ProfilePage(driver)
@@ -212,7 +227,9 @@ def run_tests():
 
         # Test 13: Settings Screen
         def test13():
-            driver.get(BASE_URL + "/settings")
+            login_page.mock_api_calls()
+            settings_btn = driver.find_element(By.XPATH, "//*[text()='Settings' or contains(text(), 'Settings')]")
+            settings_btn.click()
             time.sleep(1)
             login_page.mock_api_calls()
             set_page = SettingsPage(driver)
@@ -221,15 +238,17 @@ def run_tests():
 
         # Test 14: Logout Flow
         def test14():
-            driver.get(BASE_URL + "/settings")
+            login_page.mock_api_calls()
+            settings_btn = driver.find_element(By.XPATH, "//*[text()='Settings' or contains(text(), 'Settings')]")
+            settings_btn.click()
             time.sleep(1)
             # Clear storage to simulate logout
             driver.execute_script("localStorage.clear();")
             driver.get(BASE_URL)
             time.sleep(2)
             # Should land back on login page
-            login_page = LoginPage(driver)
-            assert login_page.check_inputs_present(), "Logout failed to redirect to Login screen"
+            login_page_reset = LoginPage(driver)
+            assert login_page_reset.check_inputs_present(), "Logout failed to redirect to Login screen"
         run_case("Test 14: Logout Flow", test14)
 
     finally:
