@@ -27,7 +27,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install selenium openpyxl requests httpx
+        pip install Appium-Python-Client selenium openpyxl requests httpx
 
     # --- Execute Appium Test Suite ---
     - name: Run Appium Mobile E2E Tests

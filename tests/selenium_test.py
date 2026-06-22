@@ -103,6 +103,12 @@ def run_tests():
                 "error": err_msg
             })
             log(f"FAILED: {name} ({elapsed:.1f}ms) - Error: {err_msg}")
+            # Print browser console logs to python output
+            try:
+                browser_logs = driver.get_log('browser')
+                log("BROWSER CONSOLE LOGS ON FAILURE:\n" + "\n".join([str(l) for l in browser_logs]))
+            except Exception as log_ex:
+                log(f"Could not retrieve browser logs: {log_ex}")
             # Capture error screenshot
             driver.save_screenshot(os.path.join(SCREENSHOTS_DIR, f"{safe_name}_error.png"))
 
@@ -151,7 +157,7 @@ def run_tests():
             login_page.navigate_to(BASE_URL)
             time.sleep(2)
             login_page.inject_mock_auth()
-            driver.refresh()
+            login_page.navigate_to(BASE_URL)
             time.sleep(3)
             # Inject API mocks immediately after reload before any screen renders
             login_page.mock_api_calls()

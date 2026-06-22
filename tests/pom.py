@@ -63,7 +63,9 @@ MOCK_SCRIPT = """
         recent_reports: [
             { id: "mock-report-id", file_name: "blood_test_report.pdf", health_score: 85, created_at: "2026-06-22" }
         ],
-        ai_summary: "Based on your latest scan, your general health parameters are stable. Pay attention to cholesterol levels."
+        ai_summary: [
+            { title: "General Health Status", description: "Based on your latest scan, your general health parameters are stable. Pay attention to cholesterol levels." }
+        ]
     };
 
     const mockAnalytics = {
@@ -278,9 +280,17 @@ MOCK_SCRIPT = """
                 if (self.onreadystatechange) {
                     self.onreadystatechange();
                 }
+                self.dispatchEvent(new Event('readystatechange'));
+                
                 if (self.onload) {
                     self.onload();
                 }
+                self.dispatchEvent(new Event('load'));
+                
+                if (self.onloadend) {
+                    self.onloadend();
+                }
+                self.dispatchEvent(new Event('loadend'));
             }, 10);
         } else {
             originalSend.apply(this, arguments);
