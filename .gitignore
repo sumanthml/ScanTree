@@ -31,8 +31,11 @@ backend/serviceAccountKey.json
 # Exclude E2E Excel reports and E2E runner scripts (per user request)
 *.xlsx
 backend/tests/e2e_test_runner.py
-backend/tests/comprehensive_test_runner.py
+# backend/tests/comprehensive_test_runner.py
 
 # Test screenshots
 selenium_error_screenshot.png
 
+# Databases
+*.db
+backend/test.db

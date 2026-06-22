@@ -1,4 +1,6 @@
+# pyrefly: ignore [missing-import]
 from sqlalchemy import create_engine
+# pyrefly: ignore [missing-import]
 from sqlalchemy.orm import sessionmaker
 
 from settings import settings
@@ -25,15 +27,21 @@ DATABASE_URL = _get_sync_url(settings.DATABASE_URL)
 # =====================================================
 # ENGINE
 # =====================================================
+connect_args = {}
+if DATABASE_URL.startswith("sqlite"):
+    connect_args = {"timeout": 10}
+else:
+    connect_args = {
+        "connect_timeout": 10,
+        "options": "-c statement_timeout=30000"
+    }
+
 engine = create_engine(
     DATABASE_URL,
     pool_pre_ping=True,
     pool_size=5,
     max_overflow=10,
-    connect_args={
-        "connect_timeout": 10,
-        "options": "-c statement_timeout=30000"
-    }
+    connect_args=connect_args
 )
 
 

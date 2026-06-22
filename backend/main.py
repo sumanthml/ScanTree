@@ -134,6 +134,7 @@ def startup():
         print(f"[startup] DB create_all skipped: {e}")
 
     # Auto-migration: ensure shared_access has status column
+    # pyrefly: ignore [missing-import]
     from sqlalchemy import text
     try:
         with engine.connect() as conn:
@@ -150,7 +151,7 @@ def startup():
 # ROOT
 # =====================================================
 @app.get("/")
-def root():
+async def root():
     return {
         "success": True,
         "message": "ScanTrace API is running",
