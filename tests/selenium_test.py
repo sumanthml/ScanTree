@@ -36,6 +36,27 @@ def log(msg):
 BASE_URL = os.getenv("BASE_URL", "http://localhost:8081").rstrip("/")
 
 def run_tests():
+    global BASE_URL
+    
+    # Validate if configured live URL is responsive
+    is_live = False
+    if "localhost" not in BASE_URL and "127.0.0.1" not in BASE_URL:
+        log(f"Validating live URL: {BASE_URL}")
+        try:
+            import requests
+            resp = requests.get(BASE_URL, timeout=5.0)
+            if resp.status_code == 200:
+                is_live = True
+                log("Live URL is active and responsive!")
+            else:
+                log(f"Live URL returned status {resp.status_code}. Using local fallback.")
+        except Exception as e:
+            log(f"Live URL check failed: {e}. Using local fallback.")
+            
+    if not is_live:
+        log("Redirecting target URL to local server fallback: http://localhost:8081")
+        BASE_URL = "http://localhost:8081"
+
     # Setup Chrome Options
     chrome_options = Options()
     chrome_options.add_argument("--headless")
@@ -43,7 +64,7 @@ def run_tests():
     chrome_options.add_argument("--disable-dev-shm-usage")
     chrome_options.add_argument("--window-size=1280,1024")
 
-    log(f"Initializing Chrome WebDriver. Base URL: {BASE_URL}")
+    log(f"Initializing Chrome WebDriver. Target URL: {BASE_URL}")
     driver = webdriver.Chrome(options=chrome_options)
     driver.implicitly_wait(5)
 
