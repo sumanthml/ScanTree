@@ -68,9 +68,15 @@ jobs:
         python3 tests/serve_spa.py &
         echo "Local SPA-aware static server started in the background on port 8081"
 
+    - name: Wait for local server to be ready
+      run: |
+        echo "Waiting for local SPA server on port 8081..."
+        timeout 30s bash -c 'until curl -s http://localhost:8081/ > /dev/null; do sleep 1; done'
+        echo "Local server is ready!"
+
     - name: Run E2E Selenium Web Tests
       env:
-        BASE_URL: https://sumanthml.github.io/ScanTree/
+        BASE_URL: http://localhost:8081
       run: |
         python tests/selenium_test.py
 
