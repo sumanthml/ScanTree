@@ -3,6 +3,7 @@ import sys
 import time
 import json
 import traceback
+import re
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
@@ -73,6 +74,8 @@ def run_tests():
     def run_case(name, func):
         start = time.perf_counter()
         log(f"Running Test: {name}...")
+        # Sanitize filename by replacing non-alphanumeric characters with underscores
+        safe_name = re.sub(r'[^a-zA-Z0-9_]', '_', name.lower())
         try:
             func()
             elapsed = (time.perf_counter() - start) * 1000.0
@@ -84,7 +87,6 @@ def run_tests():
             })
             log(f"SUCCESS: {name} ({elapsed:.1f}ms)")
             # Capture success screenshot
-            safe_name = name.replace(" ", "_").lower()
             driver.save_screenshot(os.path.join(SCREENSHOTS_DIR, f"{safe_name}.png"))
         except Exception as e:
             elapsed = (time.perf_counter() - start) * 1000.0
@@ -97,7 +99,6 @@ def run_tests():
             })
             log(f"FAILED: {name} ({elapsed:.1f}ms) - Error: {err_msg}")
             # Capture error screenshot
-            safe_name = name.replace(" ", "_").lower()
             driver.save_screenshot(os.path.join(SCREENSHOTS_DIR, f"{safe_name}_error.png"))
 
     try:
