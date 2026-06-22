@@ -1,0 +1,16 @@
+{
+    "name": "Test 15: Baseline/Load Testing",
+    "status": "Passed",
+    "duration_ms": 5974.458932876587,
+    "error": "",
+    "type": "Load (httpx)",
+    "metrics": {
+        "total_requests": 861,
+        "successful_requests": 851,
+        "failed_requests": 10,
+        "rps": 144.11,
+        "avg_ms": 614.25,
+        "min_ms": 218.55,
+        "max_ms": 1301.03
+    }
+}

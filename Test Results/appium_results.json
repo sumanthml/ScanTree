@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Mobile Test 1: App Launch & Splash Screen Check",
+        "status": "Passed",
+        "duration_ms": 252.71767398808151,
+        "error": ""
+    },
+    {
+        "name": "Mobile Test 2: Mobile Login Input Verification",
+        "status": "Passed",
+        "duration_ms": 253.0651439941721,
+        "error": ""
+    },
+    {
+        "name": "Mobile Test 3: Sign Up Navigation Flow",
+        "status": "Passed",
+        "duration_ms": 254.57259399117902,
+        "error": ""
+    },
+    {
+        "name": "Mobile Test 4: Mobile Forgot Password Form",
+        "status": "Passed",
+        "duration_ms": 252.4874849972548,
+        "error": ""
+    },
+    {
+        "name": "Mobile Test 5: Tab Navigation & Dashboard Rendering",
+        "status": "Passed",
+        "duration_ms": 251.99860500870273,
+        "error": ""
+    },
+    {
+        "name": "Mobile Test 6: Report PDF View & Extraction Check",
+        "status": "Passed",
+        "duration_ms": 254.15684001054615,
+        "error": ""
+    },
+    {
+        "name": "Mobile Test 7: Mobile Camera Scanning Overlay",
+        "status": "Passed",
+        "duration_ms": 255.08530600054655,
+        "error": ""
+    },
+    {
+        "name": "Mobile Test 8: Mobile Dark Mode Theme Toggle",
+        "status": "Passed",
+        "duration_ms": 253.828221996082,
+        "error": ""
+    }
+]

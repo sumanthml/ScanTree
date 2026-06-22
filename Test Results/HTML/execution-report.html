@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ScanTrace E2E Test Report</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            mermaid.initialize({
+                startOnLoad: true,
+                theme: 'dark',
+                securityLevel: 'loose',
+                themeVariables: {
+                    background: '#1E293B',
+                    primaryColor: '#3B82F6',
+                    primaryTextColor: '#F8FAFC',
+                    lineColor: '#64748B'
+                }
+            });
+        });
+    </script>
+    <style>
+        :root {
+            --bg: #0F172A;
+            --panel: #1E293B;
+            --primary: #3B82F6;
+            --success: #10B981;
+            --fail: #EF4444;
+            --text: #F8FAFC;
+            --text-dim: #94A3B8;
+        }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Outfit', 'Inter', -apple-system, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            background: linear-gradient(135deg, #60A5FA, #34D399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .header p {
+            color: var(--text-dim);
+            font-size: 1.1rem;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .stat-card {
+            background: var(--panel);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.05);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+        .stat-card h3 {
+            margin: 0 0 10px 0;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .stat-card .value {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .stat-card.pass-rate .value {
+            color: var(--success);
+        }
+        .table-panel {
+            background: var(--panel);
+            border-radius: 16px;
+            padding: 24px;
+            border: 1px solid rgba(255,255,255,0.05);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 14px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            text-align: left;
+        }
+        th {
+            color: var(--text-dim);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+        .badge {
+            padding: 6px 12px;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .badge.pass {
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--success);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+        .badge.fail {
+            background: rgba(239, 68, 68, 0.15);
+            color: var(--fail);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+        .error-msg {
+            color: var(--fail);
+            font-family: monospace;
+            font-size: 0.85rem;
+            background: rgba(239, 68, 68, 0.05);
+            padding: 6px;
+            border-radius: 6px;
+            max-width: 300px;
+            word-break: break-all;
+        }
+        .no-error {
+            color: var(--text-dim);
+        }
+        .screenshot-btn {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid var(--primary);
+            padding: 4px 8px;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+        .screenshot-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>ScanTrace E2E Test Suite Dashboard</h1>
+            <p>Execution Date: 2026-06-22 12:57:19 | Environment: Live GitHub Pages URL</p>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Total Tests</h3>
+                <div class="value">23</div>
+            </div>
+            <div class="stat-card">
+                <h3>Passed</h3>
+                <div class="value" style="color: var(--success);">23</div>
+            </div>
+            <div class="stat-card">
+                <h3>Failed</h3>
+                <div class="value" style="color: var(--fail);">0</div>
+            </div>
+            <div class="stat-card pass-rate">
+                <h3>Pass Rate</h3>
+                <div class="value">100.0%</div>
+            </div>
+        </div>
+
+        
+        <div class="table-panel" style="margin-bottom: 40px; border: 1px solid rgba(255,255,255,0.05); background: var(--panel);">
+            <h2 style="margin-top: 0;">Baseline/Load Test Metrics (100 Concurrent Users, 1 Minute)</h2>
+            <div class="stats-grid" style="margin-top: 20px; margin-bottom: 0;">
+                <div class="stat-card" style="background: rgba(255,255,255,0.02);">
+                    <h3>Requests per Second</h3>
+                    <div class="value" style="color: #60A5FA;">144.11 RPS</div>
+                </div>
+                <div class="stat-card" style="background: rgba(255,255,255,0.02);">
+                    <h3>Average Latency</h3>
+                    <div class="value">614.25 ms</div>
+                </div>
+                <div class="stat-card" style="background: rgba(255,255,255,0.02);">
+                    <h3>Min Latency</h3>
+                    <div class="value" style="color: var(--success);">218.55 ms</div>
+                </div>
+                <div class="stat-card" style="background: rgba(255,255,255,0.02);">
+                    <h3>Max Latency</h3>
+                    <div class="value" style="color: var(--fail);">1301.03 ms</div>
+                </div>
+            </div>
+            <div style="margin-top: 20px; font-size: 0.95rem; color: var(--text-dim);">
+                <span>Total Requests: <strong>861</strong></span> | 
+                <span>Successful: <strong style="color: var(--success);">851</strong></span> | 
+                <span>Failed: <strong style="color: var(--fail);">10</strong></span>
+            </div>
+        </div>
+        
+        
+        <div class="table-panel">
+            <h2>Detailed Test Execution</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50px; text-align: center;">#</th>
+                        <th>Test Case Name</th>
+                        <th style="width: 150px; text-align: center;">Framework</th>
+                        <th style="width: 120px; text-align: center;">Status</th>
+                        <th style="width: 120px; text-align: right;">Duration</th>
+                        <th>Error Details</th>
+                        <th style="width: 150px; text-align: center;">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+        <tr>
+            <td style="text-align: center; font-weight: bold;">1</td>
+            <td>Test 1: Web App Title Verification</td>
+            <td style="text-align: center;">Web (Selenium)</td>
+            <td style="text-align: center;"><span class="badge pass">Passed</span></td>
+            <td style="text-align: right; font-family: monospace;">3872.5ms</td>
+            <td><span class="no-error">-</span></td>
+            <td style="text-align: center;"><a href="../Screenshots/test_1:_web_app_title_verification.png" target="_blank" class="screenshot-btn">View Screenshot</a></td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center; font-weight: bold;">2</td>
+            <td>Test 2: Login Screen Inputs</td>
+            <td style="text-align: center;">Web (Selenium)</td>
+            <td style="text-align: center;"><span class="badge pass">Passed</span></td>
+            <td style="text-align: right; font-family: monospace;">51.8ms</td>
+            <td><span class="no-error">-</span></td>
+            <td style="text-align: center;"><a href="../Screenshots/test_2:_login_screen_inputs.png" target="_blank" class="screenshot-btn">View Screenshot</a></td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center; font-weight: bold;">3</td>
+            <td>Test 3: Register Navigation</td>
+            <td style="text-align: center;">Web (Selenium)</td>
+            <td style="text-align: center;"><span class="badge pass">Passed</span></td>
+            <td style="text-align: right; font-family: monospace;">3748.6ms</td>
+            <td><span class="no-error">-</span></td>
+            <td style="text-align: center;"><a href="../Screenshots/test_3:_register_navigation.png" target="_blank" class="screenshot-btn">View Screenshot</a></td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center; font-weight: bold;">4</td>
+            <td>Test 4: Forgot Password Navigation</td>
+            <td style="text-align: center;">Web (Selenium)</td>
+            <td style="text-align: center;"><span class="badge pass">Passed</span></td>
+            <td style="text-align: right; font-family: monospace;">3403.0ms</td>
+            <td><span class="no-error">-</span></td>
+            <td style="text-align: center;"><a href="../Screenshots/test_4:_forgot_password_navigation.png" target="_blank" class="screenshot-btn">View Screenshot</a></td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center; font-weight: bold;">5</td>
+            <td>Test 5: Authenticated Session Initialization</td>
+            <td style="text-align: center;">Web (Selenium)</td>
+            <td style="text-align: center;"><span class="badge pass">Passed</span></td>
+            <td style="text-align: right; font-family: monospace;">5540.5ms</td>
+            <td><span class="no-error">-</span></td>
+            <td style="text-align: center;"><a href="../Screenshots/test_5:_authenticated_session_initialization.png" target="_blank" class="screenshot-btn">View Screenshot</a></td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center; font-weight: bold;">6</td>
+            <td>Test 6: Dashboard View</td>
+            <td style="text-align: center;">Web (Selenium)</td>
+            <td style="text-align: center;"><span class="badge pass">Passed</span></td>
+            <td style="text-align: right; font-family: monospace;">29.1ms</td>
+            <td><span class="no-error">-</span></td>
+            <td style="text-align: center;"><a href="../Screenshots/test_6:_dashboard_view.png" target="_blank" class="screenshot-btn">View Screenshot</a></td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center; font-weight: bold;">7</td>
+            <td>Test 7: Reports Screen</td>
+            <td style="text-align: center;">Web (Selenium)</td>
+            <td style="text-align: center;"><span class="badge pass">Passed</span></td>
+            <td style="text-align: right; font-family: monospace;">1821.8ms</td>
+            <td><span class="no-error">-</span></td>
+            <td style="text-align: center;"><a href="../Screenshots/test_7:_reports_screen.png" target="_blank" class="screenshot-btn">View Screenshot</a></td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center; font-weight: bold;">8</td>
+            <td>Test 8: Upload Screen</td>
+            <td style="text-align: center;">Web (Selenium)</td>
+            <td style="text-align: center;"><span class="badge pass">Passed</span></td>
+            <td style="text-align: right; font-family: monospace;">1267.1ms</td>
+            <td><span class="no-error">-</span></td>
+            <td style="text-align: center;"><a href="../Screenshots/test_8:_upload_screen.png" target="_blank" class="screenshot-btn">View Screenshot</a></td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center; font-weight: bold;">9</td>
+            <td>Test 9: Analytics Screen</td>
+            <td style="text-align: center;">Web (Selenium)</td>
+            <td style="text-align: center;"><span class="badge pass">Passed</span></td>
+            <td style="text-align: right; font-family: monospace;">1272.3ms</td>
+            <td><span class="no-error">-</span></td>
+            <td style="text-align: center;"><a href="../Screenshots/test_9:_analytics_screen.png" target="_blank" class="screenshot-btn">View Screenshot</a></td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center; font-weight: bold;">10</td>
+            <td>Test 10: Notifications Screen</td>
+            <td style="text-align: center;">Web (Selenium)</td>
+            <td style="text-align: center;"><span class="badge pass">Passed</span></td>
+            <td style="text-align: right; font-family: monospace;">1327.6ms</td>
+            <td><span class="no-error">-</span></td>
+            <td style="text-align: center;"><a href="../Screenshots/test_10:_notifications_screen.png" target="_blank" class="screenshot-btn">View Screenshot</a></td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center; font-weight: bold;">11</td>
+            <td>Test 11: Access Screen</td>
+            <td style="text-align: center;">Web (Selenium)</td>
+            <td style="text-align: center;"><span class="badge pass">Passed</span></td>
+            <td style="text-align: right; font-family: monospace;">1306.8ms</td>
+            <td><span class="no-error">-</span></td>
+            <td style="text-align: center;"><a href="../Screenshots/test_11:_access_screen.png" target="_blank" class="screenshot-btn">View Screenshot</a></td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center; font-weight: bold;">12</td>
+            <td>Test 12: Profile Screen</td>
+            <td style="text-align: center;">Web (Selenium)</td>
+            <td style="text-align: center;"><span class="badge pass">Passed</span></td>
+            <td style="text-align: right; font-family: monospace;">1598.4ms</td>
+            <td><span class="no-error">-</span></td>
+            <td style="text-align: center;"><a href="../Screenshots/test_12:_profile_screen.png" target="_blank" class="screenshot-btn">View Screenshot</a></td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center; font-weight: bold;">13</td>
+            <td>Test 13: Settings Screen</td>
+            <td style="text-align: center;">Web (Selenium)</td>
+            <td style="text-align: center;"><span class="badge pass">Passed</span></td>
+            <td style="text-align: right; font-family: monospace;">1211.5ms</td>
+            <td><span class="no-error">-</span></td>
+            <td style="text-align: center;"><a href="../Screenshots/test_13:_settings_screen.png" target="_blank" class="screenshot-btn">View Screenshot</a></td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center; font-weight: bold;">14</td>
+            <td>Test 14: Logout Flow</td>
+            <td style="text-align: center;">Web (Selenium)</td>
+            <td style="text-align: center;"><span class="badge pass">Passed</span></td>
+            <td style="text-align: right; font-family: monospace;">3429.2ms</td>
+            <td><span class="no-error">-</span></td>
+            <td style="text-align: center;"><a href="../Screenshots/test_14:_logout_flow.png" target="_blank" class="screenshot-btn">View Screenshot</a></td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center; font-weight: bold;">15</td>
+            <td>Mobile Test 1: App Launch & Splash Screen Check</td>
+            <td style="text-align: center;">Mobile (Appium)</td>
+            <td style="text-align: center;"><span class="badge pass">Passed</span></td>
+            <td style="text-align: right; font-family: monospace;">252.7ms</td>
+            <td><span class="no-error">-</span></td>
+            <td style="text-align: center;"><a href="../Screenshots/mobile_test_1:_app_launch_&_splash_screen_check.png" target="_blank" class="screenshot-btn">View Screenshot</a></td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center; font-weight: bold;">16</td>
+            <td>Mobile Test 2: Mobile Login Input Verification</td>
+            <td style="text-align: center;">Mobile (Appium)</td>
+            <td style="text-align: center;"><span class="badge pass">Passed</span></td>
+            <td style="text-align: right; font-family: monospace;">253.1ms</td>
+            <td><span class="no-error">-</span></td>
+            <td style="text-align: center;"><a href="../Screenshots/mobile_test_2:_mobile_login_input_verification.png" target="_blank" class="screenshot-btn">View Screenshot</a></td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center; font-weight: bold;">17</td>
+            <td>Mobile Test 3: Sign Up Navigation Flow</td>
+            <td style="text-align: center;">Mobile (Appium)</td>
+            <td style="text-align: center;"><span class="badge pass">Passed</span></td>
+            <td style="text-align: right; font-family: monospace;">254.6ms</td>
+            <td><span class="no-error">-</span></td>
+            <td style="text-align: center;"><a href="../Screenshots/mobile_test_3:_sign_up_navigation_flow.png" target="_blank" class="screenshot-btn">View Screenshot</a></td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center; font-weight: bold;">18</td>
+            <td>Mobile Test 4: Mobile Forgot Password Form</td>
+            <td style="text-align: center;">Mobile (Appium)</td>
+            <td style="text-align: center;"><span class="badge pass">Passed</span></td>
+            <td style="text-align: right; font-family: monospace;">252.5ms</td>
+            <td><span class="no-error">-</span></td>
+            <td style="text-align: center;"><a href="../Screenshots/mobile_test_4:_mobile_forgot_password_form.png" target="_blank" class="screenshot-btn">View Screenshot</a></td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center; font-weight: bold;">19</td>
+            <td>Mobile Test 5: Tab Navigation & Dashboard Rendering</td>
+            <td style="text-align: center;">Mobile (Appium)</td>
+            <td style="text-align: center;"><span class="badge pass">Passed</span></td>
+            <td style="text-align: right; font-family: monospace;">252.0ms</td>
+            <td><span class="no-error">-</span></td>
+            <td style="text-align: center;"><a href="../Screenshots/mobile_test_5:_tab_navigation_&_dashboard_rendering.png" target="_blank" class="screenshot-btn">View Screenshot</a></td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center; font-weight: bold;">20</td>
+            <td>Mobile Test 6: Report PDF View & Extraction Check</td>
+            <td style="text-align: center;">Mobile (Appium)</td>
+            <td style="text-align: center;"><span class="badge pass">Passed</span></td>
+            <td style="text-align: right; font-family: monospace;">254.2ms</td>
+            <td><span class="no-error">-</span></td>
+            <td style="text-align: center;"><a href="../Screenshots/mobile_test_6:_report_pdf_view_&_extraction_check.png" target="_blank" class="screenshot-btn">View Screenshot</a></td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center; font-weight: bold;">21</td>
+            <td>Mobile Test 7: Mobile Camera Scanning Overlay</td>
+            <td style="text-align: center;">Mobile (Appium)</td>
+            <td style="text-align: center;"><span class="badge pass">Passed</span></td>
+            <td style="text-align: right; font-family: monospace;">255.1ms</td>
+            <td><span class="no-error">-</span></td>
+            <td style="text-align: center;"><a href="../Screenshots/mobile_test_7:_mobile_camera_scanning_overlay.png" target="_blank" class="screenshot-btn">View Screenshot</a></td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center; font-weight: bold;">22</td>
+            <td>Mobile Test 8: Mobile Dark Mode Theme Toggle</td>
+            <td style="text-align: center;">Mobile (Appium)</td>
+            <td style="text-align: center;"><span class="badge pass">Passed</span></td>
+            <td style="text-align: right; font-family: monospace;">253.8ms</td>
+            <td><span class="no-error">-</span></td>
+            <td style="text-align: center;"><a href="../Screenshots/mobile_test_8:_mobile_dark_mode_theme_toggle.png" target="_blank" class="screenshot-btn">View Screenshot</a></td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center; font-weight: bold;">23</td>
+            <td>Test 15: Baseline/Load Testing</td>
+            <td style="text-align: center;">Load (httpx)</td>
+            <td style="text-align: center;"><span class="badge pass">Passed</span></td>
+            <td style="text-align: right; font-family: monospace;">5974.5ms</td>
+            <td><span class="no-error">-</span></td>
+            <td style="text-align: center;"><span class="no-error">N/A</span></td>
+        </tr>
+        
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-panel" style="margin-top: 40px; margin-bottom: 40px;">
+            <h2>Application Navigation &amp; Logical Flowchart 🗺️</h2>
+            <div style="background: rgba(255,255,255,0.01); padding: 24px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); margin-top: 20px; display: flex; justify-content: center; overflow-x: auto;">
+                <pre class="mermaid" style="background: transparent; color: inherit; width: 100%; text-align: center;">
+graph TD
+    %% Styling
+    classDef guest fill:#1E293B,stroke:#EF4444,stroke-width:2px,color:#F8FAFC;
+    classDef auth fill:#1E293B,stroke:#10B981,stroke-width:2px,color:#F8FAFC;
+    classDef gate fill:#0F172A,stroke:#3B82F6,stroke-width:2px,stroke-dasharray: 5 5,color:#F8FAFC;
+    
+    Start([User Opens App]) --> RouteIndex{Index Router}
+    
+    RouteIndex -- Unauthenticated --> Login[Login Screen]:::guest
+    RouteIndex -- Authenticated --> Dashboard[Dashboard Tab]:::auth
+    
+    Login --> Register[Register Screen]:::guest
+    Register --> Login
+    Login --> Forgot[Forgot Password]:::guest
+    Forgot --> Login
+    
+    Login -- Submit Credentials --> Dashboard
+    
+    Dashboard --> Reports[Reports Tab]:::auth
+    Dashboard --> Upload[Upload Screen]:::auth
+    Dashboard --> Analytics[Analytics Tab]:::auth
+    Dashboard --> Notifications[Notifications Screen]:::auth
+    Dashboard --> Access[Access Management]:::auth
+    Dashboard --> Profile[Profile Screen]:::auth
+    Dashboard --> Settings[Settings Tab]:::auth
+    
+    Settings -- Theme Toggle --> Settings
+    
+    Reports --> ReportDetails[Report Details Drawer]:::auth
+    Upload -- PDF Scan Upload --> ScanningState{OCR Engine}
+    ScanningState -- Done --> Reports
+    
+    Settings -- Trigger Logout --> LogoutGate[Clear Session]:::gate
+    LogoutGate --> Login
+                </pre>
+            </div>
+        </div>
+
+        <div class="table-panel" style="margin-bottom: 40px;">
+            <h2>Application Routing &amp; E2E Test Coverage Matrix 📊</h2>
+            <table style="margin-top: 20px;">
+                <thead>
+                    <tr>
+                        <th>Route Path</th>
+                        <th>Screen Name</th>
+                        <th style="text-align: center;">Authentication</th>
+                        <th>Primary Features</th>
+                        <th style="text-align: center;">E2E Test Coverage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>/</code></td>
+                        <td><code>IndexScreen</code></td>
+                        <td style="text-align: center;"><span class="badge pass" style="background: rgba(59,130,246,0.15); color: #60A5FA; border: 1px solid rgba(59,130,246,0.3);">Guest/Auth</span></td>
+                        <td>Initial landing page. Evaluates localStorage session and routes user.</td>
+                        <td style="text-align: center; font-weight: bold; color: var(--success);">Test 1 &amp; Test 5</td>
+                    </tr>
+                    <tr>
+                        <td><code>/(auth)/login</code></td>
+                        <td><code>LoginScreen</code></td>
+                        <td style="text-align: center;"><span class="badge fail" style="background: rgba(239,68,68,0.15); color: #F87171; border: 1px solid rgba(239,68,68,0.3);">Guest</span></td>
+                        <td>Sign in, toggle password visibility, trigger authentication.</td>
+                        <td style="text-align: center; font-weight: bold; color: var(--success);">Test 2 &amp; Test 14</td>
+                    </tr>
+                    <tr>
+                        <td><code>/(auth)/register</code></td>
+                        <td><code>RegisterScreen</code></td>
+                        <td style="text-align: center;"><span class="badge fail" style="background: rgba(239,68,68,0.15); color: #F87171; border: 1px solid rgba(239,68,68,0.3);">Guest</span></td>
+                        <td>Account sign up with full name, email, and password.</td>
+                        <td style="text-align: center; font-weight: bold; color: var(--success);">Test 3</td>
+                    </tr>
+                    <tr>
+                        <td><code>/(auth)/forgot-password</code></td>
+                        <td><code>ForgotPasswordScreen</code></td>
+                        <td style="text-align: center;"><span class="badge fail" style="background: rgba(239,68,68,0.15); color: #F87171; border: 1px solid rgba(239,68,68,0.3);">Guest</span></td>
+                        <td>Request email containing password reset links.</td>
+                        <td style="text-align: center; font-weight: bold; color: var(--success);">Test 4</td>
+                    </tr>
+                    <tr>
+                        <td><code>/(tabs)/dashboard</code></td>
+                        <td><code>DashboardScreen</code></td>
+                        <td style="text-align: center;"><span class="badge pass">Authenticated</span></td>
+                        <td>Health score timeline chart, summary cards, AI insights.</td>
+                        <td style="text-align: center; font-weight: bold; color: var(--success);">Test 6</td>
+                    </tr>
+                    <tr>
+                        <td><code>/(tabs)/reports</code></td>
+                        <td><code>ReportsScreen</code></td>
+                        <td style="text-align: center;"><span class="badge pass">Authenticated</span></td>
+                        <td>List of all lab reports with details drawer for biomarkers.</td>
+                        <td style="text-align: center; font-weight: bold; color: var(--success);">Test 7</td>
+                    </tr>
+                    <tr>
+                        <td><code>/(tabs)/upload</code></td>
+                        <td><code>UploadScreen</code></td>
+                        <td style="text-align: center;"><span class="badge pass">Authenticated</span></td>
+                        <td>Drag and drop medical PDF/Image uploads. Trigger extraction.</td>
+                        <td style="text-align: center; font-weight: bold; color: var(--success);">Test 8</td>
+                    </tr>
+                    <tr>
+                        <td><code>/(tabs)/analytics</code></td>
+                        <td><code>AnalyticsScreen</code></td>
+                        <td style="text-align: center;"><span class="badge pass">Authenticated</span></td>
+                        <td>View multi-report biomarker trends and lipid charts.</td>
+                        <td style="text-align: center; font-weight: bold; color: var(--success);">Test 9</td>
+                    </tr>
+                    <tr>
+                        <td><code>/notifications</code></td>
+                        <td><code>NotificationsScreen</code></td>
+                        <td style="text-align: center;"><span class="badge pass">Authenticated</span></td>
+                        <td>View unread medical alerts and new share invitations.</td>
+                        <td style="text-align: center; font-weight: bold; color: var(--success);">Test 10</td>
+                    </tr>
+                    <tr>
+                        <td><code>/access</code></td>
+                        <td><code>AccessScreen</code></td>
+                        <td style="text-align: center;"><span class="badge pass">Authenticated</span></td>
+                        <td>Manage view/edit access permissions for family and doctors.</td>
+                        <td style="text-align: center; font-weight: bold; color: var(--success);">Test 11</td>
+                    </tr>
+                    <tr>
+                        <td><code>/profile</code></td>
+                        <td><code>ProfileScreen</code></td>
+                        <td style="text-align: center;"><span class="badge pass">Authenticated</span></td>
+                        <td>Edit profile settings (blood type, birthdate, name).</td>
+                        <td style="text-align: center; font-weight: bold; color: var(--success);">Test 12</td>
+                    </tr>
+                    <tr>
+                        <td><code>/settings</code></td>
+                        <td><code>SettingsScreen</code></td>
+                        <td style="text-align: center;"><span class="badge pass">Authenticated</span></td>
+                        <td>Configure profile settings, toggle dark mode styling.</td>
+                        <td style="text-align: center; font-weight: bold; color: var(--success);">Test 13</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

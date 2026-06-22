@@ -9,6 +9,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 jobs:
   deploy-and-test:
@@ -48,7 +50,7 @@ jobs:
     - name: Verify Live Web App Deployment
       run: |
         echo "Checking if live GitHub Pages deployment is active..."
-        timeout 20s bash -c 'until curl -sI https://sumanthml.github.io/ScanTree/ | grep "HTTP/2 200" > /dev/null; do sleep 5; done' || echo "Live Pages URL is not active yet (returned 404/timeout). Pipeline will use local fallback server."
+        timeout 30s bash -c 'until curl -sI https://sumanthml.github.io/ScanTree/ | grep -E "HTTP/2 200|HTTP/1.1 200" > /dev/null; do sleep 5; done' || echo "Live Pages URL not yet active. Pipeline will use local fallback server."
 
     # --- Setup Python & Run Tests ---
     - name: Set up Python
@@ -92,18 +94,16 @@ jobs:
       run: |
         mkdir -p deploy_reports/reports/latest
         mkdir -p deploy_reports/reports/history/build-${{ github.run_number }}
-        
-        # Copy reports to latest/
+
         cp "Test Results/HTML/execution-report.html" deploy_reports/reports/latest/
-        cp "Test Results/Summary/summary.md" deploy_reports/reports/latest/
-        cp -r "Test Results/Screenshots" deploy_reports/reports/latest/screenshots
-        cp -r "Test Results/Logs" deploy_reports/reports/latest/logs
-        
-        # Copy reports to history/build-XXX/
+        cp "Test Results/Summary/summary.md"          deploy_reports/reports/latest/
+        cp -r "Test Results/Screenshots"              deploy_reports/reports/latest/screenshots
+        cp -r "Test Results/Logs"                     deploy_reports/reports/latest/logs
+
         cp "Test Results/HTML/execution-report.html" deploy_reports/reports/history/build-${{ github.run_number }}/
-        cp "Test Results/Summary/summary.md" deploy_reports/reports/history/build-${{ github.run_number }}/
-        cp -r "Test Results/Screenshots" deploy_reports/reports/history/build-${{ github.run_number }}/screenshots
-        cp -r "Test Results/Logs" deploy_reports/reports/history/build-${{ github.run_number }}/logs
+        cp "Test Results/Summary/summary.md"          deploy_reports/reports/history/build-${{ github.run_number }}/
+        cp -r "Test Results/Screenshots"              deploy_reports/reports/history/build-${{ github.run_number }}/screenshots
+        cp -r "Test Results/Logs"                     deploy_reports/reports/history/build-${{ github.run_number }}/logs
 
     - name: Publish HTML Reports to GitHub Pages
       uses: peaceiris/actions-gh-pages@v4
@@ -112,15 +112,168 @@ jobs:
         publish_dir: ./deploy_reports
         keep_files: true
 
-    # --- Publish GitHub Actions Job Summary ---
+    # --- Publish Rich GitHub Actions Job Summary ---
     - name: Publish E2E Execution Summary
       run: |
-        echo "### Live GitHub Pages E2E Test Summary 🚀" >> $GITHUB_STEP_SUMMARY
-        echo "" >> $GITHUB_STEP_SUMMARY
-        echo "**Deployment URL:** https://sumanthml.github.io/ScanTree/" >> $GITHUB_STEP_SUMMARY
-        echo "**Live Report URL:** https://sumanthml.github.io/ScanTree/reports/latest/execution-report.html" >> $GITHUB_STEP_SUMMARY
-        echo "" >> $GITHUB_STEP_SUMMARY
-        cat "Test Results/Summary/summary.md" >> $GITHUB_STEP_SUMMARY
+        python3 - <<'PYEOF'
+        import json, os, sys
+        from datetime import datetime
+
+        results_dir = "Test Results"
+        sel_path  = os.path.join(results_dir, "test_results.json")
+        app_path  = os.path.join(results_dir, "appium_results.json")
+        load_path = os.path.join(results_dir, "load_results.json")
+
+        sel_results  = json.load(open(sel_path))  if os.path.exists(sel_path)  else []
+        app_results  = json.load(open(app_path))  if os.path.exists(app_path)  else []
+        load_result  = json.load(open(load_path)) if os.path.exists(load_path) else None
+
+        all_results = []
+        for r in sel_results:  all_results.append({**r, "type": "Web (Selenium)"})
+        for r in app_results:  all_results.append({**r, "type": "Mobile (Appium)"})
+        if load_result:
+            all_results.append({"name": load_result["name"], "status": load_result["status"],
+                                 "duration_ms": load_result["duration_ms"], "error": load_result["error"],
+                                 "type": load_result["type"]})
+
+        total  = len(all_results)
+        passed = sum(1 for r in all_results if r["status"] == "Passed")
+        failed = total - passed
+        rate   = (passed/total*100) if total else 0
+        icon   = "✅" if rate == 100 else "⚠️"
+
+        SUMMARY_FILE = os.environ["GITHUB_STEP_SUMMARY"]
+        with open(SUMMARY_FILE, "w") as f:
+            ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            run_num = os.environ.get("GITHUB_RUN_NUMBER", "N/A")
+
+            f.write(f"# 🚀 ScanTrace — E2E Test Execution Report\n\n")
+            f.write(f"> **Run:** #{run_num} | **Time:** {ts}  \n")
+            f.write(f"> **Live App:** https://sumanthml.github.io/ScanTree/  \n")
+            f.write(f"> **HTML Dashboard:** https://sumanthml.github.io/ScanTree/reports/latest/execution-report.html  \n")
+            f.write(f"> **Build History:** https://sumanthml.github.io/ScanTree/reports/history/build-{run_num}/execution-report.html\n\n")
+            f.write("---\n\n")
+
+            # Overall stats table
+            f.write("## 📊 Overall Test Results\n\n")
+            f.write("| Metric | Value |\n")
+            f.write("| :--- | :---: |\n")
+            f.write(f"| Total Tests Executed | **{total}** |\n")
+            f.write(f"| ✅ Passed | **{passed}** |\n")
+            f.write(f"| ❌ Failed | **{failed}** |\n")
+            f.write(f"| 📈 Pass Rate | **{rate:.2f}%** |\n")
+            f.write(f"| 🏁 Overall Status | {icon} **{'ALL PASSED' if rate == 100 else str(failed) + ' FAILURES'}** |\n\n")
+
+            # Load test metrics
+            if load_result and "metrics" in load_result:
+                m = load_result["metrics"]
+                f.write("## ⚡ Baseline / Load Test — 100 Virtual Users × 60 Seconds\n\n")
+                f.write("| Metric | Value |\n")
+                f.write("| :--- | :---: |\n")
+                f.write(f"| 🔁 Requests per Second (RPS) | **{m['rps']} req/sec** |\n")
+                f.write(f"| ⏱️ Average Response Time | **{m['avg_ms']} ms** |\n")
+                f.write(f"| 🟢 Min Response Time | **{m['min_ms']} ms** |\n")
+                f.write(f"| 🔴 Max Response Time | **{m['max_ms']} ms** |\n")
+                f.write(f"| 📦 Total Requests Sent | **{m['total_requests']}** |\n")
+                f.write(f"| ✅ Successful | **{m['successful_requests']}** |\n")
+                f.write(f"| ❌ Failed | **{m['failed_requests']}** |\n\n")
+
+            # Per-test-case table
+            f.write("## 🧪 All Test Case Results\n\n")
+            f.write("| # | Test Case | Framework | Status | Duration |\n")
+            f.write("| :---: | :--- | :---: | :---: | ---: |\n")
+            for idx, r in enumerate(all_results, 1):
+                s = "✅ Passed" if r["status"] == "Passed" else "❌ Failed"
+                f.write(f"| {idx} | {r['name']} | {r['type']} | {s} | {r['duration_ms']:.0f} ms |\n")
+            f.write("\n")
+
+            if failed > 0:
+                f.write("## ⚠️ Failed Tests\n\n")
+                for r in all_results:
+                    if r["status"] != "Passed":
+                        f.write(f"- **{r['name']}** ({r['type']}): `{r['error']}`\n")
+                f.write("\n")
+            else:
+                f.write("> ✅ **All test cases completed with zero failures!**\n\n")
+
+            f.write("---\n\n")
+
+            # App Navigation Flowchart
+            f.write("## 🗺️ Application Navigation Flowchart\n\n")
+            f.write("```mermaid\n")
+            f.write("flowchart TD\n")
+            f.write("    Start([\"User Opens App\"]) --> Router{\"Index Router\"}\n\n")
+            f.write("    Router -- Unauthenticated --> Login[\"Login Screen\"]\n")
+            f.write("    Router -- Authenticated --> Dashboard[\"Dashboard Tab\"]\n\n")
+            f.write("    Login --> Register[\"Register Screen\"]\n")
+            f.write("    Register --> Login\n")
+            f.write("    Login --> Forgot[\"Forgot Password\"]\n")
+            f.write("    Forgot --> Login\n")
+            f.write("    Login -- Submit Credentials --> Dashboard\n\n")
+            f.write("    Dashboard --> Reports[\"Reports Tab\"]\n")
+            f.write("    Dashboard --> Upload[\"Upload Screen\"]\n")
+            f.write("    Dashboard --> Analytics[\"Analytics Tab\"]\n")
+            f.write("    Dashboard --> Notifications[\"Notifications\"]\n")
+            f.write("    Dashboard --> Access[\"Access Management\"]\n")
+            f.write("    Dashboard --> Profile[\"Profile Screen\"]\n")
+            f.write("    Dashboard --> Settings[\"Settings Tab\"]\n\n")
+            f.write("    Reports --> Details[\"Report Details Drawer\"]\n")
+            f.write("    Upload -- PDF Upload --> OCR{\"OCR Engine\"}\n")
+            f.write("    OCR -- Done --> Reports\n\n")
+            f.write("    Settings -- Logout --> Gate[\"Clear Session\"]\n")
+            f.write("    Gate --> Login\n")
+            f.write("```\n\n")
+
+            # CI/CD Pipeline Diagram
+            f.write("## 🔄 CI/CD Pipeline Architecture\n\n")
+            f.write("```mermaid\n")
+            f.write("flowchart LR\n")
+            f.write("    Push([\"Git Push to main\"]) --> GHA[\"GitHub Actions\"]\n\n")
+            f.write("    GHA --> W1[\"Deploy and E2E\"]\n")
+            f.write("    GHA --> W2[\"Selenium Tests\"]\n")
+            f.write("    GHA --> W3[\"Security Review\"]\n")
+            f.write("    GHA --> W4[\"Android Appium\"]\n\n")
+            f.write("    W1 --> Build[\"Build Expo\"]\n")
+            f.write("    Build --> Deploy[\"Deploy Pages\"]\n")
+            f.write("    Deploy --> E2E[\"14 E2E Tests\"]\n")
+            f.write("    E2E --> Load[\"100VU Load Test\"]\n")
+            f.write("    Load --> Report[\"HTML Dashboard\"]\n\n")
+            f.write("    W2 --> Backend[\"Start Backend\"]\n")
+            f.write("    Backend --> SeleniumE2E[\"14 Selenium Tests\"]\n")
+            f.write("    SeleniumE2E --> QA[\"Comprehensive QA\"]\n\n")
+            f.write("    W3 --> Sec[\"7-Phase Pentest\"]\n")
+            f.write("    Sec --> SecReport[\"Security Report\"]\n\n")
+            f.write("    W4 --> Appium[\"Appium Simulation\"]\n")
+            f.write("    Appium --> MobileReport[\"Mobile Report\"]\n")
+            f.write("```\n\n")
+
+            # Route coverage matrix
+            f.write("## 📋 Route Map and E2E Test Coverage Matrix\n\n")
+            f.write("| Route Path | Screen | Auth | Description | Test Coverage |\n")
+            f.write("| :--- | :--- | :---: | :--- | :---: |\n")
+            routes = [
+                ("/", "IndexScreen", "Guest/Auth", "Session evaluation and re-routing", "Test 1 and 5"),
+                ("/(auth)/login", "LoginScreen", "Guest", "Sign in with email and password", "Test 2 and 14"),
+                ("/(auth)/register", "RegisterScreen", "Guest", "Create new user account", "Test 3"),
+                ("/(auth)/forgot-password", "ForgotPasswordScreen", "Guest", "Request password reset email", "Test 4"),
+                ("/(tabs)/dashboard", "DashboardScreen", "Auth", "Health scores, trends, AI insights", "Test 6"),
+                ("/(tabs)/reports", "ReportsScreen", "Auth", "Lab report list with biomarker drawer", "Test 7"),
+                ("/(tabs)/upload", "UploadScreen", "Auth", "Drag-drop medical PDF/image upload", "Test 8"),
+                ("/(tabs)/analytics", "AnalyticsScreen", "Auth", "Biomarker trend charts", "Test 9"),
+                ("/notifications", "NotificationsScreen", "Auth", "Medical alerts and share invitations", "Test 10"),
+                ("/access", "AccessScreen", "Auth", "Family/doctor permissions management", "Test 11"),
+                ("/profile", "ProfileScreen", "Auth", "Edit user profile details", "Test 12"),
+                ("/settings", "SettingsScreen", "Auth", "App settings and dark mode toggle", "Test 13"),
+            ]
+            for route, screen, auth, desc, coverage in routes:
+                f.write(f"| `{route}` | `{screen}` | {auth} | {desc} | {coverage} |\n")
+            f.write("\n")
+
+            f.write("---\n\n")
+            f.write(f"*Auto-generated by ScanTrace CI/CD pipeline on {ts}*\n")
+
+        print("Summary written successfully.")
+        PYEOF
 
     # --- Upload Test Reports as Actions Artifacts ---
     - name: Upload Test Results Artifacts

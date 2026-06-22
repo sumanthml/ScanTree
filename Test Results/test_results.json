@@ -1,0 +1,86 @@
+[
+    {
+        "name": "Test 1: Web App Title Verification",
+        "status": "Passed",
+        "duration_ms": 3872.4611429934157,
+        "error": ""
+    },
+    {
+        "name": "Test 2: Login Screen Inputs",
+        "status": "Passed",
+        "duration_ms": 51.79360399779398,
+        "error": ""
+    },
+    {
+        "name": "Test 3: Register Navigation",
+        "status": "Passed",
+        "duration_ms": 3748.639040000853,
+        "error": ""
+    },
+    {
+        "name": "Test 4: Forgot Password Navigation",
+        "status": "Passed",
+        "duration_ms": 3403.0499490036163,
+        "error": ""
+    },
+    {
+        "name": "Test 5: Authenticated Session Initialization",
+        "status": "Passed",
+        "duration_ms": 5540.51107999112,
+        "error": ""
+    },
+    {
+        "name": "Test 6: Dashboard View",
+        "status": "Passed",
+        "duration_ms": 29.14931000850629,
+        "error": ""
+    },
+    {
+        "name": "Test 7: Reports Screen",
+        "status": "Passed",
+        "duration_ms": 1821.786674001487,
+        "error": ""
+    },
+    {
+        "name": "Test 8: Upload Screen",
+        "status": "Passed",
+        "duration_ms": 1267.0880439982284,
+        "error": ""
+    },
+    {
+        "name": "Test 9: Analytics Screen",
+        "status": "Passed",
+        "duration_ms": 1272.2504920093343,
+        "error": ""
+    },
+    {
+        "name": "Test 10: Notifications Screen",
+        "status": "Passed",
+        "duration_ms": 1327.5645749963587,
+        "error": ""
+    },
+    {
+        "name": "Test 11: Access Screen",
+        "status": "Passed",
+        "duration_ms": 1306.823256003554,
+        "error": ""
+    },
+    {
+        "name": "Test 12: Profile Screen",
+        "status": "Passed",
+        "duration_ms": 1598.4257410018472,
+        "error": ""
+    },
+    {
+        "name": "Test 13: Settings Screen",
+        "status": "Passed",
+        "duration_ms": 1211.5316449926468,
+        "error": ""
+    },
+    {
+        "name": "Test 14: Logout Flow",
+        "status": "Passed",
+        "duration_ms": 3429.2473520035855,
+        "error": ""
+    }
+]

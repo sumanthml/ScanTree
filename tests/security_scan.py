@@ -351,4 +351,23 @@ if __name__ == "__main__":
     generate_exec_summary()
     generate_dep_report()
     generate_excel_reports()
+    
+    # Export structured findings data as JSON for GHA summary consumption
+    import json
+    findings_json_path = os.path.join(RESULTS_DIR, "findings_data.json")
+    export_data = []
+    for fn in findings:
+        export_data.append({
+            "severity": fn.get("severity", "Low"),
+            "category": fn.get("type", "Security"),
+            "title": fn.get("type", "Security Finding"),
+            "description": fn.get("desc", ""),
+            "fix": fn.get("fix", ""),
+            "endpoint": fn.get("endpoint", ""),
+            "file": fn.get("file", "")
+        })
+    with open(findings_json_path, "w") as jf:
+        json.dump(export_data, jf, indent=2)
+    print(f"[REPORT] Findings JSON exported to {findings_json_path}")
+    
     print("[SUCCESS] All security review deliverables created successfully!")

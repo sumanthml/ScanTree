@@ -43,18 +43,16 @@ jobs:
       run: |
         mkdir -p deploy_reports/reports/latest
         mkdir -p deploy_reports/reports/history/build-mobile-${{ github.run_number }}
-        
-        # Copy reports to latest/
+
         cp "Test Results/HTML/execution-report.html" deploy_reports/reports/latest/
-        cp "Test Results/Summary/summary.md" deploy_reports/reports/latest/
-        cp -r "Test Results/Screenshots" deploy_reports/reports/latest/screenshots
-        cp -r "Test Results/Logs" deploy_reports/reports/latest/logs
-        
-        # Copy reports to history/
+        cp "Test Results/Summary/summary.md"          deploy_reports/reports/latest/
+        cp -r "Test Results/Screenshots"              deploy_reports/reports/latest/screenshots
+        cp -r "Test Results/Logs"                     deploy_reports/reports/latest/logs
+
         cp "Test Results/HTML/execution-report.html" deploy_reports/reports/history/build-mobile-${{ github.run_number }}/
-        cp "Test Results/Summary/summary.md" deploy_reports/reports/history/build-mobile-${{ github.run_number }}/
-        cp -r "Test Results/Screenshots" deploy_reports/reports/history/build-mobile-${{ github.run_number }}/screenshots
-        cp -r "Test Results/Logs" deploy_reports/reports/history/build-mobile-${{ github.run_number }}/logs
+        cp "Test Results/Summary/summary.md"          deploy_reports/reports/history/build-mobile-${{ github.run_number }}/
+        cp -r "Test Results/Screenshots"              deploy_reports/reports/history/build-mobile-${{ github.run_number }}/screenshots
+        cp -r "Test Results/Logs"                     deploy_reports/reports/history/build-mobile-${{ github.run_number }}/logs
 
     - name: Publish HTML Reports to GitHub Pages
       uses: peaceiris/actions-gh-pages@v4
@@ -63,15 +61,73 @@ jobs:
         publish_dir: ./deploy_reports
         keep_files: true
 
-    # --- Publish GitHub Actions Job Summary ---
+    # --- Publish Rich GitHub Actions Job Summary ---
     - name: Publish Appium Execution Summary
       run: |
-        echo "### Android Appium Mobile E2E Test Summary 📱" >> $GITHUB_STEP_SUMMARY
-        echo "" >> $GITHUB_STEP_SUMMARY
-        echo "**Execution Date:** $(date)" >> $GITHUB_STEP_SUMMARY
-        echo "**Report URL:** https://sumanthml.github.io/ScanTree/reports/latest/execution-report.html" >> $GITHUB_STEP_SUMMARY
-        echo "" >> $GITHUB_STEP_SUMMARY
-        cat "Test Results/Summary/summary.md" >> $GITHUB_STEP_SUMMARY
+        python3 - <<'PYEOF'
+        import json, os
+        from datetime import datetime
+
+        results_dir = "Test Results"
+        app_path  = os.path.join(results_dir, "appium_results.json")
+        app_results = json.load(open(app_path)) if os.path.exists(app_path) else []
+
+        total  = len(app_results)
+        passed = sum(1 for r in app_results if r["status"] == "Passed")
+        failed = total - passed
+        rate   = (passed/total*100) if total else 0
+        icon   = "✅" if rate == 100 else "⚠️"
+
+        SUMMARY_FILE = os.environ["GITHUB_STEP_SUMMARY"]
+        run_num = os.environ.get("GITHUB_RUN_NUMBER", "N/A")
+        ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+        with open(SUMMARY_FILE, "w") as f:
+            f.write(f"# 📱 ScanTrace — Android Appium Mobile E2E Report\n\n")
+            f.write(f"> **Run:** #{run_num} | **Time:** {ts}  \n")
+            f.write(f"> **Live Dashboard:** https://sumanthml.github.io/ScanTrace/reports/latest/execution-report.html\n\n")
+            f.write("---\n\n")
+
+            f.write("## 📊 Mobile Test Results Summary\n\n")
+            f.write("| Metric | Value |\n")
+            f.write("| :--- | :---: |\n")
+            f.write(f"| Total Mobile Tests | **{total}** |\n")
+            f.write(f"| ✅ Passed | **{passed}** |\n")
+            f.write(f"| ❌ Failed | **{failed}** |\n")
+            f.write(f"| 📈 Pass Rate | **{rate:.2f}%** |\n")
+            f.write(f"| 🏁 Status | {icon} **{'ALL PASSED' if rate == 100 else str(failed) + ' FAILURES'}** |\n\n")
+
+            f.write("## 🧪 Mobile Test Case Results\n\n")
+            f.write("| # | Test Case | Status | Duration |\n")
+            f.write("| :---: | :--- | :---: | ---: |\n")
+            for idx, r in enumerate(app_results, 1):
+                s = "✅ Passed" if r["status"] == "Passed" else "❌ Failed"
+                f.write(f"| {idx} | {r['name']} | {s} | {r['duration_ms']:.0f} ms |\n")
+            f.write("\n")
+
+            if failed == 0:
+                f.write("> ✅ **All mobile test cases completed with zero failures!**\n\n")
+
+            f.write("---\n\n")
+
+            # Mobile App Flow Diagram
+            f.write("## 📱 Mobile App Navigation Flow\n\n")
+            f.write("```mermaid\n")
+            f.write("flowchart TD\n")
+            f.write("    Launch([\"App Launch\"]) --> AuthCheck{\"Auth Check\"}\n\n")
+            f.write("    AuthCheck -- No Session --> Login[\"Login Screen\"]\n")
+            f.write("    AuthCheck -- Has Session --> Dashboard[\"Dashboard Tab\"]\n\n")
+            f.write("    Login -- Inject Mock Token --> Dashboard\n\n")
+            f.write("    Dashboard --> Reports[\"Reports Tab\"]\n")
+            f.write("    Dashboard --> Upload[\"Upload Screen\"]\n")
+            f.write("    Dashboard --> Settings[\"Settings Tab\"]\n\n")
+            f.write("    Settings -- Logout --> Login\n")
+            f.write("```\n\n")
+
+            f.write(f"*Auto-generated by ScanTrace Android CI — {ts}*\n")
+
+        print("Mobile summary written.")
+        PYEOF
 
     # --- Upload Test Reports as Actions Artifacts ---
     - name: Upload Test Results Artifacts

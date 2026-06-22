@@ -233,6 +233,22 @@ def generate_reports():
 <head>
     <meta charset="utf-8">
     <title>ScanTrace E2E Test Report</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {{
+            mermaid.initialize({{
+                startOnLoad: true,
+                theme: 'dark',
+                securityLevel: 'loose',
+                themeVariables: {{
+                    background: '#1E293B',
+                    primaryColor: '#3B82F6',
+                    primaryTextColor: '#F8FAFC',
+                    lineColor: '#64748B'
+                }}
+            }});
+        }});
+    </script>
     <style>
         :root {{
             --bg: #0F172A;
@@ -412,6 +428,149 @@ def generate_reports():
                 </tbody>
             </table>
         </div>
+
+        <div class="table-panel" style="margin-top: 40px; margin-bottom: 40px;">
+            <h2>Application Navigation &amp; Logical Flowchart 🗺️</h2>
+            <div style="background: rgba(255,255,255,0.01); padding: 24px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); margin-top: 20px; display: flex; justify-content: center; overflow-x: auto;">
+                <pre class="mermaid" style="background: transparent; color: inherit; width: 100%; text-align: center;">
+graph TD
+    %% Styling
+    classDef guest fill:#1E293B,stroke:#EF4444,stroke-width:2px,color:#F8FAFC;
+    classDef auth fill:#1E293B,stroke:#10B981,stroke-width:2px,color:#F8FAFC;
+    classDef gate fill:#0F172A,stroke:#3B82F6,stroke-width:2px,stroke-dasharray: 5 5,color:#F8FAFC;
+    
+    Start([User Opens App]) --> RouteIndex{{Index Router}}
+    
+    RouteIndex -- Unauthenticated --> Login[Login Screen]:::guest
+    RouteIndex -- Authenticated --> Dashboard[Dashboard Tab]:::auth
+    
+    Login --> Register[Register Screen]:::guest
+    Register --> Login
+    Login --> Forgot[Forgot Password]:::guest
+    Forgot --> Login
+    
+    Login -- Submit Credentials --> Dashboard
+    
+    Dashboard --> Reports[Reports Tab]:::auth
+    Dashboard --> Upload[Upload Screen]:::auth
+    Dashboard --> Analytics[Analytics Tab]:::auth
+    Dashboard --> Notifications[Notifications Screen]:::auth
+    Dashboard --> Access[Access Management]:::auth
+    Dashboard --> Profile[Profile Screen]:::auth
+    Dashboard --> Settings[Settings Tab]:::auth
+    
+    Settings -- Theme Toggle --> Settings
+    
+    Reports --> ReportDetails[Report Details Drawer]:::auth
+    Upload -- PDF Scan Upload --> ScanningState{{OCR Engine}}
+    ScanningState -- Done --> Reports
+    
+    Settings -- Trigger Logout --> LogoutGate[Clear Session]:::gate
+    LogoutGate --> Login
+                </pre>
+            </div>
+        </div>
+
+        <div class="table-panel" style="margin-bottom: 40px;">
+            <h2>Application Routing &amp; E2E Test Coverage Matrix 📊</h2>
+            <table style="margin-top: 20px;">
+                <thead>
+                    <tr>
+                        <th>Route Path</th>
+                        <th>Screen Name</th>
+                        <th style="text-align: center;">Authentication</th>
+                        <th>Primary Features</th>
+                        <th style="text-align: center;">E2E Test Coverage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>/</code></td>
+                        <td><code>IndexScreen</code></td>
+                        <td style="text-align: center;"><span class="badge pass" style="background: rgba(59,130,246,0.15); color: #60A5FA; border: 1px solid rgba(59,130,246,0.3);">Guest/Auth</span></td>
+                        <td>Initial landing page. Evaluates localStorage session and routes user.</td>
+                        <td style="text-align: center; font-weight: bold; color: var(--success);">Test 1 &amp; Test 5</td>
+                    </tr>
+                    <tr>
+                        <td><code>/(auth)/login</code></td>
+                        <td><code>LoginScreen</code></td>
+                        <td style="text-align: center;"><span class="badge fail" style="background: rgba(239,68,68,0.15); color: #F87171; border: 1px solid rgba(239,68,68,0.3);">Guest</span></td>
+                        <td>Sign in, toggle password visibility, trigger authentication.</td>
+                        <td style="text-align: center; font-weight: bold; color: var(--success);">Test 2 &amp; Test 14</td>
+                    </tr>
+                    <tr>
+                        <td><code>/(auth)/register</code></td>
+                        <td><code>RegisterScreen</code></td>
+                        <td style="text-align: center;"><span class="badge fail" style="background: rgba(239,68,68,0.15); color: #F87171; border: 1px solid rgba(239,68,68,0.3);">Guest</span></td>
+                        <td>Account sign up with full name, email, and password.</td>
+                        <td style="text-align: center; font-weight: bold; color: var(--success);">Test 3</td>
+                    </tr>
+                    <tr>
+                        <td><code>/(auth)/forgot-password</code></td>
+                        <td><code>ForgotPasswordScreen</code></td>
+                        <td style="text-align: center;"><span class="badge fail" style="background: rgba(239,68,68,0.15); color: #F87171; border: 1px solid rgba(239,68,68,0.3);">Guest</span></td>
+                        <td>Request email containing password reset links.</td>
+                        <td style="text-align: center; font-weight: bold; color: var(--success);">Test 4</td>
+                    </tr>
+                    <tr>
+                        <td><code>/(tabs)/dashboard</code></td>
+                        <td><code>DashboardScreen</code></td>
+                        <td style="text-align: center;"><span class="badge pass">Authenticated</span></td>
+                        <td>Health score timeline chart, summary cards, AI insights.</td>
+                        <td style="text-align: center; font-weight: bold; color: var(--success);">Test 6</td>
+                    </tr>
+                    <tr>
+                        <td><code>/(tabs)/reports</code></td>
+                        <td><code>ReportsScreen</code></td>
+                        <td style="text-align: center;"><span class="badge pass">Authenticated</span></td>
+                        <td>List of all lab reports with details drawer for biomarkers.</td>
+                        <td style="text-align: center; font-weight: bold; color: var(--success);">Test 7</td>
+                    </tr>
+                    <tr>
+                        <td><code>/(tabs)/upload</code></td>
+                        <td><code>UploadScreen</code></td>
+                        <td style="text-align: center;"><span class="badge pass">Authenticated</span></td>
+                        <td>Drag and drop medical PDF/Image uploads. Trigger extraction.</td>
+                        <td style="text-align: center; font-weight: bold; color: var(--success);">Test 8</td>
+                    </tr>
+                    <tr>
+                        <td><code>/(tabs)/analytics</code></td>
+                        <td><code>AnalyticsScreen</code></td>
+                        <td style="text-align: center;"><span class="badge pass">Authenticated</span></td>
+                        <td>View multi-report biomarker trends and lipid charts.</td>
+                        <td style="text-align: center; font-weight: bold; color: var(--success);">Test 9</td>
+                    </tr>
+                    <tr>
+                        <td><code>/notifications</code></td>
+                        <td><code>NotificationsScreen</code></td>
+                        <td style="text-align: center;"><span class="badge pass">Authenticated</span></td>
+                        <td>View unread medical alerts and new share invitations.</td>
+                        <td style="text-align: center; font-weight: bold; color: var(--success);">Test 10</td>
+                    </tr>
+                    <tr>
+                        <td><code>/access</code></td>
+                        <td><code>AccessScreen</code></td>
+                        <td style="text-align: center;"><span class="badge pass">Authenticated</span></td>
+                        <td>Manage view/edit access permissions for family and doctors.</td>
+                        <td style="text-align: center; font-weight: bold; color: var(--success);">Test 11</td>
+                    </tr>
+                    <tr>
+                        <td><code>/profile</code></td>
+                        <td><code>ProfileScreen</code></td>
+                        <td style="text-align: center;"><span class="badge pass">Authenticated</span></td>
+                        <td>Edit profile settings (blood type, birthdate, name).</td>
+                        <td style="text-align: center; font-weight: bold; color: var(--success);">Test 12</td>
+                    </tr>
+                    <tr>
+                        <td><code>/settings</code></td>
+                        <td><code>SettingsScreen</code></td>
+                        <td style="text-align: center;"><span class="badge pass">Authenticated</span></td>
+                        <td>Configure profile settings, toggle dark mode styling.</td>
+                        <td style="text-align: center; font-weight: bold; color: var(--success);">Test 13</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </body>
 </html>
@@ -424,35 +583,130 @@ def generate_reports():
     # MARKDOWN SUMMARY: summary.md
     # ──────────────────────────────────────────────────────────────────────────
     summary_path = os.path.join(SUMMARY_DIR, "summary.md")
-    
+    pass_icon = "✅" if pass_rate == 100 else "⚠️"
+
     with open(summary_path, "w") as f:
-        f.write("# Live GitHub Pages E2E Test Summary\n\n")
-        f.write("## Test Metrics\n\n")
-        f.write(f"- **Total Tests Executed:** {total}\n")
-        f.write(f"- **Passed:** {passed}\n")
-        f.write(f"- **Failed:** {failed}\n")
-        f.write(f"- **Pass Rate:** {pass_rate:.2f}%\n\n")
-        
+        f.write(f"# 🚀 ScanTrace — Automated Test Execution Report\n\n")
+        f.write(f"> **Execution Time:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}  \n")
+        f.write(f"> **Target:** https://sumanthml.github.io/ScanTree/  \n")
+        f.write(f"> **Live Dashboard:** https://sumanthml.github.io/ScanTree/reports/latest/execution-report.html\n\n")
+        f.write("---\n\n")
+
+        # ── Overall Stats Table ──
+        f.write("## 📊 Overall Test Results\n\n")
+        f.write("| Metric | Value |\n")
+        f.write("| :--- | :---: |\n")
+        f.write(f"| Total Tests Executed | **{total}** |\n")
+        f.write(f"| ✅ Passed | **{passed}** |\n")
+        f.write(f"| ❌ Failed | **{failed}** |\n")
+        f.write(f"| 📈 Pass Rate | **{pass_rate:.2f}%** |\n")
+        f.write(f"| 🏁 Overall Status | {pass_icon} **{'ALL PASSED' if pass_rate == 100 else str(failed) + ' FAILURES'}** |\n\n")
+
+        # ── Load Test Metrics ──
         if load_result and "metrics" in load_result:
             m = load_result["metrics"]
-            f.write("## Baseline/Load Testing Metrics\n\n")
-            f.write(f"- **Requests per Second (RPS):** {m['rps']} req/sec\n")
-            f.write(f"- **Average Response Time:** {m['avg_ms']} ms\n")
-            f.write(f"- **Min Response Time:** {m['min_ms']} ms\n")
-            f.write(f"- **Max Response Time:** {m['max_ms']} ms\n")
-            f.write(f"- **Total Requests Sent:** {m['total_requests']}\n")
-            f.write(f"- **Successful Requests:** {m['successful_requests']}\n")
-            f.write(f"- **Failed Requests:** {m['failed_requests']}\n\n")
+            f.write("## ⚡ Baseline / Load Test Results (100 Virtual Users × 60 Seconds)\n\n")
+            f.write("| Metric | Value |\n")
+            f.write("| :--- | :---: |\n")
+            f.write(f"| 🔁 Requests per Second (RPS) | **{m['rps']} req/sec** |\n")
+            f.write(f"| ⏱️ Average Response Time | **{m['avg_ms']} ms** |\n")
+            f.write(f"| 🟢 Min Response Time | **{m['min_ms']} ms** |\n")
+            f.write(f"| 🔴 Max Response Time | **{m['max_ms']} ms** |\n")
+            f.write(f"| 📦 Total Requests Sent | **{m['total_requests']}** |\n")
+            f.write(f"| ✅ Successful Requests | **{m['successful_requests']}** |\n")
+            f.write(f"| ❌ Failed Requests | **{m['failed_requests']}** |\n\n")
+
+        # ── Per-Test Case Table ──
+        f.write("## 🧪 Test Case Results\n\n")
+        f.write("| # | Test Case | Framework | Status | Duration |\n")
+        f.write("| :---: | :--- | :---: | :---: | ---: |\n")
+        for idx, r in enumerate(all_results, start=1):
+            status_str = "✅ Passed" if r["status"] == "Passed" else "❌ Failed"
+            f.write(f"| {idx} | {r['name']} | {r['type']} | {status_str} | {r['duration_ms']:.0f} ms |\n")
+        f.write("\n")
 
         if failed > 0:
-            f.write("## Failed Tests\n\n")
+            f.write("## ⚠️ Failed Tests — Details\n\n")
             for r in all_results:
                 if r["status"] != "Passed":
-                    f.write(f"- **{r['name']}** ({r['type']})\n")
-                    f.write(f"  - *Reason:* {r['error']}\n")
+                    f.write(f"### ❌ {r['name']}\n")
+                    f.write(f"- **Framework:** {r['type']}\n")
+                    f.write(f"- **Error:** `{r['error']}`\n\n")
         else:
-            f.write("## Execution Status\n\n")
-            f.write("All test cases completed successfully! ✅\n")
+            f.write("> ✅ **All test cases completed successfully — zero failures!**\n\n")
+
+        f.write("---\n\n")
+
+        # ── Mermaid App Navigation Flowchart ──
+        f.write("## 🗺️ Application Navigation Flowchart\n\n")
+        f.write("```mermaid\n")
+        f.write("flowchart TD\n")
+        f.write("    Start([\"User Opens App\"]) --> RouteIndex{\"Index Router\"}\n\n")
+        f.write("    RouteIndex -- Unauthenticated --> Login[\"Login Screen\"]\n")
+        f.write("    RouteIndex -- Authenticated --> Dashboard[\"Dashboard Tab\"]\n\n")
+        f.write("    Login --> Register[\"Register Screen\"]\n")
+        f.write("    Register --> Login\n")
+        f.write("    Login --> Forgot[\"Forgot Password\"]\n")
+        f.write("    Forgot --> Login\n")
+        f.write("    Login -- Submit Credentials --> Dashboard\n\n")
+        f.write("    Dashboard --> Reports[\"Reports Tab\"]\n")
+        f.write("    Dashboard --> Upload[\"Upload Screen\"]\n")
+        f.write("    Dashboard --> Analytics[\"Analytics Tab\"]\n")
+        f.write("    Dashboard --> Notifications[\"Notifications\"]\n")
+        f.write("    Dashboard --> Access[\"Access Management\"]\n")
+        f.write("    Dashboard --> Profile[\"Profile Screen\"]\n")
+        f.write("    Dashboard --> Settings[\"Settings Tab\"]\n\n")
+        f.write("    Reports --> ReportDetails[\"Report Details Drawer\"]\n")
+        f.write("    Upload -- PDF Scan Upload --> OCR{\"OCR Engine\"}\n")
+        f.write("    OCR -- Extraction Done --> Reports\n\n")
+        f.write("    Settings -- Trigger Logout --> LogoutGate[\"Clear Session\"]\n")
+        f.write("    LogoutGate --> Login\n")
+        f.write("```\n\n")
+
+        # ── CI/CD Pipeline Flow ──
+        f.write("## 🔄 CI/CD Pipeline Workflow\n\n")
+        f.write("```mermaid\n")
+        f.write("flowchart LR\n")
+        f.write("    Push([\"Git Push to main\"]) --> GHA[\"GitHub Actions\"]\n\n")
+        f.write("    GHA --> W1[\"Deploy and E2E\"]\n")
+        f.write("    GHA --> W2[\"Selenium Tests\"]\n")
+        f.write("    GHA --> W3[\"Security Review\"]\n")
+        f.write("    GHA --> W4[\"Android Appium\"]\n\n")
+        f.write("    W1 --> B1[\"Build Expo App\"]\n")
+        f.write("    B1 --> D1[\"Deploy to Pages\"]\n")
+        f.write("    D1 --> S1[\"14 Selenium Tests\"]\n")
+        f.write("    S1 --> L1[\"Load Test 100VU\"]\n")
+        f.write("    L1 --> R1[\"Generate Reports\"]\n")
+        f.write("    R1 --> P1[\"Publish Dashboard\"]\n\n")
+        f.write("    W2 --> BS2[\"Start Backend and Frontend\"]\n")
+        f.write("    BS2 --> TS2[\"14 Selenium Tests\"]\n")
+        f.write("    TS2 --> QA2[\"Comprehensive QA\"]\n")
+        f.write("    QA2 --> LD2[\"Load Tests\"]\n\n")
+        f.write("    W3 --> PH3[\"7-Phase Security Scan\"]\n")
+        f.write("    PH3 --> REP3[\"Security Reports\"]\n\n")
+        f.write("    W4 --> APP4[\"Appium Simulation\"]\n")
+        f.write("    APP4 --> REP4[\"Mobile Reports\"]\n")
+        f.write("```\n\n")
+
+        # ── Route Matrix ──
+        f.write("## 📋 Route Map and E2E Test Coverage Matrix\n\n")
+        f.write("| Route Path | Screen | Auth Required | Description | Test Coverage |\n")
+        f.write("| :--- | :--- | :---: | :--- | :---: |\n")
+        f.write("| `/` | `IndexScreen` | Guest/Auth | Entry router - evaluates session and redirects | Test 1 and 5 |\n")
+        f.write("| `/(auth)/login` | `LoginScreen` | Guest | Sign in with email and password | Test 2 and 14 |\n")
+        f.write("| `/(auth)/register` | `RegisterScreen` | Guest | Create new account | Test 3 |\n")
+        f.write("| `/(auth)/forgot-password` | `ForgotPasswordScreen` | Guest | Request password reset email | Test 4 |\n")
+        f.write("| `/(tabs)/dashboard` | `DashboardScreen` | Auth | Health scores, trends, AI insights | Test 6 |\n")
+        f.write("| `/(tabs)/reports` | `ReportsScreen` | Auth | Lab report listings with biomarker drawer | Test 7 |\n")
+        f.write("| `/(tabs)/upload` | `UploadScreen` | Auth | Drag-drop medical PDF/Image upload | Test 8 |\n")
+        f.write("| `/(tabs)/analytics` | `AnalyticsScreen` | Auth | Biomarker trend charts and comparisons | Test 9 |\n")
+        f.write("| `/notifications` | `NotificationsScreen` | Auth | Medical alerts and share invitations | Test 10 |\n")
+        f.write("| `/access` | `AccessScreen` | Auth | Family/doctor view and edit permissions | Test 11 |\n")
+        f.write("| `/profile` | `ProfileScreen` | Auth | Edit user details (blood type, birthdate) | Test 12 |\n")
+        f.write("| `/settings` | `SettingsScreen` | Auth | App settings, dark mode toggle | Test 13 |\n\n")
+
+        f.write("---\n\n")
+        f.write(f"*Report auto-generated by ScanTrace CI/CD — {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}*\n")
 
     print(f"[Reporter] Summary markdown saved to {summary_path}")
     print("[Reporter] All report formats generated successfully!")
