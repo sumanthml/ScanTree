@@ -1,0 +1,126 @@
+name: Deploy to GitHub Pages & E2E Testing
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    # --- Setup Node & Build Frontend App ---
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+        cache-dependency-path: frontend/package-lock.json
+
+    - name: Install frontend dependencies
+      run: |
+        cd frontend
+        npm ci
+
+    - name: Export Expo web build
+      run: |
+        cd frontend
+        npx expo export --platform web
+
+    # --- Deploy Web App to GitHub Pages ---
+    - name: Deploy Web Application to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./frontend/dist
+        keep_files: true
+
+    # --- Wait for GitHub Pages Deployment to become responsive ---
+    - name: Verify Live Web App Deployment
+      run: |
+        echo "Waiting for live GitHub Pages deployment to respond..."
+        # Wait up to 3 minutes for GitHub Pages to refresh the deployment
+        timeout 180s bash -c 'until curl -sI https://sumanthml.github.io/ScanTree/ | grep "HTTP/2 200" > /dev/null; do sleep 5; done'
+        echo "Live deployment is online!"
+
+    # --- Setup Python & Run Tests ---
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    - name: Install Python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install selenium pytest openpyxl requests httpx
+
+    - name: Run E2E Selenium Web Tests
+      env:
+        BASE_URL: https://sumanthml.github.io/ScanTree/
+      run: |
+        python tests/selenium_test.py
+
+    - name: Run Appium Mobile Simulation
+      run: |
+        python tests/appium_test.py
+
+    - name: Compile Test Reports
+      run: |
+        python tests/report_generator.py
+
+    # --- Structure & Deploy HTML Reports ---
+    - name: Stage Reports for GitHub Pages Publishing
+      run: |
+        mkdir -p deploy_reports/reports/latest
+        mkdir -p deploy_reports/reports/history/build-${{ github.run_number }}
+        
+        # Copy reports to latest/
+        cp "Test Results/HTML/execution-report.html" deploy_reports/reports/latest/
+        cp "Test Results/Summary/summary.md" deploy_reports/reports/latest/
+        cp -r "Test Results/Screenshots" deploy_reports/reports/latest/screenshots
+        cp -r "Test Results/Logs" deploy_reports/reports/latest/logs
+        
+        # Copy reports to history/build-XXX/
+        cp "Test Results/HTML/execution-report.html" deploy_reports/reports/history/build-${{ github.run_number }}/
+        cp "Test Results/Summary/summary.md" deploy_reports/reports/history/build-${{ github.run_number }}/
+        cp -r "Test Results/Screenshots" deploy_reports/reports/history/build-${{ github.run_number }}/screenshots
+        cp -r "Test Results/Logs" deploy_reports/reports/history/build-${{ github.run_number }}/logs
+
+    - name: Publish HTML Reports to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./deploy_reports
+        keep_files: true
+
+    # --- Publish GitHub Actions Job Summary ---
+    - name: Publish E2E Execution Summary
+      run: |
+        echo "### Live GitHub Pages E2E Test Summary 🚀" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "**Deployment URL:** https://sumanthml.github.io/ScanTree/" >> $GITHUB_STEP_SUMMARY
+        echo "**Live Report URL:** https://sumanthml.github.io/ScanTree/reports/latest/execution-report.html" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        cat "Test Results/Summary/summary.md" >> $GITHUB_STEP_SUMMARY
+
+    # --- Upload Test Reports as Actions Artifacts ---
+    - name: Upload Test Results Artifacts
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: automation-test-results
+        path: |
+          Test Results/Excel/Automation_Test_Report.xlsx
+          Test Results/HTML/execution-report.html
+          Test Results/Screenshots/
+          Test Results/Logs/
+          Test Results/Summary/summary.md
