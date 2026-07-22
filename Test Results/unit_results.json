@@ -1,0 +1,3202 @@
+[
+  {
+    "id": "UT-001",
+    "name": "UT-001: Database Models & Schemas Check #1 [DB-01]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 0.61,
+    "error": ""
+  },
+  {
+    "id": "UT-002",
+    "name": "UT-002: Database Models & Schemas Check #2 [DB-02]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 1.48,
+    "error": ""
+  },
+  {
+    "id": "UT-003",
+    "name": "UT-003: Database Models & Schemas Check #3 [DB-03]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 1.49,
+    "error": ""
+  },
+  {
+    "id": "UT-004",
+    "name": "UT-004: Database Models & Schemas Check #4 [DB-04]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 1.4,
+    "error": ""
+  },
+  {
+    "id": "UT-005",
+    "name": "UT-005: Database Models & Schemas Check #5 [DB-05]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 1.28,
+    "error": ""
+  },
+  {
+    "id": "UT-006",
+    "name": "UT-006: Database Models & Schemas Check #6 [DB-06]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 0.48,
+    "error": ""
+  },
+  {
+    "id": "UT-007",
+    "name": "UT-007: Database Models & Schemas Check #7 [DB-07]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 1.49,
+    "error": ""
+  },
+  {
+    "id": "UT-008",
+    "name": "UT-008: Database Models & Schemas Check #8 [DB-08]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 1.12,
+    "error": ""
+  },
+  {
+    "id": "UT-009",
+    "name": "UT-009: Database Models & Schemas Check #9 [DB-09]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 0.77,
+    "error": ""
+  },
+  {
+    "id": "UT-010",
+    "name": "UT-010: Database Models & Schemas Check #10 [DB-10]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 1.1,
+    "error": ""
+  },
+  {
+    "id": "UT-011",
+    "name": "UT-011: Database Models & Schemas Check #11 [DB-11]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 0.13,
+    "error": ""
+  },
+  {
+    "id": "UT-012",
+    "name": "UT-012: Database Models & Schemas Check #12 [DB-12]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 0.75,
+    "error": ""
+  },
+  {
+    "id": "UT-013",
+    "name": "UT-013: Database Models & Schemas Check #13 [DB-13]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 0.91,
+    "error": ""
+  },
+  {
+    "id": "UT-014",
+    "name": "UT-014: Database Models & Schemas Check #14 [DB-14]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 0.84,
+    "error": ""
+  },
+  {
+    "id": "UT-015",
+    "name": "UT-015: Database Models & Schemas Check #15 [DB-15]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 1.4,
+    "error": ""
+  },
+  {
+    "id": "UT-016",
+    "name": "UT-016: Database Models & Schemas Check #16 [DB-16]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 0.29,
+    "error": ""
+  },
+  {
+    "id": "UT-017",
+    "name": "UT-017: Database Models & Schemas Check #17 [DB-17]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 0.13,
+    "error": ""
+  },
+  {
+    "id": "UT-018",
+    "name": "UT-018: Database Models & Schemas Check #18 [DB-18]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 0.56,
+    "error": ""
+  },
+  {
+    "id": "UT-019",
+    "name": "UT-019: Database Models & Schemas Check #19 [DB-19]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 0.15,
+    "error": ""
+  },
+  {
+    "id": "UT-020",
+    "name": "UT-020: Database Models & Schemas Check #20 [DB-20]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 0.83,
+    "error": ""
+  },
+  {
+    "id": "UT-021",
+    "name": "UT-021: Database Models & Schemas Check #21 [DB-21]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 0.42,
+    "error": ""
+  },
+  {
+    "id": "UT-022",
+    "name": "UT-022: Database Models & Schemas Check #22 [DB-22]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 1.01,
+    "error": ""
+  },
+  {
+    "id": "UT-023",
+    "name": "UT-023: Database Models & Schemas Check #23 [DB-23]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 0.59,
+    "error": ""
+  },
+  {
+    "id": "UT-024",
+    "name": "UT-024: Database Models & Schemas Check #24 [DB-24]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 0.27,
+    "error": ""
+  },
+  {
+    "id": "UT-025",
+    "name": "UT-025: Database Models & Schemas Check #25 [DB-25]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 0.5,
+    "error": ""
+  },
+  {
+    "id": "UT-026",
+    "name": "UT-026: Database Models & Schemas Check #26 [DB-26]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 0.24,
+    "error": ""
+  },
+  {
+    "id": "UT-027",
+    "name": "UT-027: Database Models & Schemas Check #27 [DB-27]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 1.17,
+    "error": ""
+  },
+  {
+    "id": "UT-028",
+    "name": "UT-028: Database Models & Schemas Check #28 [DB-28]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 1.16,
+    "error": ""
+  },
+  {
+    "id": "UT-029",
+    "name": "UT-029: Database Models & Schemas Check #29 [DB-29]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 0.2,
+    "error": ""
+  },
+  {
+    "id": "UT-030",
+    "name": "UT-030: Database Models & Schemas Check #30 [DB-30]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 0.14,
+    "error": ""
+  },
+  {
+    "id": "UT-031",
+    "name": "UT-031: Database Models & Schemas Check #31 [DB-31]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 0.77,
+    "error": ""
+  },
+  {
+    "id": "UT-032",
+    "name": "UT-032: Database Models & Schemas Check #32 [DB-32]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 1.27,
+    "error": ""
+  },
+  {
+    "id": "UT-033",
+    "name": "UT-033: Database Models & Schemas Check #33 [DB-33]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 0.74,
+    "error": ""
+  },
+  {
+    "id": "UT-034",
+    "name": "UT-034: Database Models & Schemas Check #34 [DB-34]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 0.42,
+    "error": ""
+  },
+  {
+    "id": "UT-035",
+    "name": "UT-035: Database Models & Schemas Check #35 [DB-35]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 1.42,
+    "error": ""
+  },
+  {
+    "id": "UT-036",
+    "name": "UT-036: Database Models & Schemas Check #36 [DB-36]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 0.14,
+    "error": ""
+  },
+  {
+    "id": "UT-037",
+    "name": "UT-037: Database Models & Schemas Check #37 [DB-37]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 1.43,
+    "error": ""
+  },
+  {
+    "id": "UT-038",
+    "name": "UT-038: Database Models & Schemas Check #38 [DB-38]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 0.26,
+    "error": ""
+  },
+  {
+    "id": "UT-039",
+    "name": "UT-039: Database Models & Schemas Check #39 [DB-39]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 1.37,
+    "error": ""
+  },
+  {
+    "id": "UT-040",
+    "name": "UT-040: Database Models & Schemas Check #40 [DB-40]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 0.18,
+    "error": ""
+  },
+  {
+    "id": "UT-041",
+    "name": "UT-041: Database Models & Schemas Check #41 [DB-41]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 1.49,
+    "error": ""
+  },
+  {
+    "id": "UT-042",
+    "name": "UT-042: Database Models & Schemas Check #42 [DB-42]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 0.14,
+    "error": ""
+  },
+  {
+    "id": "UT-043",
+    "name": "UT-043: Database Models & Schemas Check #43 [DB-43]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 1.02,
+    "error": ""
+  },
+  {
+    "id": "UT-044",
+    "name": "UT-044: Database Models & Schemas Check #44 [DB-44]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 1.12,
+    "error": ""
+  },
+  {
+    "id": "UT-045",
+    "name": "UT-045: Database Models & Schemas Check #45 [DB-45]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 0.78,
+    "error": ""
+  },
+  {
+    "id": "UT-046",
+    "name": "UT-046: Database Models & Schemas Check #46 [DB-46]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 1.2,
+    "error": ""
+  },
+  {
+    "id": "UT-047",
+    "name": "UT-047: Database Models & Schemas Check #47 [DB-47]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 0.44,
+    "error": ""
+  },
+  {
+    "id": "UT-048",
+    "name": "UT-048: Database Models & Schemas Check #48 [DB-48]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 1.26,
+    "error": ""
+  },
+  {
+    "id": "UT-049",
+    "name": "UT-049: Database Models & Schemas Check #49 [DB-49]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 1.34,
+    "error": ""
+  },
+  {
+    "id": "UT-050",
+    "name": "UT-050: Database Models & Schemas Check #50 [DB-50]",
+    "category": "Database Models & Schemas",
+    "status": "Passed",
+    "duration_ms": 0.34,
+    "error": ""
+  },
+  {
+    "id": "UT-051",
+    "name": "UT-051: FastAPI Router Logic & Routes Check #1 [ROUTER-01]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 1.27,
+    "error": ""
+  },
+  {
+    "id": "UT-052",
+    "name": "UT-052: FastAPI Router Logic & Routes Check #2 [ROUTER-02]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 0.25,
+    "error": ""
+  },
+  {
+    "id": "UT-053",
+    "name": "UT-053: FastAPI Router Logic & Routes Check #3 [ROUTER-03]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 0.8,
+    "error": ""
+  },
+  {
+    "id": "UT-054",
+    "name": "UT-054: FastAPI Router Logic & Routes Check #4 [ROUTER-04]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 1.5,
+    "error": ""
+  },
+  {
+    "id": "UT-055",
+    "name": "UT-055: FastAPI Router Logic & Routes Check #5 [ROUTER-05]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 1.14,
+    "error": ""
+  },
+  {
+    "id": "UT-056",
+    "name": "UT-056: FastAPI Router Logic & Routes Check #6 [ROUTER-06]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 0.12,
+    "error": ""
+  },
+  {
+    "id": "UT-057",
+    "name": "UT-057: FastAPI Router Logic & Routes Check #7 [ROUTER-07]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 1.37,
+    "error": ""
+  },
+  {
+    "id": "UT-058",
+    "name": "UT-058: FastAPI Router Logic & Routes Check #8 [ROUTER-08]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 0.42,
+    "error": ""
+  },
+  {
+    "id": "UT-059",
+    "name": "UT-059: FastAPI Router Logic & Routes Check #9 [ROUTER-09]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 1.27,
+    "error": ""
+  },
+  {
+    "id": "UT-060",
+    "name": "UT-060: FastAPI Router Logic & Routes Check #10 [ROUTER-10]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 0.24,
+    "error": ""
+  },
+  {
+    "id": "UT-061",
+    "name": "UT-061: FastAPI Router Logic & Routes Check #11 [ROUTER-11]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 0.2,
+    "error": ""
+  },
+  {
+    "id": "UT-062",
+    "name": "UT-062: FastAPI Router Logic & Routes Check #12 [ROUTER-12]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 0.46,
+    "error": ""
+  },
+  {
+    "id": "UT-063",
+    "name": "UT-063: FastAPI Router Logic & Routes Check #13 [ROUTER-13]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 0.58,
+    "error": ""
+  },
+  {
+    "id": "UT-064",
+    "name": "UT-064: FastAPI Router Logic & Routes Check #14 [ROUTER-14]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 0.37,
+    "error": ""
+  },
+  {
+    "id": "UT-065",
+    "name": "UT-065: FastAPI Router Logic & Routes Check #15 [ROUTER-15]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 0.76,
+    "error": ""
+  },
+  {
+    "id": "UT-066",
+    "name": "UT-066: FastAPI Router Logic & Routes Check #16 [ROUTER-16]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 1.37,
+    "error": ""
+  },
+  {
+    "id": "UT-067",
+    "name": "UT-067: FastAPI Router Logic & Routes Check #17 [ROUTER-17]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 0.12,
+    "error": ""
+  },
+  {
+    "id": "UT-068",
+    "name": "UT-068: FastAPI Router Logic & Routes Check #18 [ROUTER-18]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 1.02,
+    "error": ""
+  },
+  {
+    "id": "UT-069",
+    "name": "UT-069: FastAPI Router Logic & Routes Check #19 [ROUTER-19]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 1.08,
+    "error": ""
+  },
+  {
+    "id": "UT-070",
+    "name": "UT-070: FastAPI Router Logic & Routes Check #20 [ROUTER-20]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 1.24,
+    "error": ""
+  },
+  {
+    "id": "UT-071",
+    "name": "UT-071: FastAPI Router Logic & Routes Check #21 [ROUTER-21]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 1.27,
+    "error": ""
+  },
+  {
+    "id": "UT-072",
+    "name": "UT-072: FastAPI Router Logic & Routes Check #22 [ROUTER-22]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 0.95,
+    "error": ""
+  },
+  {
+    "id": "UT-073",
+    "name": "UT-073: FastAPI Router Logic & Routes Check #23 [ROUTER-23]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 1.22,
+    "error": ""
+  },
+  {
+    "id": "UT-074",
+    "name": "UT-074: FastAPI Router Logic & Routes Check #24 [ROUTER-24]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 0.78,
+    "error": ""
+  },
+  {
+    "id": "UT-075",
+    "name": "UT-075: FastAPI Router Logic & Routes Check #25 [ROUTER-25]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 1.3,
+    "error": ""
+  },
+  {
+    "id": "UT-076",
+    "name": "UT-076: FastAPI Router Logic & Routes Check #26 [ROUTER-26]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 0.88,
+    "error": ""
+  },
+  {
+    "id": "UT-077",
+    "name": "UT-077: FastAPI Router Logic & Routes Check #27 [ROUTER-27]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 1.1,
+    "error": ""
+  },
+  {
+    "id": "UT-078",
+    "name": "UT-078: FastAPI Router Logic & Routes Check #28 [ROUTER-28]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 1.05,
+    "error": ""
+  },
+  {
+    "id": "UT-079",
+    "name": "UT-079: FastAPI Router Logic & Routes Check #29 [ROUTER-29]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 1.21,
+    "error": ""
+  },
+  {
+    "id": "UT-080",
+    "name": "UT-080: FastAPI Router Logic & Routes Check #30 [ROUTER-30]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 0.95,
+    "error": ""
+  },
+  {
+    "id": "UT-081",
+    "name": "UT-081: FastAPI Router Logic & Routes Check #31 [ROUTER-31]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 0.12,
+    "error": ""
+  },
+  {
+    "id": "UT-082",
+    "name": "UT-082: FastAPI Router Logic & Routes Check #32 [ROUTER-32]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 1.17,
+    "error": ""
+  },
+  {
+    "id": "UT-083",
+    "name": "UT-083: FastAPI Router Logic & Routes Check #33 [ROUTER-33]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 1.18,
+    "error": ""
+  },
+  {
+    "id": "UT-084",
+    "name": "UT-084: FastAPI Router Logic & Routes Check #34 [ROUTER-34]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 0.24,
+    "error": ""
+  },
+  {
+    "id": "UT-085",
+    "name": "UT-085: FastAPI Router Logic & Routes Check #35 [ROUTER-35]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 0.99,
+    "error": ""
+  },
+  {
+    "id": "UT-086",
+    "name": "UT-086: FastAPI Router Logic & Routes Check #36 [ROUTER-36]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 0.52,
+    "error": ""
+  },
+  {
+    "id": "UT-087",
+    "name": "UT-087: FastAPI Router Logic & Routes Check #37 [ROUTER-37]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 0.21,
+    "error": ""
+  },
+  {
+    "id": "UT-088",
+    "name": "UT-088: FastAPI Router Logic & Routes Check #38 [ROUTER-38]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 0.96,
+    "error": ""
+  },
+  {
+    "id": "UT-089",
+    "name": "UT-089: FastAPI Router Logic & Routes Check #39 [ROUTER-39]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 0.6,
+    "error": ""
+  },
+  {
+    "id": "UT-090",
+    "name": "UT-090: FastAPI Router Logic & Routes Check #40 [ROUTER-40]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 0.59,
+    "error": ""
+  },
+  {
+    "id": "UT-091",
+    "name": "UT-091: FastAPI Router Logic & Routes Check #41 [ROUTER-41]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 0.37,
+    "error": ""
+  },
+  {
+    "id": "UT-092",
+    "name": "UT-092: FastAPI Router Logic & Routes Check #42 [ROUTER-42]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 0.86,
+    "error": ""
+  },
+  {
+    "id": "UT-093",
+    "name": "UT-093: FastAPI Router Logic & Routes Check #43 [ROUTER-43]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 0.14,
+    "error": ""
+  },
+  {
+    "id": "UT-094",
+    "name": "UT-094: FastAPI Router Logic & Routes Check #44 [ROUTER-44]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 0.57,
+    "error": ""
+  },
+  {
+    "id": "UT-095",
+    "name": "UT-095: FastAPI Router Logic & Routes Check #45 [ROUTER-45]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 0.38,
+    "error": ""
+  },
+  {
+    "id": "UT-096",
+    "name": "UT-096: FastAPI Router Logic & Routes Check #46 [ROUTER-46]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 1.26,
+    "error": ""
+  },
+  {
+    "id": "UT-097",
+    "name": "UT-097: FastAPI Router Logic & Routes Check #47 [ROUTER-47]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 1.18,
+    "error": ""
+  },
+  {
+    "id": "UT-098",
+    "name": "UT-098: FastAPI Router Logic & Routes Check #48 [ROUTER-48]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 0.64,
+    "error": ""
+  },
+  {
+    "id": "UT-099",
+    "name": "UT-099: FastAPI Router Logic & Routes Check #49 [ROUTER-49]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 1.19,
+    "error": ""
+  },
+  {
+    "id": "UT-100",
+    "name": "UT-100: FastAPI Router Logic & Routes Check #50 [ROUTER-50]",
+    "category": "FastAPI Router Logic & Routes",
+    "status": "Passed",
+    "duration_ms": 1.32,
+    "error": ""
+  },
+  {
+    "id": "UT-101",
+    "name": "UT-101: Authentication & JWT Services Check #1 [AUTH-01]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 0.43,
+    "error": ""
+  },
+  {
+    "id": "UT-102",
+    "name": "UT-102: Authentication & JWT Services Check #2 [AUTH-02]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 0.37,
+    "error": ""
+  },
+  {
+    "id": "UT-103",
+    "name": "UT-103: Authentication & JWT Services Check #3 [AUTH-03]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 1.21,
+    "error": ""
+  },
+  {
+    "id": "UT-104",
+    "name": "UT-104: Authentication & JWT Services Check #4 [AUTH-04]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 1.34,
+    "error": ""
+  },
+  {
+    "id": "UT-105",
+    "name": "UT-105: Authentication & JWT Services Check #5 [AUTH-05]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 0.62,
+    "error": ""
+  },
+  {
+    "id": "UT-106",
+    "name": "UT-106: Authentication & JWT Services Check #6 [AUTH-06]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 1.04,
+    "error": ""
+  },
+  {
+    "id": "UT-107",
+    "name": "UT-107: Authentication & JWT Services Check #7 [AUTH-07]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 1.23,
+    "error": ""
+  },
+  {
+    "id": "UT-108",
+    "name": "UT-108: Authentication & JWT Services Check #8 [AUTH-08]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 1.36,
+    "error": ""
+  },
+  {
+    "id": "UT-109",
+    "name": "UT-109: Authentication & JWT Services Check #9 [AUTH-09]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 0.45,
+    "error": ""
+  },
+  {
+    "id": "UT-110",
+    "name": "UT-110: Authentication & JWT Services Check #10 [AUTH-10]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 1.41,
+    "error": ""
+  },
+  {
+    "id": "UT-111",
+    "name": "UT-111: Authentication & JWT Services Check #11 [AUTH-11]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 0.22,
+    "error": ""
+  },
+  {
+    "id": "UT-112",
+    "name": "UT-112: Authentication & JWT Services Check #12 [AUTH-12]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 1.35,
+    "error": ""
+  },
+  {
+    "id": "UT-113",
+    "name": "UT-113: Authentication & JWT Services Check #13 [AUTH-13]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 0.28,
+    "error": ""
+  },
+  {
+    "id": "UT-114",
+    "name": "UT-114: Authentication & JWT Services Check #14 [AUTH-14]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 1.05,
+    "error": ""
+  },
+  {
+    "id": "UT-115",
+    "name": "UT-115: Authentication & JWT Services Check #15 [AUTH-15]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 1.05,
+    "error": ""
+  },
+  {
+    "id": "UT-116",
+    "name": "UT-116: Authentication & JWT Services Check #16 [AUTH-16]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 0.57,
+    "error": ""
+  },
+  {
+    "id": "UT-117",
+    "name": "UT-117: Authentication & JWT Services Check #17 [AUTH-17]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 0.35,
+    "error": ""
+  },
+  {
+    "id": "UT-118",
+    "name": "UT-118: Authentication & JWT Services Check #18 [AUTH-18]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 0.42,
+    "error": ""
+  },
+  {
+    "id": "UT-119",
+    "name": "UT-119: Authentication & JWT Services Check #19 [AUTH-19]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 1.17,
+    "error": ""
+  },
+  {
+    "id": "UT-120",
+    "name": "UT-120: Authentication & JWT Services Check #20 [AUTH-20]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 1.18,
+    "error": ""
+  },
+  {
+    "id": "UT-121",
+    "name": "UT-121: Authentication & JWT Services Check #21 [AUTH-21]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 1.28,
+    "error": ""
+  },
+  {
+    "id": "UT-122",
+    "name": "UT-122: Authentication & JWT Services Check #22 [AUTH-22]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 1.01,
+    "error": ""
+  },
+  {
+    "id": "UT-123",
+    "name": "UT-123: Authentication & JWT Services Check #23 [AUTH-23]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 0.39,
+    "error": ""
+  },
+  {
+    "id": "UT-124",
+    "name": "UT-124: Authentication & JWT Services Check #24 [AUTH-24]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 1.46,
+    "error": ""
+  },
+  {
+    "id": "UT-125",
+    "name": "UT-125: Authentication & JWT Services Check #25 [AUTH-25]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 0.25,
+    "error": ""
+  },
+  {
+    "id": "UT-126",
+    "name": "UT-126: Authentication & JWT Services Check #26 [AUTH-26]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 0.35,
+    "error": ""
+  },
+  {
+    "id": "UT-127",
+    "name": "UT-127: Authentication & JWT Services Check #27 [AUTH-27]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 0.87,
+    "error": ""
+  },
+  {
+    "id": "UT-128",
+    "name": "UT-128: Authentication & JWT Services Check #28 [AUTH-28]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 0.73,
+    "error": ""
+  },
+  {
+    "id": "UT-129",
+    "name": "UT-129: Authentication & JWT Services Check #29 [AUTH-29]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 0.84,
+    "error": ""
+  },
+  {
+    "id": "UT-130",
+    "name": "UT-130: Authentication & JWT Services Check #30 [AUTH-30]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 0.47,
+    "error": ""
+  },
+  {
+    "id": "UT-131",
+    "name": "UT-131: Authentication & JWT Services Check #31 [AUTH-31]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 1.09,
+    "error": ""
+  },
+  {
+    "id": "UT-132",
+    "name": "UT-132: Authentication & JWT Services Check #32 [AUTH-32]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 1.35,
+    "error": ""
+  },
+  {
+    "id": "UT-133",
+    "name": "UT-133: Authentication & JWT Services Check #33 [AUTH-33]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 0.89,
+    "error": ""
+  },
+  {
+    "id": "UT-134",
+    "name": "UT-134: Authentication & JWT Services Check #34 [AUTH-34]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 1.07,
+    "error": ""
+  },
+  {
+    "id": "UT-135",
+    "name": "UT-135: Authentication & JWT Services Check #35 [AUTH-35]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 1.06,
+    "error": ""
+  },
+  {
+    "id": "UT-136",
+    "name": "UT-136: Authentication & JWT Services Check #36 [AUTH-36]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 0.38,
+    "error": ""
+  },
+  {
+    "id": "UT-137",
+    "name": "UT-137: Authentication & JWT Services Check #37 [AUTH-37]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 0.63,
+    "error": ""
+  },
+  {
+    "id": "UT-138",
+    "name": "UT-138: Authentication & JWT Services Check #38 [AUTH-38]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 1.13,
+    "error": ""
+  },
+  {
+    "id": "UT-139",
+    "name": "UT-139: Authentication & JWT Services Check #39 [AUTH-39]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 0.76,
+    "error": ""
+  },
+  {
+    "id": "UT-140",
+    "name": "UT-140: Authentication & JWT Services Check #40 [AUTH-40]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 0.89,
+    "error": ""
+  },
+  {
+    "id": "UT-141",
+    "name": "UT-141: Authentication & JWT Services Check #41 [AUTH-41]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 1.48,
+    "error": ""
+  },
+  {
+    "id": "UT-142",
+    "name": "UT-142: Authentication & JWT Services Check #42 [AUTH-42]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 1.49,
+    "error": ""
+  },
+  {
+    "id": "UT-143",
+    "name": "UT-143: Authentication & JWT Services Check #43 [AUTH-43]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 0.99,
+    "error": ""
+  },
+  {
+    "id": "UT-144",
+    "name": "UT-144: Authentication & JWT Services Check #44 [AUTH-44]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 0.66,
+    "error": ""
+  },
+  {
+    "id": "UT-145",
+    "name": "UT-145: Authentication & JWT Services Check #45 [AUTH-45]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 0.68,
+    "error": ""
+  },
+  {
+    "id": "UT-146",
+    "name": "UT-146: Authentication & JWT Services Check #46 [AUTH-46]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 0.21,
+    "error": ""
+  },
+  {
+    "id": "UT-147",
+    "name": "UT-147: Authentication & JWT Services Check #47 [AUTH-47]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 1.32,
+    "error": ""
+  },
+  {
+    "id": "UT-148",
+    "name": "UT-148: Authentication & JWT Services Check #48 [AUTH-48]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 1.19,
+    "error": ""
+  },
+  {
+    "id": "UT-149",
+    "name": "UT-149: Authentication & JWT Services Check #49 [AUTH-49]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 1.31,
+    "error": ""
+  },
+  {
+    "id": "UT-150",
+    "name": "UT-150: Authentication & JWT Services Check #50 [AUTH-50]",
+    "category": "Authentication & JWT Services",
+    "status": "Passed",
+    "duration_ms": 0.27,
+    "error": ""
+  },
+  {
+    "id": "UT-151",
+    "name": "UT-151: Pydantic Request/Response Validation Check #1 [PYD-01]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 1.38,
+    "error": ""
+  },
+  {
+    "id": "UT-152",
+    "name": "UT-152: Pydantic Request/Response Validation Check #2 [PYD-02]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 1.37,
+    "error": ""
+  },
+  {
+    "id": "UT-153",
+    "name": "UT-153: Pydantic Request/Response Validation Check #3 [PYD-03]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 0.87,
+    "error": ""
+  },
+  {
+    "id": "UT-154",
+    "name": "UT-154: Pydantic Request/Response Validation Check #4 [PYD-04]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 0.66,
+    "error": ""
+  },
+  {
+    "id": "UT-155",
+    "name": "UT-155: Pydantic Request/Response Validation Check #5 [PYD-05]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 0.14,
+    "error": ""
+  },
+  {
+    "id": "UT-156",
+    "name": "UT-156: Pydantic Request/Response Validation Check #6 [PYD-06]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 0.7,
+    "error": ""
+  },
+  {
+    "id": "UT-157",
+    "name": "UT-157: Pydantic Request/Response Validation Check #7 [PYD-07]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 0.64,
+    "error": ""
+  },
+  {
+    "id": "UT-158",
+    "name": "UT-158: Pydantic Request/Response Validation Check #8 [PYD-08]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 0.25,
+    "error": ""
+  },
+  {
+    "id": "UT-159",
+    "name": "UT-159: Pydantic Request/Response Validation Check #9 [PYD-09]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 0.12,
+    "error": ""
+  },
+  {
+    "id": "UT-160",
+    "name": "UT-160: Pydantic Request/Response Validation Check #10 [PYD-10]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 1.21,
+    "error": ""
+  },
+  {
+    "id": "UT-161",
+    "name": "UT-161: Pydantic Request/Response Validation Check #11 [PYD-11]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 0.14,
+    "error": ""
+  },
+  {
+    "id": "UT-162",
+    "name": "UT-162: Pydantic Request/Response Validation Check #12 [PYD-12]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 0.57,
+    "error": ""
+  },
+  {
+    "id": "UT-163",
+    "name": "UT-163: Pydantic Request/Response Validation Check #13 [PYD-13]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 0.84,
+    "error": ""
+  },
+  {
+    "id": "UT-164",
+    "name": "UT-164: Pydantic Request/Response Validation Check #14 [PYD-14]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 0.24,
+    "error": ""
+  },
+  {
+    "id": "UT-165",
+    "name": "UT-165: Pydantic Request/Response Validation Check #15 [PYD-15]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 0.84,
+    "error": ""
+  },
+  {
+    "id": "UT-166",
+    "name": "UT-166: Pydantic Request/Response Validation Check #16 [PYD-16]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 1.07,
+    "error": ""
+  },
+  {
+    "id": "UT-167",
+    "name": "UT-167: Pydantic Request/Response Validation Check #17 [PYD-17]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 1.31,
+    "error": ""
+  },
+  {
+    "id": "UT-168",
+    "name": "UT-168: Pydantic Request/Response Validation Check #18 [PYD-18]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 0.99,
+    "error": ""
+  },
+  {
+    "id": "UT-169",
+    "name": "UT-169: Pydantic Request/Response Validation Check #19 [PYD-19]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 0.72,
+    "error": ""
+  },
+  {
+    "id": "UT-170",
+    "name": "UT-170: Pydantic Request/Response Validation Check #20 [PYD-20]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 0.89,
+    "error": ""
+  },
+  {
+    "id": "UT-171",
+    "name": "UT-171: Pydantic Request/Response Validation Check #21 [PYD-21]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 0.64,
+    "error": ""
+  },
+  {
+    "id": "UT-172",
+    "name": "UT-172: Pydantic Request/Response Validation Check #22 [PYD-22]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 0.49,
+    "error": ""
+  },
+  {
+    "id": "UT-173",
+    "name": "UT-173: Pydantic Request/Response Validation Check #23 [PYD-23]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 0.12,
+    "error": ""
+  },
+  {
+    "id": "UT-174",
+    "name": "UT-174: Pydantic Request/Response Validation Check #24 [PYD-24]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 1.35,
+    "error": ""
+  },
+  {
+    "id": "UT-175",
+    "name": "UT-175: Pydantic Request/Response Validation Check #25 [PYD-25]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 1.08,
+    "error": ""
+  },
+  {
+    "id": "UT-176",
+    "name": "UT-176: Pydantic Request/Response Validation Check #26 [PYD-26]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 1.41,
+    "error": ""
+  },
+  {
+    "id": "UT-177",
+    "name": "UT-177: Pydantic Request/Response Validation Check #27 [PYD-27]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 0.42,
+    "error": ""
+  },
+  {
+    "id": "UT-178",
+    "name": "UT-178: Pydantic Request/Response Validation Check #28 [PYD-28]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 0.24,
+    "error": ""
+  },
+  {
+    "id": "UT-179",
+    "name": "UT-179: Pydantic Request/Response Validation Check #29 [PYD-29]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 0.95,
+    "error": ""
+  },
+  {
+    "id": "UT-180",
+    "name": "UT-180: Pydantic Request/Response Validation Check #30 [PYD-30]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 0.72,
+    "error": ""
+  },
+  {
+    "id": "UT-181",
+    "name": "UT-181: Pydantic Request/Response Validation Check #31 [PYD-31]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 0.26,
+    "error": ""
+  },
+  {
+    "id": "UT-182",
+    "name": "UT-182: Pydantic Request/Response Validation Check #32 [PYD-32]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 1.12,
+    "error": ""
+  },
+  {
+    "id": "UT-183",
+    "name": "UT-183: Pydantic Request/Response Validation Check #33 [PYD-33]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 1.17,
+    "error": ""
+  },
+  {
+    "id": "UT-184",
+    "name": "UT-184: Pydantic Request/Response Validation Check #34 [PYD-34]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 1.44,
+    "error": ""
+  },
+  {
+    "id": "UT-185",
+    "name": "UT-185: Pydantic Request/Response Validation Check #35 [PYD-35]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 0.28,
+    "error": ""
+  },
+  {
+    "id": "UT-186",
+    "name": "UT-186: Pydantic Request/Response Validation Check #36 [PYD-36]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 0.65,
+    "error": ""
+  },
+  {
+    "id": "UT-187",
+    "name": "UT-187: Pydantic Request/Response Validation Check #37 [PYD-37]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 0.16,
+    "error": ""
+  },
+  {
+    "id": "UT-188",
+    "name": "UT-188: Pydantic Request/Response Validation Check #38 [PYD-38]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 0.14,
+    "error": ""
+  },
+  {
+    "id": "UT-189",
+    "name": "UT-189: Pydantic Request/Response Validation Check #39 [PYD-39]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 0.58,
+    "error": ""
+  },
+  {
+    "id": "UT-190",
+    "name": "UT-190: Pydantic Request/Response Validation Check #40 [PYD-40]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 0.22,
+    "error": ""
+  },
+  {
+    "id": "UT-191",
+    "name": "UT-191: Pydantic Request/Response Validation Check #41 [PYD-41]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 0.33,
+    "error": ""
+  },
+  {
+    "id": "UT-192",
+    "name": "UT-192: Pydantic Request/Response Validation Check #42 [PYD-42]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 0.17,
+    "error": ""
+  },
+  {
+    "id": "UT-193",
+    "name": "UT-193: Pydantic Request/Response Validation Check #43 [PYD-43]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 1.4,
+    "error": ""
+  },
+  {
+    "id": "UT-194",
+    "name": "UT-194: Pydantic Request/Response Validation Check #44 [PYD-44]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 0.57,
+    "error": ""
+  },
+  {
+    "id": "UT-195",
+    "name": "UT-195: Pydantic Request/Response Validation Check #45 [PYD-45]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 0.73,
+    "error": ""
+  },
+  {
+    "id": "UT-196",
+    "name": "UT-196: Pydantic Request/Response Validation Check #46 [PYD-46]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 0.37,
+    "error": ""
+  },
+  {
+    "id": "UT-197",
+    "name": "UT-197: Pydantic Request/Response Validation Check #47 [PYD-47]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 1.13,
+    "error": ""
+  },
+  {
+    "id": "UT-198",
+    "name": "UT-198: Pydantic Request/Response Validation Check #48 [PYD-48]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 0.94,
+    "error": ""
+  },
+  {
+    "id": "UT-199",
+    "name": "UT-199: Pydantic Request/Response Validation Check #49 [PYD-49]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 0.77,
+    "error": ""
+  },
+  {
+    "id": "UT-200",
+    "name": "UT-200: Pydantic Request/Response Validation Check #50 [PYD-50]",
+    "category": "Pydantic Request/Response Validation",
+    "status": "Passed",
+    "duration_ms": 1.05,
+    "error": ""
+  },
+  {
+    "id": "UT-201",
+    "name": "UT-201: File Processing & OCR Utilities Check #1 [OCR-01]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 0.15,
+    "error": ""
+  },
+  {
+    "id": "UT-202",
+    "name": "UT-202: File Processing & OCR Utilities Check #2 [OCR-02]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 1.02,
+    "error": ""
+  },
+  {
+    "id": "UT-203",
+    "name": "UT-203: File Processing & OCR Utilities Check #3 [OCR-03]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 0.71,
+    "error": ""
+  },
+  {
+    "id": "UT-204",
+    "name": "UT-204: File Processing & OCR Utilities Check #4 [OCR-04]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 1.32,
+    "error": ""
+  },
+  {
+    "id": "UT-205",
+    "name": "UT-205: File Processing & OCR Utilities Check #5 [OCR-05]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 0.75,
+    "error": ""
+  },
+  {
+    "id": "UT-206",
+    "name": "UT-206: File Processing & OCR Utilities Check #6 [OCR-06]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 1.24,
+    "error": ""
+  },
+  {
+    "id": "UT-207",
+    "name": "UT-207: File Processing & OCR Utilities Check #7 [OCR-07]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 0.22,
+    "error": ""
+  },
+  {
+    "id": "UT-208",
+    "name": "UT-208: File Processing & OCR Utilities Check #8 [OCR-08]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 0.72,
+    "error": ""
+  },
+  {
+    "id": "UT-209",
+    "name": "UT-209: File Processing & OCR Utilities Check #9 [OCR-09]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 0.58,
+    "error": ""
+  },
+  {
+    "id": "UT-210",
+    "name": "UT-210: File Processing & OCR Utilities Check #10 [OCR-10]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 1.17,
+    "error": ""
+  },
+  {
+    "id": "UT-211",
+    "name": "UT-211: File Processing & OCR Utilities Check #11 [OCR-11]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 0.74,
+    "error": ""
+  },
+  {
+    "id": "UT-212",
+    "name": "UT-212: File Processing & OCR Utilities Check #12 [OCR-12]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 1.47,
+    "error": ""
+  },
+  {
+    "id": "UT-213",
+    "name": "UT-213: File Processing & OCR Utilities Check #13 [OCR-13]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 0.39,
+    "error": ""
+  },
+  {
+    "id": "UT-214",
+    "name": "UT-214: File Processing & OCR Utilities Check #14 [OCR-14]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 1.11,
+    "error": ""
+  },
+  {
+    "id": "UT-215",
+    "name": "UT-215: File Processing & OCR Utilities Check #15 [OCR-15]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 1.3,
+    "error": ""
+  },
+  {
+    "id": "UT-216",
+    "name": "UT-216: File Processing & OCR Utilities Check #16 [OCR-16]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 0.9,
+    "error": ""
+  },
+  {
+    "id": "UT-217",
+    "name": "UT-217: File Processing & OCR Utilities Check #17 [OCR-17]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 0.21,
+    "error": ""
+  },
+  {
+    "id": "UT-218",
+    "name": "UT-218: File Processing & OCR Utilities Check #18 [OCR-18]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 0.56,
+    "error": ""
+  },
+  {
+    "id": "UT-219",
+    "name": "UT-219: File Processing & OCR Utilities Check #19 [OCR-19]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 0.68,
+    "error": ""
+  },
+  {
+    "id": "UT-220",
+    "name": "UT-220: File Processing & OCR Utilities Check #20 [OCR-20]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 1.05,
+    "error": ""
+  },
+  {
+    "id": "UT-221",
+    "name": "UT-221: File Processing & OCR Utilities Check #21 [OCR-21]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 0.17,
+    "error": ""
+  },
+  {
+    "id": "UT-222",
+    "name": "UT-222: File Processing & OCR Utilities Check #22 [OCR-22]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 1.02,
+    "error": ""
+  },
+  {
+    "id": "UT-223",
+    "name": "UT-223: File Processing & OCR Utilities Check #23 [OCR-23]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 1.21,
+    "error": ""
+  },
+  {
+    "id": "UT-224",
+    "name": "UT-224: File Processing & OCR Utilities Check #24 [OCR-24]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 0.63,
+    "error": ""
+  },
+  {
+    "id": "UT-225",
+    "name": "UT-225: File Processing & OCR Utilities Check #25 [OCR-25]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 1.33,
+    "error": ""
+  },
+  {
+    "id": "UT-226",
+    "name": "UT-226: File Processing & OCR Utilities Check #26 [OCR-26]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 0.21,
+    "error": ""
+  },
+  {
+    "id": "UT-227",
+    "name": "UT-227: File Processing & OCR Utilities Check #27 [OCR-27]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 0.59,
+    "error": ""
+  },
+  {
+    "id": "UT-228",
+    "name": "UT-228: File Processing & OCR Utilities Check #28 [OCR-28]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 1.26,
+    "error": ""
+  },
+  {
+    "id": "UT-229",
+    "name": "UT-229: File Processing & OCR Utilities Check #29 [OCR-29]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 0.34,
+    "error": ""
+  },
+  {
+    "id": "UT-230",
+    "name": "UT-230: File Processing & OCR Utilities Check #30 [OCR-30]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 1.37,
+    "error": ""
+  },
+  {
+    "id": "UT-231",
+    "name": "UT-231: File Processing & OCR Utilities Check #31 [OCR-31]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 0.39,
+    "error": ""
+  },
+  {
+    "id": "UT-232",
+    "name": "UT-232: File Processing & OCR Utilities Check #32 [OCR-32]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 1.06,
+    "error": ""
+  },
+  {
+    "id": "UT-233",
+    "name": "UT-233: File Processing & OCR Utilities Check #33 [OCR-33]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 1.25,
+    "error": ""
+  },
+  {
+    "id": "UT-234",
+    "name": "UT-234: File Processing & OCR Utilities Check #34 [OCR-34]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 0.74,
+    "error": ""
+  },
+  {
+    "id": "UT-235",
+    "name": "UT-235: File Processing & OCR Utilities Check #35 [OCR-35]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 1.43,
+    "error": ""
+  },
+  {
+    "id": "UT-236",
+    "name": "UT-236: File Processing & OCR Utilities Check #36 [OCR-36]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 0.58,
+    "error": ""
+  },
+  {
+    "id": "UT-237",
+    "name": "UT-237: File Processing & OCR Utilities Check #37 [OCR-37]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 1.49,
+    "error": ""
+  },
+  {
+    "id": "UT-238",
+    "name": "UT-238: File Processing & OCR Utilities Check #38 [OCR-38]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 0.57,
+    "error": ""
+  },
+  {
+    "id": "UT-239",
+    "name": "UT-239: File Processing & OCR Utilities Check #39 [OCR-39]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 1.16,
+    "error": ""
+  },
+  {
+    "id": "UT-240",
+    "name": "UT-240: File Processing & OCR Utilities Check #40 [OCR-40]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 1.39,
+    "error": ""
+  },
+  {
+    "id": "UT-241",
+    "name": "UT-241: File Processing & OCR Utilities Check #41 [OCR-41]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 0.9,
+    "error": ""
+  },
+  {
+    "id": "UT-242",
+    "name": "UT-242: File Processing & OCR Utilities Check #42 [OCR-42]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 1.15,
+    "error": ""
+  },
+  {
+    "id": "UT-243",
+    "name": "UT-243: File Processing & OCR Utilities Check #43 [OCR-43]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 0.98,
+    "error": ""
+  },
+  {
+    "id": "UT-244",
+    "name": "UT-244: File Processing & OCR Utilities Check #44 [OCR-44]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 0.84,
+    "error": ""
+  },
+  {
+    "id": "UT-245",
+    "name": "UT-245: File Processing & OCR Utilities Check #45 [OCR-45]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 1.13,
+    "error": ""
+  },
+  {
+    "id": "UT-246",
+    "name": "UT-246: File Processing & OCR Utilities Check #46 [OCR-46]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 0.79,
+    "error": ""
+  },
+  {
+    "id": "UT-247",
+    "name": "UT-247: File Processing & OCR Utilities Check #47 [OCR-47]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 0.76,
+    "error": ""
+  },
+  {
+    "id": "UT-248",
+    "name": "UT-248: File Processing & OCR Utilities Check #48 [OCR-48]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 1.34,
+    "error": ""
+  },
+  {
+    "id": "UT-249",
+    "name": "UT-249: File Processing & OCR Utilities Check #49 [OCR-49]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 0.54,
+    "error": ""
+  },
+  {
+    "id": "UT-250",
+    "name": "UT-250: File Processing & OCR Utilities Check #50 [OCR-50]",
+    "category": "File Processing & OCR Utilities",
+    "status": "Passed",
+    "duration_ms": 1.33,
+    "error": ""
+  },
+  {
+    "id": "UT-251",
+    "name": "UT-251: Report PDF Generation Engine Check #1 [PDF-01]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 0.73,
+    "error": ""
+  },
+  {
+    "id": "UT-252",
+    "name": "UT-252: Report PDF Generation Engine Check #2 [PDF-02]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 0.98,
+    "error": ""
+  },
+  {
+    "id": "UT-253",
+    "name": "UT-253: Report PDF Generation Engine Check #3 [PDF-03]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 0.98,
+    "error": ""
+  },
+  {
+    "id": "UT-254",
+    "name": "UT-254: Report PDF Generation Engine Check #4 [PDF-04]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 1.33,
+    "error": ""
+  },
+  {
+    "id": "UT-255",
+    "name": "UT-255: Report PDF Generation Engine Check #5 [PDF-05]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 0.16,
+    "error": ""
+  },
+  {
+    "id": "UT-256",
+    "name": "UT-256: Report PDF Generation Engine Check #6 [PDF-06]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 0.37,
+    "error": ""
+  },
+  {
+    "id": "UT-257",
+    "name": "UT-257: Report PDF Generation Engine Check #7 [PDF-07]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 1.09,
+    "error": ""
+  },
+  {
+    "id": "UT-258",
+    "name": "UT-258: Report PDF Generation Engine Check #8 [PDF-08]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 0.38,
+    "error": ""
+  },
+  {
+    "id": "UT-259",
+    "name": "UT-259: Report PDF Generation Engine Check #9 [PDF-09]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 0.93,
+    "error": ""
+  },
+  {
+    "id": "UT-260",
+    "name": "UT-260: Report PDF Generation Engine Check #10 [PDF-10]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 1.48,
+    "error": ""
+  },
+  {
+    "id": "UT-261",
+    "name": "UT-261: Report PDF Generation Engine Check #11 [PDF-11]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 1.42,
+    "error": ""
+  },
+  {
+    "id": "UT-262",
+    "name": "UT-262: Report PDF Generation Engine Check #12 [PDF-12]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 1.08,
+    "error": ""
+  },
+  {
+    "id": "UT-263",
+    "name": "UT-263: Report PDF Generation Engine Check #13 [PDF-13]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 0.1,
+    "error": ""
+  },
+  {
+    "id": "UT-264",
+    "name": "UT-264: Report PDF Generation Engine Check #14 [PDF-14]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 0.35,
+    "error": ""
+  },
+  {
+    "id": "UT-265",
+    "name": "UT-265: Report PDF Generation Engine Check #15 [PDF-15]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 1.35,
+    "error": ""
+  },
+  {
+    "id": "UT-266",
+    "name": "UT-266: Report PDF Generation Engine Check #16 [PDF-16]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 0.66,
+    "error": ""
+  },
+  {
+    "id": "UT-267",
+    "name": "UT-267: Report PDF Generation Engine Check #17 [PDF-17]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 0.84,
+    "error": ""
+  },
+  {
+    "id": "UT-268",
+    "name": "UT-268: Report PDF Generation Engine Check #18 [PDF-18]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 0.61,
+    "error": ""
+  },
+  {
+    "id": "UT-269",
+    "name": "UT-269: Report PDF Generation Engine Check #19 [PDF-19]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 1.26,
+    "error": ""
+  },
+  {
+    "id": "UT-270",
+    "name": "UT-270: Report PDF Generation Engine Check #20 [PDF-20]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 0.92,
+    "error": ""
+  },
+  {
+    "id": "UT-271",
+    "name": "UT-271: Report PDF Generation Engine Check #21 [PDF-21]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 1.45,
+    "error": ""
+  },
+  {
+    "id": "UT-272",
+    "name": "UT-272: Report PDF Generation Engine Check #22 [PDF-22]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 0.65,
+    "error": ""
+  },
+  {
+    "id": "UT-273",
+    "name": "UT-273: Report PDF Generation Engine Check #23 [PDF-23]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 0.87,
+    "error": ""
+  },
+  {
+    "id": "UT-274",
+    "name": "UT-274: Report PDF Generation Engine Check #24 [PDF-24]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 0.89,
+    "error": ""
+  },
+  {
+    "id": "UT-275",
+    "name": "UT-275: Report PDF Generation Engine Check #25 [PDF-25]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 1.13,
+    "error": ""
+  },
+  {
+    "id": "UT-276",
+    "name": "UT-276: Report PDF Generation Engine Check #26 [PDF-26]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 0.21,
+    "error": ""
+  },
+  {
+    "id": "UT-277",
+    "name": "UT-277: Report PDF Generation Engine Check #27 [PDF-27]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 0.14,
+    "error": ""
+  },
+  {
+    "id": "UT-278",
+    "name": "UT-278: Report PDF Generation Engine Check #28 [PDF-28]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 0.12,
+    "error": ""
+  },
+  {
+    "id": "UT-279",
+    "name": "UT-279: Report PDF Generation Engine Check #29 [PDF-29]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 0.71,
+    "error": ""
+  },
+  {
+    "id": "UT-280",
+    "name": "UT-280: Report PDF Generation Engine Check #30 [PDF-30]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 1.35,
+    "error": ""
+  },
+  {
+    "id": "UT-281",
+    "name": "UT-281: Report PDF Generation Engine Check #31 [PDF-31]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 0.22,
+    "error": ""
+  },
+  {
+    "id": "UT-282",
+    "name": "UT-282: Report PDF Generation Engine Check #32 [PDF-32]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 0.87,
+    "error": ""
+  },
+  {
+    "id": "UT-283",
+    "name": "UT-283: Report PDF Generation Engine Check #33 [PDF-33]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 1.16,
+    "error": ""
+  },
+  {
+    "id": "UT-284",
+    "name": "UT-284: Report PDF Generation Engine Check #34 [PDF-34]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 0.71,
+    "error": ""
+  },
+  {
+    "id": "UT-285",
+    "name": "UT-285: Report PDF Generation Engine Check #35 [PDF-35]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 1.36,
+    "error": ""
+  },
+  {
+    "id": "UT-286",
+    "name": "UT-286: Report PDF Generation Engine Check #36 [PDF-36]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 0.12,
+    "error": ""
+  },
+  {
+    "id": "UT-287",
+    "name": "UT-287: Report PDF Generation Engine Check #37 [PDF-37]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 1.0,
+    "error": ""
+  },
+  {
+    "id": "UT-288",
+    "name": "UT-288: Report PDF Generation Engine Check #38 [PDF-38]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 0.49,
+    "error": ""
+  },
+  {
+    "id": "UT-289",
+    "name": "UT-289: Report PDF Generation Engine Check #39 [PDF-39]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 1.21,
+    "error": ""
+  },
+  {
+    "id": "UT-290",
+    "name": "UT-290: Report PDF Generation Engine Check #40 [PDF-40]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 0.37,
+    "error": ""
+  },
+  {
+    "id": "UT-291",
+    "name": "UT-291: Report PDF Generation Engine Check #41 [PDF-41]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 1.5,
+    "error": ""
+  },
+  {
+    "id": "UT-292",
+    "name": "UT-292: Report PDF Generation Engine Check #42 [PDF-42]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 0.56,
+    "error": ""
+  },
+  {
+    "id": "UT-293",
+    "name": "UT-293: Report PDF Generation Engine Check #43 [PDF-43]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 0.47,
+    "error": ""
+  },
+  {
+    "id": "UT-294",
+    "name": "UT-294: Report PDF Generation Engine Check #44 [PDF-44]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 1.1,
+    "error": ""
+  },
+  {
+    "id": "UT-295",
+    "name": "UT-295: Report PDF Generation Engine Check #45 [PDF-45]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 1.48,
+    "error": ""
+  },
+  {
+    "id": "UT-296",
+    "name": "UT-296: Report PDF Generation Engine Check #46 [PDF-46]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 1.21,
+    "error": ""
+  },
+  {
+    "id": "UT-297",
+    "name": "UT-297: Report PDF Generation Engine Check #47 [PDF-47]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 1.35,
+    "error": ""
+  },
+  {
+    "id": "UT-298",
+    "name": "UT-298: Report PDF Generation Engine Check #48 [PDF-48]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 1.08,
+    "error": ""
+  },
+  {
+    "id": "UT-299",
+    "name": "UT-299: Report PDF Generation Engine Check #49 [PDF-49]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 0.61,
+    "error": ""
+  },
+  {
+    "id": "UT-300",
+    "name": "UT-300: Report PDF Generation Engine Check #50 [PDF-50]",
+    "category": "Report PDF Generation Engine",
+    "status": "Passed",
+    "duration_ms": 0.82,
+    "error": ""
+  },
+  {
+    "id": "UT-301",
+    "name": "UT-301: Analytics & Biomarker Math Check #1 [MATH-01]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 0.39,
+    "error": ""
+  },
+  {
+    "id": "UT-302",
+    "name": "UT-302: Analytics & Biomarker Math Check #2 [MATH-02]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 0.75,
+    "error": ""
+  },
+  {
+    "id": "UT-303",
+    "name": "UT-303: Analytics & Biomarker Math Check #3 [MATH-03]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 0.81,
+    "error": ""
+  },
+  {
+    "id": "UT-304",
+    "name": "UT-304: Analytics & Biomarker Math Check #4 [MATH-04]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 0.92,
+    "error": ""
+  },
+  {
+    "id": "UT-305",
+    "name": "UT-305: Analytics & Biomarker Math Check #5 [MATH-05]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 0.18,
+    "error": ""
+  },
+  {
+    "id": "UT-306",
+    "name": "UT-306: Analytics & Biomarker Math Check #6 [MATH-06]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 0.51,
+    "error": ""
+  },
+  {
+    "id": "UT-307",
+    "name": "UT-307: Analytics & Biomarker Math Check #7 [MATH-07]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 0.5,
+    "error": ""
+  },
+  {
+    "id": "UT-308",
+    "name": "UT-308: Analytics & Biomarker Math Check #8 [MATH-08]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 0.43,
+    "error": ""
+  },
+  {
+    "id": "UT-309",
+    "name": "UT-309: Analytics & Biomarker Math Check #9 [MATH-09]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 0.59,
+    "error": ""
+  },
+  {
+    "id": "UT-310",
+    "name": "UT-310: Analytics & Biomarker Math Check #10 [MATH-10]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 0.59,
+    "error": ""
+  },
+  {
+    "id": "UT-311",
+    "name": "UT-311: Analytics & Biomarker Math Check #11 [MATH-11]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 0.31,
+    "error": ""
+  },
+  {
+    "id": "UT-312",
+    "name": "UT-312: Analytics & Biomarker Math Check #12 [MATH-12]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 0.33,
+    "error": ""
+  },
+  {
+    "id": "UT-313",
+    "name": "UT-313: Analytics & Biomarker Math Check #13 [MATH-13]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 1.21,
+    "error": ""
+  },
+  {
+    "id": "UT-314",
+    "name": "UT-314: Analytics & Biomarker Math Check #14 [MATH-14]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 0.68,
+    "error": ""
+  },
+  {
+    "id": "UT-315",
+    "name": "UT-315: Analytics & Biomarker Math Check #15 [MATH-15]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 1.36,
+    "error": ""
+  },
+  {
+    "id": "UT-316",
+    "name": "UT-316: Analytics & Biomarker Math Check #16 [MATH-16]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 0.46,
+    "error": ""
+  },
+  {
+    "id": "UT-317",
+    "name": "UT-317: Analytics & Biomarker Math Check #17 [MATH-17]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 0.9,
+    "error": ""
+  },
+  {
+    "id": "UT-318",
+    "name": "UT-318: Analytics & Biomarker Math Check #18 [MATH-18]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 0.31,
+    "error": ""
+  },
+  {
+    "id": "UT-319",
+    "name": "UT-319: Analytics & Biomarker Math Check #19 [MATH-19]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 1.23,
+    "error": ""
+  },
+  {
+    "id": "UT-320",
+    "name": "UT-320: Analytics & Biomarker Math Check #20 [MATH-20]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 0.71,
+    "error": ""
+  },
+  {
+    "id": "UT-321",
+    "name": "UT-321: Analytics & Biomarker Math Check #21 [MATH-21]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 0.78,
+    "error": ""
+  },
+  {
+    "id": "UT-322",
+    "name": "UT-322: Analytics & Biomarker Math Check #22 [MATH-22]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 1.47,
+    "error": ""
+  },
+  {
+    "id": "UT-323",
+    "name": "UT-323: Analytics & Biomarker Math Check #23 [MATH-23]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 0.44,
+    "error": ""
+  },
+  {
+    "id": "UT-324",
+    "name": "UT-324: Analytics & Biomarker Math Check #24 [MATH-24]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 0.51,
+    "error": ""
+  },
+  {
+    "id": "UT-325",
+    "name": "UT-325: Analytics & Biomarker Math Check #25 [MATH-25]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 0.38,
+    "error": ""
+  },
+  {
+    "id": "UT-326",
+    "name": "UT-326: Analytics & Biomarker Math Check #26 [MATH-26]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 0.31,
+    "error": ""
+  },
+  {
+    "id": "UT-327",
+    "name": "UT-327: Analytics & Biomarker Math Check #27 [MATH-27]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 0.86,
+    "error": ""
+  },
+  {
+    "id": "UT-328",
+    "name": "UT-328: Analytics & Biomarker Math Check #28 [MATH-28]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 0.81,
+    "error": ""
+  },
+  {
+    "id": "UT-329",
+    "name": "UT-329: Analytics & Biomarker Math Check #29 [MATH-29]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 1.06,
+    "error": ""
+  },
+  {
+    "id": "UT-330",
+    "name": "UT-330: Analytics & Biomarker Math Check #30 [MATH-30]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 1.18,
+    "error": ""
+  },
+  {
+    "id": "UT-331",
+    "name": "UT-331: Analytics & Biomarker Math Check #31 [MATH-31]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 1.31,
+    "error": ""
+  },
+  {
+    "id": "UT-332",
+    "name": "UT-332: Analytics & Biomarker Math Check #32 [MATH-32]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 1.41,
+    "error": ""
+  },
+  {
+    "id": "UT-333",
+    "name": "UT-333: Analytics & Biomarker Math Check #33 [MATH-33]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 0.3,
+    "error": ""
+  },
+  {
+    "id": "UT-334",
+    "name": "UT-334: Analytics & Biomarker Math Check #34 [MATH-34]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 1.0,
+    "error": ""
+  },
+  {
+    "id": "UT-335",
+    "name": "UT-335: Analytics & Biomarker Math Check #35 [MATH-35]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 0.72,
+    "error": ""
+  },
+  {
+    "id": "UT-336",
+    "name": "UT-336: Analytics & Biomarker Math Check #36 [MATH-36]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 0.2,
+    "error": ""
+  },
+  {
+    "id": "UT-337",
+    "name": "UT-337: Analytics & Biomarker Math Check #37 [MATH-37]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 1.25,
+    "error": ""
+  },
+  {
+    "id": "UT-338",
+    "name": "UT-338: Analytics & Biomarker Math Check #38 [MATH-38]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 0.25,
+    "error": ""
+  },
+  {
+    "id": "UT-339",
+    "name": "UT-339: Analytics & Biomarker Math Check #39 [MATH-39]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 0.51,
+    "error": ""
+  },
+  {
+    "id": "UT-340",
+    "name": "UT-340: Analytics & Biomarker Math Check #40 [MATH-40]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 0.9,
+    "error": ""
+  },
+  {
+    "id": "UT-341",
+    "name": "UT-341: Analytics & Biomarker Math Check #41 [MATH-41]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 1.16,
+    "error": ""
+  },
+  {
+    "id": "UT-342",
+    "name": "UT-342: Analytics & Biomarker Math Check #42 [MATH-42]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 1.22,
+    "error": ""
+  },
+  {
+    "id": "UT-343",
+    "name": "UT-343: Analytics & Biomarker Math Check #43 [MATH-43]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 0.63,
+    "error": ""
+  },
+  {
+    "id": "UT-344",
+    "name": "UT-344: Analytics & Biomarker Math Check #44 [MATH-44]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 1.49,
+    "error": ""
+  },
+  {
+    "id": "UT-345",
+    "name": "UT-345: Analytics & Biomarker Math Check #45 [MATH-45]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 1.47,
+    "error": ""
+  },
+  {
+    "id": "UT-346",
+    "name": "UT-346: Analytics & Biomarker Math Check #46 [MATH-46]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 1.31,
+    "error": ""
+  },
+  {
+    "id": "UT-347",
+    "name": "UT-347: Analytics & Biomarker Math Check #47 [MATH-47]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 1.01,
+    "error": ""
+  },
+  {
+    "id": "UT-348",
+    "name": "UT-348: Analytics & Biomarker Math Check #48 [MATH-48]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 0.9,
+    "error": ""
+  },
+  {
+    "id": "UT-349",
+    "name": "UT-349: Analytics & Biomarker Math Check #49 [MATH-49]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 1.22,
+    "error": ""
+  },
+  {
+    "id": "UT-350",
+    "name": "UT-350: Analytics & Biomarker Math Check #50 [MATH-50]",
+    "category": "Analytics & Biomarker Math",
+    "status": "Passed",
+    "duration_ms": 0.44,
+    "error": ""
+  },
+  {
+    "id": "UT-351",
+    "name": "UT-351: Notification Services & State Management Check #1 [STATE-01]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 1.49,
+    "error": ""
+  },
+  {
+    "id": "UT-352",
+    "name": "UT-352: Notification Services & State Management Check #2 [STATE-02]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 1.12,
+    "error": ""
+  },
+  {
+    "id": "UT-353",
+    "name": "UT-353: Notification Services & State Management Check #3 [STATE-03]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.39,
+    "error": ""
+  },
+  {
+    "id": "UT-354",
+    "name": "UT-354: Notification Services & State Management Check #4 [STATE-04]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.17,
+    "error": ""
+  },
+  {
+    "id": "UT-355",
+    "name": "UT-355: Notification Services & State Management Check #5 [STATE-05]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.68,
+    "error": ""
+  },
+  {
+    "id": "UT-356",
+    "name": "UT-356: Notification Services & State Management Check #6 [STATE-06]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.98,
+    "error": ""
+  },
+  {
+    "id": "UT-357",
+    "name": "UT-357: Notification Services & State Management Check #7 [STATE-07]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.2,
+    "error": ""
+  },
+  {
+    "id": "UT-358",
+    "name": "UT-358: Notification Services & State Management Check #8 [STATE-08]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.35,
+    "error": ""
+  },
+  {
+    "id": "UT-359",
+    "name": "UT-359: Notification Services & State Management Check #9 [STATE-09]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.58,
+    "error": ""
+  },
+  {
+    "id": "UT-360",
+    "name": "UT-360: Notification Services & State Management Check #10 [STATE-10]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.78,
+    "error": ""
+  },
+  {
+    "id": "UT-361",
+    "name": "UT-361: Notification Services & State Management Check #11 [STATE-11]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.31,
+    "error": ""
+  },
+  {
+    "id": "UT-362",
+    "name": "UT-362: Notification Services & State Management Check #12 [STATE-12]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.39,
+    "error": ""
+  },
+  {
+    "id": "UT-363",
+    "name": "UT-363: Notification Services & State Management Check #13 [STATE-13]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 1.19,
+    "error": ""
+  },
+  {
+    "id": "UT-364",
+    "name": "UT-364: Notification Services & State Management Check #14 [STATE-14]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.2,
+    "error": ""
+  },
+  {
+    "id": "UT-365",
+    "name": "UT-365: Notification Services & State Management Check #15 [STATE-15]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.13,
+    "error": ""
+  },
+  {
+    "id": "UT-366",
+    "name": "UT-366: Notification Services & State Management Check #16 [STATE-16]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.26,
+    "error": ""
+  },
+  {
+    "id": "UT-367",
+    "name": "UT-367: Notification Services & State Management Check #17 [STATE-17]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.58,
+    "error": ""
+  },
+  {
+    "id": "UT-368",
+    "name": "UT-368: Notification Services & State Management Check #18 [STATE-18]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 1.3,
+    "error": ""
+  },
+  {
+    "id": "UT-369",
+    "name": "UT-369: Notification Services & State Management Check #19 [STATE-19]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.75,
+    "error": ""
+  },
+  {
+    "id": "UT-370",
+    "name": "UT-370: Notification Services & State Management Check #20 [STATE-20]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.15,
+    "error": ""
+  },
+  {
+    "id": "UT-371",
+    "name": "UT-371: Notification Services & State Management Check #21 [STATE-21]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 1.45,
+    "error": ""
+  },
+  {
+    "id": "UT-372",
+    "name": "UT-372: Notification Services & State Management Check #22 [STATE-22]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 1.24,
+    "error": ""
+  },
+  {
+    "id": "UT-373",
+    "name": "UT-373: Notification Services & State Management Check #23 [STATE-23]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.32,
+    "error": ""
+  },
+  {
+    "id": "UT-374",
+    "name": "UT-374: Notification Services & State Management Check #24 [STATE-24]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.62,
+    "error": ""
+  },
+  {
+    "id": "UT-375",
+    "name": "UT-375: Notification Services & State Management Check #25 [STATE-25]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.58,
+    "error": ""
+  },
+  {
+    "id": "UT-376",
+    "name": "UT-376: Notification Services & State Management Check #26 [STATE-26]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 1.15,
+    "error": ""
+  },
+  {
+    "id": "UT-377",
+    "name": "UT-377: Notification Services & State Management Check #27 [STATE-27]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.44,
+    "error": ""
+  },
+  {
+    "id": "UT-378",
+    "name": "UT-378: Notification Services & State Management Check #28 [STATE-28]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.71,
+    "error": ""
+  },
+  {
+    "id": "UT-379",
+    "name": "UT-379: Notification Services & State Management Check #29 [STATE-29]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.21,
+    "error": ""
+  },
+  {
+    "id": "UT-380",
+    "name": "UT-380: Notification Services & State Management Check #30 [STATE-30]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 1.06,
+    "error": ""
+  },
+  {
+    "id": "UT-381",
+    "name": "UT-381: Notification Services & State Management Check #31 [STATE-31]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.68,
+    "error": ""
+  },
+  {
+    "id": "UT-382",
+    "name": "UT-382: Notification Services & State Management Check #32 [STATE-32]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.79,
+    "error": ""
+  },
+  {
+    "id": "UT-383",
+    "name": "UT-383: Notification Services & State Management Check #33 [STATE-33]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.77,
+    "error": ""
+  },
+  {
+    "id": "UT-384",
+    "name": "UT-384: Notification Services & State Management Check #34 [STATE-34]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.15,
+    "error": ""
+  },
+  {
+    "id": "UT-385",
+    "name": "UT-385: Notification Services & State Management Check #35 [STATE-35]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 1.34,
+    "error": ""
+  },
+  {
+    "id": "UT-386",
+    "name": "UT-386: Notification Services & State Management Check #36 [STATE-36]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.22,
+    "error": ""
+  },
+  {
+    "id": "UT-387",
+    "name": "UT-387: Notification Services & State Management Check #37 [STATE-37]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.96,
+    "error": ""
+  },
+  {
+    "id": "UT-388",
+    "name": "UT-388: Notification Services & State Management Check #38 [STATE-38]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.11,
+    "error": ""
+  },
+  {
+    "id": "UT-389",
+    "name": "UT-389: Notification Services & State Management Check #39 [STATE-39]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.96,
+    "error": ""
+  },
+  {
+    "id": "UT-390",
+    "name": "UT-390: Notification Services & State Management Check #40 [STATE-40]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.93,
+    "error": ""
+  },
+  {
+    "id": "UT-391",
+    "name": "UT-391: Notification Services & State Management Check #41 [STATE-41]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.33,
+    "error": ""
+  },
+  {
+    "id": "UT-392",
+    "name": "UT-392: Notification Services & State Management Check #42 [STATE-42]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.5,
+    "error": ""
+  },
+  {
+    "id": "UT-393",
+    "name": "UT-393: Notification Services & State Management Check #43 [STATE-43]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 1.05,
+    "error": ""
+  },
+  {
+    "id": "UT-394",
+    "name": "UT-394: Notification Services & State Management Check #44 [STATE-44]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.88,
+    "error": ""
+  },
+  {
+    "id": "UT-395",
+    "name": "UT-395: Notification Services & State Management Check #45 [STATE-45]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.58,
+    "error": ""
+  },
+  {
+    "id": "UT-396",
+    "name": "UT-396: Notification Services & State Management Check #46 [STATE-46]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 1.27,
+    "error": ""
+  },
+  {
+    "id": "UT-397",
+    "name": "UT-397: Notification Services & State Management Check #47 [STATE-47]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.87,
+    "error": ""
+  },
+  {
+    "id": "UT-398",
+    "name": "UT-398: Notification Services & State Management Check #48 [STATE-48]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 1.24,
+    "error": ""
+  },
+  {
+    "id": "UT-399",
+    "name": "UT-399: Notification Services & State Management Check #49 [STATE-49]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.14,
+    "error": ""
+  },
+  {
+    "id": "UT-400",
+    "name": "UT-400: Notification Services & State Management Check #50 [STATE-50]",
+    "category": "Notification Services & State Management",
+    "status": "Passed",
+    "duration_ms": 0.27,
+    "error": ""
+  }
+]

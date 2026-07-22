@@ -1,0 +1,2802 @@
+[
+  {
+    "name": "TC-001: Authentication API Functional Integration #1 [AUTH-01]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 2.8,
+    "error": ""
+  },
+  {
+    "name": "TC-002: Authentication API Functional Integration #2 [AUTH-02]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 1.27,
+    "error": ""
+  },
+  {
+    "name": "TC-003: Authentication API Functional Integration #3 [AUTH-03]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 1.33,
+    "error": ""
+  },
+  {
+    "name": "TC-004: Authentication API Functional Integration #4 [AUTH-04]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 1.98,
+    "error": ""
+  },
+  {
+    "name": "TC-005: Authentication API Functional Integration #5 [AUTH-05]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 2.95,
+    "error": ""
+  },
+  {
+    "name": "TC-006: Authentication API Functional Integration #6 [AUTH-06]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 2.77,
+    "error": ""
+  },
+  {
+    "name": "TC-007: Authentication API Functional Integration #7 [AUTH-07]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 1.96,
+    "error": ""
+  },
+  {
+    "name": "TC-008: Authentication API Functional Integration #8 [AUTH-08]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 3.17,
+    "error": ""
+  },
+  {
+    "name": "TC-009: Authentication API Functional Integration #9 [AUTH-09]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 2.15,
+    "error": ""
+  },
+  {
+    "name": "TC-010: Authentication API Functional Integration #10 [AUTH-10]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 2.64,
+    "error": ""
+  },
+  {
+    "name": "TC-011: Authentication API Functional Integration #11 [AUTH-11]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 2.08,
+    "error": ""
+  },
+  {
+    "name": "TC-012: Authentication API Functional Integration #12 [AUTH-12]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 2.83,
+    "error": ""
+  },
+  {
+    "name": "TC-013: Authentication API Functional Integration #13 [AUTH-13]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 1.04,
+    "error": ""
+  },
+  {
+    "name": "TC-014: Authentication API Functional Integration #14 [AUTH-14]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 2.28,
+    "error": ""
+  },
+  {
+    "name": "TC-015: Authentication API Functional Integration #15 [AUTH-15]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 2.75,
+    "error": ""
+  },
+  {
+    "name": "TC-016: Authentication API Functional Integration #16 [AUTH-16]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 2.04,
+    "error": ""
+  },
+  {
+    "name": "TC-017: Authentication API Functional Integration #17 [AUTH-17]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 1.23,
+    "error": ""
+  },
+  {
+    "name": "TC-018: Authentication API Functional Integration #18 [AUTH-18]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 1.57,
+    "error": ""
+  },
+  {
+    "name": "TC-019: Authentication API Functional Integration #19 [AUTH-19]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 2.2,
+    "error": ""
+  },
+  {
+    "name": "TC-020: Authentication API Functional Integration #20 [AUTH-20]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 1.25,
+    "error": ""
+  },
+  {
+    "name": "TC-021: Authentication API Functional Integration #21 [AUTH-21]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 2.77,
+    "error": ""
+  },
+  {
+    "name": "TC-022: Authentication API Functional Integration #22 [AUTH-22]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 1.55,
+    "error": ""
+  },
+  {
+    "name": "TC-023: Authentication API Functional Integration #23 [AUTH-23]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 2.04,
+    "error": ""
+  },
+  {
+    "name": "TC-024: Authentication API Functional Integration #24 [AUTH-24]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 1.7,
+    "error": ""
+  },
+  {
+    "name": "TC-025: Authentication API Functional Integration #25 [AUTH-25]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 3.34,
+    "error": ""
+  },
+  {
+    "name": "TC-026: Authentication API Functional Integration #26 [AUTH-26]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 2.44,
+    "error": ""
+  },
+  {
+    "name": "TC-027: Authentication API Functional Integration #27 [AUTH-27]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 2.2,
+    "error": ""
+  },
+  {
+    "name": "TC-028: Authentication API Functional Integration #28 [AUTH-28]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 1.83,
+    "error": ""
+  },
+  {
+    "name": "TC-029: Authentication API Functional Integration #29 [AUTH-29]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 2.59,
+    "error": ""
+  },
+  {
+    "name": "TC-030: Authentication API Functional Integration #30 [AUTH-30]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 1.59,
+    "error": ""
+  },
+  {
+    "name": "TC-031: Authentication API Functional Integration #31 [AUTH-31]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 2.47,
+    "error": ""
+  },
+  {
+    "name": "TC-032: Authentication API Functional Integration #32 [AUTH-32]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 2.18,
+    "error": ""
+  },
+  {
+    "name": "TC-033: Authentication API Functional Integration #33 [AUTH-33]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 2.78,
+    "error": ""
+  },
+  {
+    "name": "TC-034: Authentication API Functional Integration #34 [AUTH-34]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 2.13,
+    "error": ""
+  },
+  {
+    "name": "TC-035: Authentication API Functional Integration #35 [AUTH-35]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 3.11,
+    "error": ""
+  },
+  {
+    "name": "TC-036: Authentication API Functional Integration #36 [AUTH-36]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 2.84,
+    "error": ""
+  },
+  {
+    "name": "TC-037: Authentication API Functional Integration #37 [AUTH-37]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 3.01,
+    "error": ""
+  },
+  {
+    "name": "TC-038: Authentication API Functional Integration #38 [AUTH-38]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 2.25,
+    "error": ""
+  },
+  {
+    "name": "TC-039: Authentication API Functional Integration #39 [AUTH-39]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 2.37,
+    "error": ""
+  },
+  {
+    "name": "TC-040: Authentication API Functional Integration #40 [AUTH-40]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 2.35,
+    "error": ""
+  },
+  {
+    "name": "TC-041: Authentication API Functional Integration #41 [AUTH-41]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 1.7,
+    "error": ""
+  },
+  {
+    "name": "TC-042: Authentication API Functional Integration #42 [AUTH-42]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 2.78,
+    "error": ""
+  },
+  {
+    "name": "TC-043: Authentication API Functional Integration #43 [AUTH-43]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 1.84,
+    "error": ""
+  },
+  {
+    "name": "TC-044: Authentication API Functional Integration #44 [AUTH-44]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 1.61,
+    "error": ""
+  },
+  {
+    "name": "TC-045: Authentication API Functional Integration #45 [AUTH-45]",
+    "category": "Authentication API",
+    "status": "Passed",
+    "duration_ms": 2.12,
+    "error": ""
+  },
+  {
+    "name": "TC-046: User Profile API Functional Integration #1 [PROF-01]",
+    "category": "User Profile API",
+    "status": "Passed",
+    "duration_ms": 2.18,
+    "error": ""
+  },
+  {
+    "name": "TC-047: User Profile API Functional Integration #2 [PROF-02]",
+    "category": "User Profile API",
+    "status": "Passed",
+    "duration_ms": 1.31,
+    "error": ""
+  },
+  {
+    "name": "TC-048: User Profile API Functional Integration #3 [PROF-03]",
+    "category": "User Profile API",
+    "status": "Passed",
+    "duration_ms": 2.77,
+    "error": ""
+  },
+  {
+    "name": "TC-049: User Profile API Functional Integration #4 [PROF-04]",
+    "category": "User Profile API",
+    "status": "Passed",
+    "duration_ms": 1.97,
+    "error": ""
+  },
+  {
+    "name": "TC-050: User Profile API Functional Integration #5 [PROF-05]",
+    "category": "User Profile API",
+    "status": "Passed",
+    "duration_ms": 1.33,
+    "error": ""
+  },
+  {
+    "name": "TC-051: User Profile API Functional Integration #6 [PROF-06]",
+    "category": "User Profile API",
+    "status": "Passed",
+    "duration_ms": 2.31,
+    "error": ""
+  },
+  {
+    "name": "TC-052: User Profile API Functional Integration #7 [PROF-07]",
+    "category": "User Profile API",
+    "status": "Passed",
+    "duration_ms": 2.61,
+    "error": ""
+  },
+  {
+    "name": "TC-053: User Profile API Functional Integration #8 [PROF-08]",
+    "category": "User Profile API",
+    "status": "Passed",
+    "duration_ms": 3.16,
+    "error": ""
+  },
+  {
+    "name": "TC-054: User Profile API Functional Integration #9 [PROF-09]",
+    "category": "User Profile API",
+    "status": "Passed",
+    "duration_ms": 3.12,
+    "error": ""
+  },
+  {
+    "name": "TC-055: User Profile API Functional Integration #10 [PROF-10]",
+    "category": "User Profile API",
+    "status": "Passed",
+    "duration_ms": 2.62,
+    "error": ""
+  },
+  {
+    "name": "TC-056: User Profile API Functional Integration #11 [PROF-11]",
+    "category": "User Profile API",
+    "status": "Passed",
+    "duration_ms": 1.41,
+    "error": ""
+  },
+  {
+    "name": "TC-057: User Profile API Functional Integration #12 [PROF-12]",
+    "category": "User Profile API",
+    "status": "Passed",
+    "duration_ms": 2.69,
+    "error": ""
+  },
+  {
+    "name": "TC-058: User Profile API Functional Integration #13 [PROF-13]",
+    "category": "User Profile API",
+    "status": "Passed",
+    "duration_ms": 1.54,
+    "error": ""
+  },
+  {
+    "name": "TC-059: User Profile API Functional Integration #14 [PROF-14]",
+    "category": "User Profile API",
+    "status": "Passed",
+    "duration_ms": 3.13,
+    "error": ""
+  },
+  {
+    "name": "TC-060: User Profile API Functional Integration #15 [PROF-15]",
+    "category": "User Profile API",
+    "status": "Passed",
+    "duration_ms": 2.65,
+    "error": ""
+  },
+  {
+    "name": "TC-061: User Profile API Functional Integration #16 [PROF-16]",
+    "category": "User Profile API",
+    "status": "Passed",
+    "duration_ms": 2.31,
+    "error": ""
+  },
+  {
+    "name": "TC-062: User Profile API Functional Integration #17 [PROF-17]",
+    "category": "User Profile API",
+    "status": "Passed",
+    "duration_ms": 1.86,
+    "error": ""
+  },
+  {
+    "name": "TC-063: User Profile API Functional Integration #18 [PROF-18]",
+    "category": "User Profile API",
+    "status": "Passed",
+    "duration_ms": 1.71,
+    "error": ""
+  },
+  {
+    "name": "TC-064: User Profile API Functional Integration #19 [PROF-19]",
+    "category": "User Profile API",
+    "status": "Passed",
+    "duration_ms": 3.45,
+    "error": ""
+  },
+  {
+    "name": "TC-065: User Profile API Functional Integration #20 [PROF-20]",
+    "category": "User Profile API",
+    "status": "Passed",
+    "duration_ms": 1.9,
+    "error": ""
+  },
+  {
+    "name": "TC-066: User Profile API Functional Integration #21 [PROF-21]",
+    "category": "User Profile API",
+    "status": "Passed",
+    "duration_ms": 3.19,
+    "error": ""
+  },
+  {
+    "name": "TC-067: User Profile API Functional Integration #22 [PROF-22]",
+    "category": "User Profile API",
+    "status": "Passed",
+    "duration_ms": 1.76,
+    "error": ""
+  },
+  {
+    "name": "TC-068: User Profile API Functional Integration #23 [PROF-23]",
+    "category": "User Profile API",
+    "status": "Passed",
+    "duration_ms": 1.39,
+    "error": ""
+  },
+  {
+    "name": "TC-069: User Profile API Functional Integration #24 [PROF-24]",
+    "category": "User Profile API",
+    "status": "Passed",
+    "duration_ms": 0.92,
+    "error": ""
+  },
+  {
+    "name": "TC-070: User Profile API Functional Integration #25 [PROF-25]",
+    "category": "User Profile API",
+    "status": "Passed",
+    "duration_ms": 2.69,
+    "error": ""
+  },
+  {
+    "name": "TC-071: User Profile API Functional Integration #26 [PROF-26]",
+    "category": "User Profile API",
+    "status": "Passed",
+    "duration_ms": 1.39,
+    "error": ""
+  },
+  {
+    "name": "TC-072: User Profile API Functional Integration #27 [PROF-27]",
+    "category": "User Profile API",
+    "status": "Passed",
+    "duration_ms": 1.56,
+    "error": ""
+  },
+  {
+    "name": "TC-073: User Profile API Functional Integration #28 [PROF-28]",
+    "category": "User Profile API",
+    "status": "Passed",
+    "duration_ms": 1.62,
+    "error": ""
+  },
+  {
+    "name": "TC-074: User Profile API Functional Integration #29 [PROF-29]",
+    "category": "User Profile API",
+    "status": "Passed",
+    "duration_ms": 2.84,
+    "error": ""
+  },
+  {
+    "name": "TC-075: User Profile API Functional Integration #30 [PROF-30]",
+    "category": "User Profile API",
+    "status": "Passed",
+    "duration_ms": 2.38,
+    "error": ""
+  },
+  {
+    "name": "TC-076: User Profile API Functional Integration #31 [PROF-31]",
+    "category": "User Profile API",
+    "status": "Passed",
+    "duration_ms": 3.03,
+    "error": ""
+  },
+  {
+    "name": "TC-077: User Profile API Functional Integration #32 [PROF-32]",
+    "category": "User Profile API",
+    "status": "Passed",
+    "duration_ms": 2.48,
+    "error": ""
+  },
+  {
+    "name": "TC-078: User Profile API Functional Integration #33 [PROF-33]",
+    "category": "User Profile API",
+    "status": "Passed",
+    "duration_ms": 1.48,
+    "error": ""
+  },
+  {
+    "name": "TC-079: User Profile API Functional Integration #34 [PROF-34]",
+    "category": "User Profile API",
+    "status": "Passed",
+    "duration_ms": 2.57,
+    "error": ""
+  },
+  {
+    "name": "TC-080: User Profile API Functional Integration #35 [PROF-35]",
+    "category": "User Profile API",
+    "status": "Passed",
+    "duration_ms": 1.12,
+    "error": ""
+  },
+  {
+    "name": "TC-081: Reports API Functional Integration #1 [REP-01]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 2.62,
+    "error": ""
+  },
+  {
+    "name": "TC-082: Reports API Functional Integration #2 [REP-02]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 2.37,
+    "error": ""
+  },
+  {
+    "name": "TC-083: Reports API Functional Integration #3 [REP-03]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 2.8,
+    "error": ""
+  },
+  {
+    "name": "TC-084: Reports API Functional Integration #4 [REP-04]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 3.46,
+    "error": ""
+  },
+  {
+    "name": "TC-085: Reports API Functional Integration #5 [REP-05]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 1.34,
+    "error": ""
+  },
+  {
+    "name": "TC-086: Reports API Functional Integration #6 [REP-06]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 1.94,
+    "error": ""
+  },
+  {
+    "name": "TC-087: Reports API Functional Integration #7 [REP-07]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 1.78,
+    "error": ""
+  },
+  {
+    "name": "TC-088: Reports API Functional Integration #8 [REP-08]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 2.45,
+    "error": ""
+  },
+  {
+    "name": "TC-089: Reports API Functional Integration #9 [REP-09]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 2.68,
+    "error": ""
+  },
+  {
+    "name": "TC-090: Reports API Functional Integration #10 [REP-10]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 2.08,
+    "error": ""
+  },
+  {
+    "name": "TC-091: Reports API Functional Integration #11 [REP-11]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 2.67,
+    "error": ""
+  },
+  {
+    "name": "TC-092: Reports API Functional Integration #12 [REP-12]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 2.69,
+    "error": ""
+  },
+  {
+    "name": "TC-093: Reports API Functional Integration #13 [REP-13]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 2.01,
+    "error": ""
+  },
+  {
+    "name": "TC-094: Reports API Functional Integration #14 [REP-14]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 2.69,
+    "error": ""
+  },
+  {
+    "name": "TC-095: Reports API Functional Integration #15 [REP-15]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 2.35,
+    "error": ""
+  },
+  {
+    "name": "TC-096: Reports API Functional Integration #16 [REP-16]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 1.89,
+    "error": ""
+  },
+  {
+    "name": "TC-097: Reports API Functional Integration #17 [REP-17]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 1.29,
+    "error": ""
+  },
+  {
+    "name": "TC-098: Reports API Functional Integration #18 [REP-18]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 2.58,
+    "error": ""
+  },
+  {
+    "name": "TC-099: Reports API Functional Integration #19 [REP-19]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 1.76,
+    "error": ""
+  },
+  {
+    "name": "TC-100: Reports API Functional Integration #20 [REP-20]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 2.96,
+    "error": ""
+  },
+  {
+    "name": "TC-101: Reports API Functional Integration #21 [REP-21]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 1.63,
+    "error": ""
+  },
+  {
+    "name": "TC-102: Reports API Functional Integration #22 [REP-22]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 2.41,
+    "error": ""
+  },
+  {
+    "name": "TC-103: Reports API Functional Integration #23 [REP-23]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 2.79,
+    "error": ""
+  },
+  {
+    "name": "TC-104: Reports API Functional Integration #24 [REP-24]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 1.48,
+    "error": ""
+  },
+  {
+    "name": "TC-105: Reports API Functional Integration #25 [REP-25]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 0.95,
+    "error": ""
+  },
+  {
+    "name": "TC-106: Reports API Functional Integration #26 [REP-26]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 2.0,
+    "error": ""
+  },
+  {
+    "name": "TC-107: Reports API Functional Integration #27 [REP-27]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 2.65,
+    "error": ""
+  },
+  {
+    "name": "TC-108: Reports API Functional Integration #28 [REP-28]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 3.43,
+    "error": ""
+  },
+  {
+    "name": "TC-109: Reports API Functional Integration #29 [REP-29]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 1.41,
+    "error": ""
+  },
+  {
+    "name": "TC-110: Reports API Functional Integration #30 [REP-30]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 2.14,
+    "error": ""
+  },
+  {
+    "name": "TC-111: Reports API Functional Integration #31 [REP-31]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 2.36,
+    "error": ""
+  },
+  {
+    "name": "TC-112: Reports API Functional Integration #32 [REP-32]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 2.95,
+    "error": ""
+  },
+  {
+    "name": "TC-113: Reports API Functional Integration #33 [REP-33]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 1.88,
+    "error": ""
+  },
+  {
+    "name": "TC-114: Reports API Functional Integration #34 [REP-34]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 2.25,
+    "error": ""
+  },
+  {
+    "name": "TC-115: Reports API Functional Integration #35 [REP-35]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 2.71,
+    "error": ""
+  },
+  {
+    "name": "TC-116: Reports API Functional Integration #36 [REP-36]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 1.89,
+    "error": ""
+  },
+  {
+    "name": "TC-117: Reports API Functional Integration #37 [REP-37]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 1.34,
+    "error": ""
+  },
+  {
+    "name": "TC-118: Reports API Functional Integration #38 [REP-38]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 2.54,
+    "error": ""
+  },
+  {
+    "name": "TC-119: Reports API Functional Integration #39 [REP-39]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 1.91,
+    "error": ""
+  },
+  {
+    "name": "TC-120: Reports API Functional Integration #40 [REP-40]",
+    "category": "Reports API",
+    "status": "Passed",
+    "duration_ms": 2.02,
+    "error": ""
+  },
+  {
+    "name": "TC-121: File Upload API Functional Integration #1 [UP-01]",
+    "category": "File Upload API",
+    "status": "Passed",
+    "duration_ms": 1.88,
+    "error": ""
+  },
+  {
+    "name": "TC-122: File Upload API Functional Integration #2 [UP-02]",
+    "category": "File Upload API",
+    "status": "Passed",
+    "duration_ms": 2.34,
+    "error": ""
+  },
+  {
+    "name": "TC-123: File Upload API Functional Integration #3 [UP-03]",
+    "category": "File Upload API",
+    "status": "Passed",
+    "duration_ms": 2.69,
+    "error": ""
+  },
+  {
+    "name": "TC-124: File Upload API Functional Integration #4 [UP-04]",
+    "category": "File Upload API",
+    "status": "Passed",
+    "duration_ms": 2.33,
+    "error": ""
+  },
+  {
+    "name": "TC-125: File Upload API Functional Integration #5 [UP-05]",
+    "category": "File Upload API",
+    "status": "Passed",
+    "duration_ms": 2.25,
+    "error": ""
+  },
+  {
+    "name": "TC-126: File Upload API Functional Integration #6 [UP-06]",
+    "category": "File Upload API",
+    "status": "Passed",
+    "duration_ms": 2.23,
+    "error": ""
+  },
+  {
+    "name": "TC-127: File Upload API Functional Integration #7 [UP-07]",
+    "category": "File Upload API",
+    "status": "Passed",
+    "duration_ms": 1.12,
+    "error": ""
+  },
+  {
+    "name": "TC-128: File Upload API Functional Integration #8 [UP-08]",
+    "category": "File Upload API",
+    "status": "Passed",
+    "duration_ms": 1.73,
+    "error": ""
+  },
+  {
+    "name": "TC-129: File Upload API Functional Integration #9 [UP-09]",
+    "category": "File Upload API",
+    "status": "Passed",
+    "duration_ms": 2.37,
+    "error": ""
+  },
+  {
+    "name": "TC-130: File Upload API Functional Integration #10 [UP-10]",
+    "category": "File Upload API",
+    "status": "Passed",
+    "duration_ms": 1.88,
+    "error": ""
+  },
+  {
+    "name": "TC-131: File Upload API Functional Integration #11 [UP-11]",
+    "category": "File Upload API",
+    "status": "Passed",
+    "duration_ms": 1.8,
+    "error": ""
+  },
+  {
+    "name": "TC-132: File Upload API Functional Integration #12 [UP-12]",
+    "category": "File Upload API",
+    "status": "Passed",
+    "duration_ms": 1.88,
+    "error": ""
+  },
+  {
+    "name": "TC-133: File Upload API Functional Integration #13 [UP-13]",
+    "category": "File Upload API",
+    "status": "Passed",
+    "duration_ms": 1.61,
+    "error": ""
+  },
+  {
+    "name": "TC-134: File Upload API Functional Integration #14 [UP-14]",
+    "category": "File Upload API",
+    "status": "Passed",
+    "duration_ms": 3.33,
+    "error": ""
+  },
+  {
+    "name": "TC-135: File Upload API Functional Integration #15 [UP-15]",
+    "category": "File Upload API",
+    "status": "Passed",
+    "duration_ms": 1.17,
+    "error": ""
+  },
+  {
+    "name": "TC-136: File Upload API Functional Integration #16 [UP-16]",
+    "category": "File Upload API",
+    "status": "Passed",
+    "duration_ms": 2.11,
+    "error": ""
+  },
+  {
+    "name": "TC-137: File Upload API Functional Integration #17 [UP-17]",
+    "category": "File Upload API",
+    "status": "Passed",
+    "duration_ms": 2.01,
+    "error": ""
+  },
+  {
+    "name": "TC-138: File Upload API Functional Integration #18 [UP-18]",
+    "category": "File Upload API",
+    "status": "Passed",
+    "duration_ms": 2.92,
+    "error": ""
+  },
+  {
+    "name": "TC-139: File Upload API Functional Integration #19 [UP-19]",
+    "category": "File Upload API",
+    "status": "Passed",
+    "duration_ms": 1.44,
+    "error": ""
+  },
+  {
+    "name": "TC-140: File Upload API Functional Integration #20 [UP-20]",
+    "category": "File Upload API",
+    "status": "Passed",
+    "duration_ms": 3.19,
+    "error": ""
+  },
+  {
+    "name": "TC-141: File Upload API Functional Integration #21 [UP-21]",
+    "category": "File Upload API",
+    "status": "Passed",
+    "duration_ms": 2.75,
+    "error": ""
+  },
+  {
+    "name": "TC-142: File Upload API Functional Integration #22 [UP-22]",
+    "category": "File Upload API",
+    "status": "Passed",
+    "duration_ms": 2.88,
+    "error": ""
+  },
+  {
+    "name": "TC-143: File Upload API Functional Integration #23 [UP-23]",
+    "category": "File Upload API",
+    "status": "Passed",
+    "duration_ms": 2.52,
+    "error": ""
+  },
+  {
+    "name": "TC-144: File Upload API Functional Integration #24 [UP-24]",
+    "category": "File Upload API",
+    "status": "Passed",
+    "duration_ms": 4.05,
+    "error": ""
+  },
+  {
+    "name": "TC-145: File Upload API Functional Integration #25 [UP-25]",
+    "category": "File Upload API",
+    "status": "Passed",
+    "duration_ms": 3.12,
+    "error": ""
+  },
+  {
+    "name": "TC-146: File Upload API Functional Integration #26 [UP-26]",
+    "category": "File Upload API",
+    "status": "Passed",
+    "duration_ms": 2.3,
+    "error": ""
+  },
+  {
+    "name": "TC-147: File Upload API Functional Integration #27 [UP-27]",
+    "category": "File Upload API",
+    "status": "Passed",
+    "duration_ms": 2.45,
+    "error": ""
+  },
+  {
+    "name": "TC-148: File Upload API Functional Integration #28 [UP-28]",
+    "category": "File Upload API",
+    "status": "Passed",
+    "duration_ms": 1.92,
+    "error": ""
+  },
+  {
+    "name": "TC-149: File Upload API Functional Integration #29 [UP-29]",
+    "category": "File Upload API",
+    "status": "Passed",
+    "duration_ms": 1.56,
+    "error": ""
+  },
+  {
+    "name": "TC-150: File Upload API Functional Integration #30 [UP-30]",
+    "category": "File Upload API",
+    "status": "Passed",
+    "duration_ms": 4.64,
+    "error": ""
+  },
+  {
+    "name": "TC-151: Analytics API Functional Integration #1 [ANA-01]",
+    "category": "Analytics API",
+    "status": "Passed",
+    "duration_ms": 8.69,
+    "error": ""
+  },
+  {
+    "name": "TC-152: Analytics API Functional Integration #2 [ANA-02]",
+    "category": "Analytics API",
+    "status": "Passed",
+    "duration_ms": 2.18,
+    "error": ""
+  },
+  {
+    "name": "TC-153: Analytics API Functional Integration #3 [ANA-03]",
+    "category": "Analytics API",
+    "status": "Passed",
+    "duration_ms": 1.97,
+    "error": ""
+  },
+  {
+    "name": "TC-154: Analytics API Functional Integration #4 [ANA-04]",
+    "category": "Analytics API",
+    "status": "Passed",
+    "duration_ms": 3.04,
+    "error": ""
+  },
+  {
+    "name": "TC-155: Analytics API Functional Integration #5 [ANA-05]",
+    "category": "Analytics API",
+    "status": "Passed",
+    "duration_ms": 2.39,
+    "error": ""
+  },
+  {
+    "name": "TC-156: Analytics API Functional Integration #6 [ANA-06]",
+    "category": "Analytics API",
+    "status": "Passed",
+    "duration_ms": 5.74,
+    "error": ""
+  },
+  {
+    "name": "TC-157: Analytics API Functional Integration #7 [ANA-07]",
+    "category": "Analytics API",
+    "status": "Passed",
+    "duration_ms": 2.42,
+    "error": ""
+  },
+  {
+    "name": "TC-158: Analytics API Functional Integration #8 [ANA-08]",
+    "category": "Analytics API",
+    "status": "Passed",
+    "duration_ms": 1.68,
+    "error": ""
+  },
+  {
+    "name": "TC-159: Analytics API Functional Integration #9 [ANA-09]",
+    "category": "Analytics API",
+    "status": "Passed",
+    "duration_ms": 2.0,
+    "error": ""
+  },
+  {
+    "name": "TC-160: Analytics API Functional Integration #10 [ANA-10]",
+    "category": "Analytics API",
+    "status": "Passed",
+    "duration_ms": 2.19,
+    "error": ""
+  },
+  {
+    "name": "TC-161: Analytics API Functional Integration #11 [ANA-11]",
+    "category": "Analytics API",
+    "status": "Passed",
+    "duration_ms": 3.22,
+    "error": ""
+  },
+  {
+    "name": "TC-162: Analytics API Functional Integration #12 [ANA-12]",
+    "category": "Analytics API",
+    "status": "Passed",
+    "duration_ms": 2.1,
+    "error": ""
+  },
+  {
+    "name": "TC-163: Analytics API Functional Integration #13 [ANA-13]",
+    "category": "Analytics API",
+    "status": "Passed",
+    "duration_ms": 1.74,
+    "error": ""
+  },
+  {
+    "name": "TC-164: Analytics API Functional Integration #14 [ANA-14]",
+    "category": "Analytics API",
+    "status": "Passed",
+    "duration_ms": 3.57,
+    "error": ""
+  },
+  {
+    "name": "TC-165: Analytics API Functional Integration #15 [ANA-15]",
+    "category": "Analytics API",
+    "status": "Passed",
+    "duration_ms": 2.02,
+    "error": ""
+  },
+  {
+    "name": "TC-166: Analytics API Functional Integration #16 [ANA-16]",
+    "category": "Analytics API",
+    "status": "Passed",
+    "duration_ms": 2.62,
+    "error": ""
+  },
+  {
+    "name": "TC-167: Analytics API Functional Integration #17 [ANA-17]",
+    "category": "Analytics API",
+    "status": "Passed",
+    "duration_ms": 2.22,
+    "error": ""
+  },
+  {
+    "name": "TC-168: Analytics API Functional Integration #18 [ANA-18]",
+    "category": "Analytics API",
+    "status": "Passed",
+    "duration_ms": 2.28,
+    "error": ""
+  },
+  {
+    "name": "TC-169: Analytics API Functional Integration #19 [ANA-19]",
+    "category": "Analytics API",
+    "status": "Passed",
+    "duration_ms": 2.42,
+    "error": ""
+  },
+  {
+    "name": "TC-170: Analytics API Functional Integration #20 [ANA-20]",
+    "category": "Analytics API",
+    "status": "Passed",
+    "duration_ms": 1.67,
+    "error": ""
+  },
+  {
+    "name": "TC-171: Analytics API Functional Integration #21 [ANA-21]",
+    "category": "Analytics API",
+    "status": "Passed",
+    "duration_ms": 1.12,
+    "error": ""
+  },
+  {
+    "name": "TC-172: Analytics API Functional Integration #22 [ANA-22]",
+    "category": "Analytics API",
+    "status": "Passed",
+    "duration_ms": 1.81,
+    "error": ""
+  },
+  {
+    "name": "TC-173: Analytics API Functional Integration #23 [ANA-23]",
+    "category": "Analytics API",
+    "status": "Passed",
+    "duration_ms": 1.34,
+    "error": ""
+  },
+  {
+    "name": "TC-174: Analytics API Functional Integration #24 [ANA-24]",
+    "category": "Analytics API",
+    "status": "Passed",
+    "duration_ms": 8.83,
+    "error": ""
+  },
+  {
+    "name": "TC-175: Analytics API Functional Integration #25 [ANA-25]",
+    "category": "Analytics API",
+    "status": "Passed",
+    "duration_ms": 8.43,
+    "error": ""
+  },
+  {
+    "name": "TC-176: Analytics API Functional Integration #26 [ANA-26]",
+    "category": "Analytics API",
+    "status": "Passed",
+    "duration_ms": 7.49,
+    "error": ""
+  },
+  {
+    "name": "TC-177: Analytics API Functional Integration #27 [ANA-27]",
+    "category": "Analytics API",
+    "status": "Passed",
+    "duration_ms": 3.86,
+    "error": ""
+  },
+  {
+    "name": "TC-178: Analytics API Functional Integration #28 [ANA-28]",
+    "category": "Analytics API",
+    "status": "Passed",
+    "duration_ms": 2.83,
+    "error": ""
+  },
+  {
+    "name": "TC-179: Analytics API Functional Integration #29 [ANA-29]",
+    "category": "Analytics API",
+    "status": "Passed",
+    "duration_ms": 110.05,
+    "error": ""
+  },
+  {
+    "name": "TC-180: Analytics API Functional Integration #30 [ANA-30]",
+    "category": "Analytics API",
+    "status": "Passed",
+    "duration_ms": 3.16,
+    "error": ""
+  },
+  {
+    "name": "TC-181: Notifications API Functional Integration #1 [NOTIF-01]",
+    "category": "Notifications API",
+    "status": "Passed",
+    "duration_ms": 1.23,
+    "error": ""
+  },
+  {
+    "name": "TC-182: Notifications API Functional Integration #2 [NOTIF-02]",
+    "category": "Notifications API",
+    "status": "Passed",
+    "duration_ms": 1.54,
+    "error": ""
+  },
+  {
+    "name": "TC-183: Notifications API Functional Integration #3 [NOTIF-03]",
+    "category": "Notifications API",
+    "status": "Passed",
+    "duration_ms": 2.7,
+    "error": ""
+  },
+  {
+    "name": "TC-184: Notifications API Functional Integration #4 [NOTIF-04]",
+    "category": "Notifications API",
+    "status": "Passed",
+    "duration_ms": 1.94,
+    "error": ""
+  },
+  {
+    "name": "TC-185: Notifications API Functional Integration #5 [NOTIF-05]",
+    "category": "Notifications API",
+    "status": "Passed",
+    "duration_ms": 2.0,
+    "error": ""
+  },
+  {
+    "name": "TC-186: Notifications API Functional Integration #6 [NOTIF-06]",
+    "category": "Notifications API",
+    "status": "Passed",
+    "duration_ms": 1.63,
+    "error": ""
+  },
+  {
+    "name": "TC-187: Notifications API Functional Integration #7 [NOTIF-07]",
+    "category": "Notifications API",
+    "status": "Passed",
+    "duration_ms": 5.1,
+    "error": ""
+  },
+  {
+    "name": "TC-188: Notifications API Functional Integration #8 [NOTIF-08]",
+    "category": "Notifications API",
+    "status": "Passed",
+    "duration_ms": 2.15,
+    "error": ""
+  },
+  {
+    "name": "TC-189: Notifications API Functional Integration #9 [NOTIF-09]",
+    "category": "Notifications API",
+    "status": "Passed",
+    "duration_ms": 2.41,
+    "error": ""
+  },
+  {
+    "name": "TC-190: Notifications API Functional Integration #10 [NOTIF-10]",
+    "category": "Notifications API",
+    "status": "Passed",
+    "duration_ms": 2.86,
+    "error": ""
+  },
+  {
+    "name": "TC-191: Notifications API Functional Integration #11 [NOTIF-11]",
+    "category": "Notifications API",
+    "status": "Passed",
+    "duration_ms": 3.41,
+    "error": ""
+  },
+  {
+    "name": "TC-192: Notifications API Functional Integration #12 [NOTIF-12]",
+    "category": "Notifications API",
+    "status": "Passed",
+    "duration_ms": 1.64,
+    "error": ""
+  },
+  {
+    "name": "TC-193: Notifications API Functional Integration #13 [NOTIF-13]",
+    "category": "Notifications API",
+    "status": "Passed",
+    "duration_ms": 3.03,
+    "error": ""
+  },
+  {
+    "name": "TC-194: Notifications API Functional Integration #14 [NOTIF-14]",
+    "category": "Notifications API",
+    "status": "Passed",
+    "duration_ms": 6.23,
+    "error": ""
+  },
+  {
+    "name": "TC-195: Notifications API Functional Integration #15 [NOTIF-15]",
+    "category": "Notifications API",
+    "status": "Passed",
+    "duration_ms": 3.41,
+    "error": ""
+  },
+  {
+    "name": "TC-196: Notifications API Functional Integration #16 [NOTIF-16]",
+    "category": "Notifications API",
+    "status": "Passed",
+    "duration_ms": 2.42,
+    "error": ""
+  },
+  {
+    "name": "TC-197: Notifications API Functional Integration #17 [NOTIF-17]",
+    "category": "Notifications API",
+    "status": "Passed",
+    "duration_ms": 2.57,
+    "error": ""
+  },
+  {
+    "name": "TC-198: Notifications API Functional Integration #18 [NOTIF-18]",
+    "category": "Notifications API",
+    "status": "Passed",
+    "duration_ms": 3.21,
+    "error": ""
+  },
+  {
+    "name": "TC-199: Notifications API Functional Integration #19 [NOTIF-19]",
+    "category": "Notifications API",
+    "status": "Passed",
+    "duration_ms": 3.46,
+    "error": ""
+  },
+  {
+    "name": "TC-200: Notifications API Functional Integration #20 [NOTIF-20]",
+    "category": "Notifications API",
+    "status": "Passed",
+    "duration_ms": 2.41,
+    "error": ""
+  },
+  {
+    "name": "TC-201: Notifications API Functional Integration #21 [NOTIF-21]",
+    "category": "Notifications API",
+    "status": "Passed",
+    "duration_ms": 2.55,
+    "error": ""
+  },
+  {
+    "name": "TC-202: Notifications API Functional Integration #22 [NOTIF-22]",
+    "category": "Notifications API",
+    "status": "Passed",
+    "duration_ms": 1.47,
+    "error": ""
+  },
+  {
+    "name": "TC-203: Notifications API Functional Integration #23 [NOTIF-23]",
+    "category": "Notifications API",
+    "status": "Passed",
+    "duration_ms": 3.58,
+    "error": ""
+  },
+  {
+    "name": "TC-204: Notifications API Functional Integration #24 [NOTIF-24]",
+    "category": "Notifications API",
+    "status": "Passed",
+    "duration_ms": 2.28,
+    "error": ""
+  },
+  {
+    "name": "TC-205: Notifications API Functional Integration #25 [NOTIF-25]",
+    "category": "Notifications API",
+    "status": "Passed",
+    "duration_ms": 1.74,
+    "error": ""
+  },
+  {
+    "name": "TC-206: Access Management API Functional Integration #1 [ACC-01]",
+    "category": "Access Management API",
+    "status": "Passed",
+    "duration_ms": 1.83,
+    "error": ""
+  },
+  {
+    "name": "TC-207: Access Management API Functional Integration #2 [ACC-02]",
+    "category": "Access Management API",
+    "status": "Passed",
+    "duration_ms": 2.26,
+    "error": ""
+  },
+  {
+    "name": "TC-208: Access Management API Functional Integration #3 [ACC-03]",
+    "category": "Access Management API",
+    "status": "Passed",
+    "duration_ms": 1.3,
+    "error": ""
+  },
+  {
+    "name": "TC-209: Access Management API Functional Integration #4 [ACC-04]",
+    "category": "Access Management API",
+    "status": "Passed",
+    "duration_ms": 2.34,
+    "error": ""
+  },
+  {
+    "name": "TC-210: Access Management API Functional Integration #5 [ACC-05]",
+    "category": "Access Management API",
+    "status": "Passed",
+    "duration_ms": 2.09,
+    "error": ""
+  },
+  {
+    "name": "TC-211: Access Management API Functional Integration #6 [ACC-06]",
+    "category": "Access Management API",
+    "status": "Passed",
+    "duration_ms": 3.68,
+    "error": ""
+  },
+  {
+    "name": "TC-212: Access Management API Functional Integration #7 [ACC-07]",
+    "category": "Access Management API",
+    "status": "Passed",
+    "duration_ms": 1.47,
+    "error": ""
+  },
+  {
+    "name": "TC-213: Access Management API Functional Integration #8 [ACC-08]",
+    "category": "Access Management API",
+    "status": "Passed",
+    "duration_ms": 2.95,
+    "error": ""
+  },
+  {
+    "name": "TC-214: Access Management API Functional Integration #9 [ACC-09]",
+    "category": "Access Management API",
+    "status": "Passed",
+    "duration_ms": 2.19,
+    "error": ""
+  },
+  {
+    "name": "TC-215: Access Management API Functional Integration #10 [ACC-10]",
+    "category": "Access Management API",
+    "status": "Passed",
+    "duration_ms": 1.22,
+    "error": ""
+  },
+  {
+    "name": "TC-216: Access Management API Functional Integration #11 [ACC-11]",
+    "category": "Access Management API",
+    "status": "Passed",
+    "duration_ms": 1.72,
+    "error": ""
+  },
+  {
+    "name": "TC-217: Access Management API Functional Integration #12 [ACC-12]",
+    "category": "Access Management API",
+    "status": "Passed",
+    "duration_ms": 2.03,
+    "error": ""
+  },
+  {
+    "name": "TC-218: Access Management API Functional Integration #13 [ACC-13]",
+    "category": "Access Management API",
+    "status": "Passed",
+    "duration_ms": 2.35,
+    "error": ""
+  },
+  {
+    "name": "TC-219: Access Management API Functional Integration #14 [ACC-14]",
+    "category": "Access Management API",
+    "status": "Passed",
+    "duration_ms": 2.59,
+    "error": ""
+  },
+  {
+    "name": "TC-220: Access Management API Functional Integration #15 [ACC-15]",
+    "category": "Access Management API",
+    "status": "Passed",
+    "duration_ms": 2.63,
+    "error": ""
+  },
+  {
+    "name": "TC-221: Access Management API Functional Integration #16 [ACC-16]",
+    "category": "Access Management API",
+    "status": "Passed",
+    "duration_ms": 1.55,
+    "error": ""
+  },
+  {
+    "name": "TC-222: Access Management API Functional Integration #17 [ACC-17]",
+    "category": "Access Management API",
+    "status": "Passed",
+    "duration_ms": 2.43,
+    "error": ""
+  },
+  {
+    "name": "TC-223: Access Management API Functional Integration #18 [ACC-18]",
+    "category": "Access Management API",
+    "status": "Passed",
+    "duration_ms": 1.49,
+    "error": ""
+  },
+  {
+    "name": "TC-224: Access Management API Functional Integration #19 [ACC-19]",
+    "category": "Access Management API",
+    "status": "Passed",
+    "duration_ms": 2.68,
+    "error": ""
+  },
+  {
+    "name": "TC-225: Access Management API Functional Integration #20 [ACC-20]",
+    "category": "Access Management API",
+    "status": "Passed",
+    "duration_ms": 2.5,
+    "error": ""
+  },
+  {
+    "name": "TC-226: Access Management API Functional Integration #21 [ACC-21]",
+    "category": "Access Management API",
+    "status": "Passed",
+    "duration_ms": 2.06,
+    "error": ""
+  },
+  {
+    "name": "TC-227: Access Management API Functional Integration #22 [ACC-22]",
+    "category": "Access Management API",
+    "status": "Passed",
+    "duration_ms": 1.83,
+    "error": ""
+  },
+  {
+    "name": "TC-228: Access Management API Functional Integration #23 [ACC-23]",
+    "category": "Access Management API",
+    "status": "Passed",
+    "duration_ms": 1.82,
+    "error": ""
+  },
+  {
+    "name": "TC-229: Access Management API Functional Integration #24 [ACC-24]",
+    "category": "Access Management API",
+    "status": "Passed",
+    "duration_ms": 2.63,
+    "error": ""
+  },
+  {
+    "name": "TC-230: Access Management API Functional Integration #25 [ACC-25]",
+    "category": "Access Management API",
+    "status": "Passed",
+    "duration_ms": 1.82,
+    "error": ""
+  },
+  {
+    "name": "TC-231: Security & Pentest Functional Integration #1 [SEC-01]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 2.25,
+    "error": ""
+  },
+  {
+    "name": "TC-232: Security & Pentest Functional Integration #2 [SEC-02]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 2.66,
+    "error": ""
+  },
+  {
+    "name": "TC-233: Security & Pentest Functional Integration #3 [SEC-03]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 2.97,
+    "error": ""
+  },
+  {
+    "name": "TC-234: Security & Pentest Functional Integration #4 [SEC-04]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 3.13,
+    "error": ""
+  },
+  {
+    "name": "TC-235: Security & Pentest Functional Integration #5 [SEC-05]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 1.74,
+    "error": ""
+  },
+  {
+    "name": "TC-236: Security & Pentest Functional Integration #6 [SEC-06]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 2.1,
+    "error": ""
+  },
+  {
+    "name": "TC-237: Security & Pentest Functional Integration #7 [SEC-07]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 2.34,
+    "error": ""
+  },
+  {
+    "name": "TC-238: Security & Pentest Functional Integration #8 [SEC-08]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 2.3,
+    "error": ""
+  },
+  {
+    "name": "TC-239: Security & Pentest Functional Integration #9 [SEC-09]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 1.11,
+    "error": ""
+  },
+  {
+    "name": "TC-240: Security & Pentest Functional Integration #10 [SEC-10]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 2.01,
+    "error": ""
+  },
+  {
+    "name": "TC-241: Security & Pentest Functional Integration #11 [SEC-11]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 2.63,
+    "error": ""
+  },
+  {
+    "name": "TC-242: Security & Pentest Functional Integration #12 [SEC-12]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 1.96,
+    "error": ""
+  },
+  {
+    "name": "TC-243: Security & Pentest Functional Integration #13 [SEC-13]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 1.59,
+    "error": ""
+  },
+  {
+    "name": "TC-244: Security & Pentest Functional Integration #14 [SEC-14]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 2.72,
+    "error": ""
+  },
+  {
+    "name": "TC-245: Security & Pentest Functional Integration #15 [SEC-15]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 2.61,
+    "error": ""
+  },
+  {
+    "name": "TC-246: Security & Pentest Functional Integration #16 [SEC-16]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 3.5,
+    "error": ""
+  },
+  {
+    "name": "TC-247: Security & Pentest Functional Integration #17 [SEC-17]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 2.46,
+    "error": ""
+  },
+  {
+    "name": "TC-248: Security & Pentest Functional Integration #18 [SEC-18]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 2.59,
+    "error": ""
+  },
+  {
+    "name": "TC-249: Security & Pentest Functional Integration #19 [SEC-19]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 2.97,
+    "error": ""
+  },
+  {
+    "name": "TC-250: Security & Pentest Functional Integration #20 [SEC-20]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 3.57,
+    "error": ""
+  },
+  {
+    "name": "TC-251: Security & Pentest Functional Integration #21 [SEC-21]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 2.15,
+    "error": ""
+  },
+  {
+    "name": "TC-252: Security & Pentest Functional Integration #22 [SEC-22]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 2.76,
+    "error": ""
+  },
+  {
+    "name": "TC-253: Security & Pentest Functional Integration #23 [SEC-23]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 2.74,
+    "error": ""
+  },
+  {
+    "name": "TC-254: Security & Pentest Functional Integration #24 [SEC-24]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 2.51,
+    "error": ""
+  },
+  {
+    "name": "TC-255: Security & Pentest Functional Integration #25 [SEC-25]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 2.38,
+    "error": ""
+  },
+  {
+    "name": "TC-256: Security & Pentest Functional Integration #26 [SEC-26]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 1.98,
+    "error": ""
+  },
+  {
+    "name": "TC-257: Security & Pentest Functional Integration #27 [SEC-27]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 2.63,
+    "error": ""
+  },
+  {
+    "name": "TC-258: Security & Pentest Functional Integration #28 [SEC-28]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 2.44,
+    "error": ""
+  },
+  {
+    "name": "TC-259: Security & Pentest Functional Integration #29 [SEC-29]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 2.72,
+    "error": ""
+  },
+  {
+    "name": "TC-260: Security & Pentest Functional Integration #30 [SEC-30]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 2.22,
+    "error": ""
+  },
+  {
+    "name": "TC-261: Security & Pentest Functional Integration #31 [SEC-31]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 1.57,
+    "error": ""
+  },
+  {
+    "name": "TC-262: Security & Pentest Functional Integration #32 [SEC-32]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 2.41,
+    "error": ""
+  },
+  {
+    "name": "TC-263: Security & Pentest Functional Integration #33 [SEC-33]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 2.93,
+    "error": ""
+  },
+  {
+    "name": "TC-264: Security & Pentest Functional Integration #34 [SEC-34]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 1.99,
+    "error": ""
+  },
+  {
+    "name": "TC-265: Security & Pentest Functional Integration #35 [SEC-35]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 3.0,
+    "error": ""
+  },
+  {
+    "name": "TC-266: Security & Pentest Functional Integration #36 [SEC-36]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 1.56,
+    "error": ""
+  },
+  {
+    "name": "TC-267: Security & Pentest Functional Integration #37 [SEC-37]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 3.12,
+    "error": ""
+  },
+  {
+    "name": "TC-268: Security & Pentest Functional Integration #38 [SEC-38]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 3.27,
+    "error": ""
+  },
+  {
+    "name": "TC-269: Security & Pentest Functional Integration #39 [SEC-39]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 2.49,
+    "error": ""
+  },
+  {
+    "name": "TC-270: Security & Pentest Functional Integration #40 [SEC-40]",
+    "category": "Security & Pentest",
+    "status": "Passed",
+    "duration_ms": 2.57,
+    "error": ""
+  },
+  {
+    "name": "TC-271: Data Validation Functional Integration #1 [VAL-01]",
+    "category": "Data Validation",
+    "status": "Passed",
+    "duration_ms": 2.77,
+    "error": ""
+  },
+  {
+    "name": "TC-272: Data Validation Functional Integration #2 [VAL-02]",
+    "category": "Data Validation",
+    "status": "Passed",
+    "duration_ms": 2.68,
+    "error": ""
+  },
+  {
+    "name": "TC-273: Data Validation Functional Integration #3 [VAL-03]",
+    "category": "Data Validation",
+    "status": "Passed",
+    "duration_ms": 1.62,
+    "error": ""
+  },
+  {
+    "name": "TC-274: Data Validation Functional Integration #4 [VAL-04]",
+    "category": "Data Validation",
+    "status": "Passed",
+    "duration_ms": 0.97,
+    "error": ""
+  },
+  {
+    "name": "TC-275: Data Validation Functional Integration #5 [VAL-05]",
+    "category": "Data Validation",
+    "status": "Passed",
+    "duration_ms": 1.3,
+    "error": ""
+  },
+  {
+    "name": "TC-276: Data Validation Functional Integration #6 [VAL-06]",
+    "category": "Data Validation",
+    "status": "Passed",
+    "duration_ms": 2.6,
+    "error": ""
+  },
+  {
+    "name": "TC-277: Data Validation Functional Integration #7 [VAL-07]",
+    "category": "Data Validation",
+    "status": "Passed",
+    "duration_ms": 2.76,
+    "error": ""
+  },
+  {
+    "name": "TC-278: Data Validation Functional Integration #8 [VAL-08]",
+    "category": "Data Validation",
+    "status": "Passed",
+    "duration_ms": 4.35,
+    "error": ""
+  },
+  {
+    "name": "TC-279: Data Validation Functional Integration #9 [VAL-09]",
+    "category": "Data Validation",
+    "status": "Passed",
+    "duration_ms": 3.0,
+    "error": ""
+  },
+  {
+    "name": "TC-280: Data Validation Functional Integration #10 [VAL-10]",
+    "category": "Data Validation",
+    "status": "Passed",
+    "duration_ms": 2.01,
+    "error": ""
+  },
+  {
+    "name": "TC-281: Data Validation Functional Integration #11 [VAL-11]",
+    "category": "Data Validation",
+    "status": "Passed",
+    "duration_ms": 2.29,
+    "error": ""
+  },
+  {
+    "name": "TC-282: Data Validation Functional Integration #12 [VAL-12]",
+    "category": "Data Validation",
+    "status": "Passed",
+    "duration_ms": 1.82,
+    "error": ""
+  },
+  {
+    "name": "TC-283: Data Validation Functional Integration #13 [VAL-13]",
+    "category": "Data Validation",
+    "status": "Passed",
+    "duration_ms": 2.53,
+    "error": ""
+  },
+  {
+    "name": "TC-284: Data Validation Functional Integration #14 [VAL-14]",
+    "category": "Data Validation",
+    "status": "Passed",
+    "duration_ms": 1.56,
+    "error": ""
+  },
+  {
+    "name": "TC-285: Data Validation Functional Integration #15 [VAL-15]",
+    "category": "Data Validation",
+    "status": "Passed",
+    "duration_ms": 1.57,
+    "error": ""
+  },
+  {
+    "name": "TC-286: Data Validation Functional Integration #16 [VAL-16]",
+    "category": "Data Validation",
+    "status": "Passed",
+    "duration_ms": 3.12,
+    "error": ""
+  },
+  {
+    "name": "TC-287: Data Validation Functional Integration #17 [VAL-17]",
+    "category": "Data Validation",
+    "status": "Passed",
+    "duration_ms": 2.99,
+    "error": ""
+  },
+  {
+    "name": "TC-288: Data Validation Functional Integration #18 [VAL-18]",
+    "category": "Data Validation",
+    "status": "Passed",
+    "duration_ms": 3.02,
+    "error": ""
+  },
+  {
+    "name": "TC-289: Data Validation Functional Integration #19 [VAL-19]",
+    "category": "Data Validation",
+    "status": "Passed",
+    "duration_ms": 0.83,
+    "error": ""
+  },
+  {
+    "name": "TC-290: Data Validation Functional Integration #20 [VAL-20]",
+    "category": "Data Validation",
+    "status": "Passed",
+    "duration_ms": 3.37,
+    "error": ""
+  },
+  {
+    "name": "TC-291: Data Validation Functional Integration #21 [VAL-21]",
+    "category": "Data Validation",
+    "status": "Passed",
+    "duration_ms": 2.77,
+    "error": ""
+  },
+  {
+    "name": "TC-292: Data Validation Functional Integration #22 [VAL-22]",
+    "category": "Data Validation",
+    "status": "Passed",
+    "duration_ms": 2.18,
+    "error": ""
+  },
+  {
+    "name": "TC-293: Data Validation Functional Integration #23 [VAL-23]",
+    "category": "Data Validation",
+    "status": "Passed",
+    "duration_ms": 2.29,
+    "error": ""
+  },
+  {
+    "name": "TC-294: Data Validation Functional Integration #24 [VAL-24]",
+    "category": "Data Validation",
+    "status": "Passed",
+    "duration_ms": 1.67,
+    "error": ""
+  },
+  {
+    "name": "TC-295: Data Validation Functional Integration #25 [VAL-25]",
+    "category": "Data Validation",
+    "status": "Passed",
+    "duration_ms": 3.62,
+    "error": ""
+  },
+  {
+    "name": "TC-296: Data Validation Functional Integration #26 [VAL-26]",
+    "category": "Data Validation",
+    "status": "Passed",
+    "duration_ms": 1.79,
+    "error": ""
+  },
+  {
+    "name": "TC-297: Data Validation Functional Integration #27 [VAL-27]",
+    "category": "Data Validation",
+    "status": "Passed",
+    "duration_ms": 2.0,
+    "error": ""
+  },
+  {
+    "name": "TC-298: Data Validation Functional Integration #28 [VAL-28]",
+    "category": "Data Validation",
+    "status": "Passed",
+    "duration_ms": 1.05,
+    "error": ""
+  },
+  {
+    "name": "TC-299: Data Validation Functional Integration #29 [VAL-29]",
+    "category": "Data Validation",
+    "status": "Passed",
+    "duration_ms": 1.18,
+    "error": ""
+  },
+  {
+    "name": "TC-300: Data Validation Functional Integration #30 [VAL-30]",
+    "category": "Data Validation",
+    "status": "Passed",
+    "duration_ms": 1.76,
+    "error": ""
+  },
+  {
+    "name": "TC-301: Error Handling Functional Integration #1 [ERR-01]",
+    "category": "Error Handling",
+    "status": "Passed",
+    "duration_ms": 2.23,
+    "error": ""
+  },
+  {
+    "name": "TC-302: Error Handling Functional Integration #2 [ERR-02]",
+    "category": "Error Handling",
+    "status": "Passed",
+    "duration_ms": 2.62,
+    "error": ""
+  },
+  {
+    "name": "TC-303: Error Handling Functional Integration #3 [ERR-03]",
+    "category": "Error Handling",
+    "status": "Passed",
+    "duration_ms": 1.41,
+    "error": ""
+  },
+  {
+    "name": "TC-304: Error Handling Functional Integration #4 [ERR-04]",
+    "category": "Error Handling",
+    "status": "Passed",
+    "duration_ms": 1.3,
+    "error": ""
+  },
+  {
+    "name": "TC-305: Error Handling Functional Integration #5 [ERR-05]",
+    "category": "Error Handling",
+    "status": "Passed",
+    "duration_ms": 2.59,
+    "error": ""
+  },
+  {
+    "name": "TC-306: Error Handling Functional Integration #6 [ERR-06]",
+    "category": "Error Handling",
+    "status": "Passed",
+    "duration_ms": 3.24,
+    "error": ""
+  },
+  {
+    "name": "TC-307: Error Handling Functional Integration #7 [ERR-07]",
+    "category": "Error Handling",
+    "status": "Passed",
+    "duration_ms": 1.36,
+    "error": ""
+  },
+  {
+    "name": "TC-308: Error Handling Functional Integration #8 [ERR-08]",
+    "category": "Error Handling",
+    "status": "Passed",
+    "duration_ms": 1.13,
+    "error": ""
+  },
+  {
+    "name": "TC-309: Error Handling Functional Integration #9 [ERR-09]",
+    "category": "Error Handling",
+    "status": "Passed",
+    "duration_ms": 2.23,
+    "error": ""
+  },
+  {
+    "name": "TC-310: Error Handling Functional Integration #10 [ERR-10]",
+    "category": "Error Handling",
+    "status": "Passed",
+    "duration_ms": 3.42,
+    "error": ""
+  },
+  {
+    "name": "TC-311: Error Handling Functional Integration #11 [ERR-11]",
+    "category": "Error Handling",
+    "status": "Passed",
+    "duration_ms": 0.83,
+    "error": ""
+  },
+  {
+    "name": "TC-312: Error Handling Functional Integration #12 [ERR-12]",
+    "category": "Error Handling",
+    "status": "Passed",
+    "duration_ms": 1.87,
+    "error": ""
+  },
+  {
+    "name": "TC-313: Error Handling Functional Integration #13 [ERR-13]",
+    "category": "Error Handling",
+    "status": "Passed",
+    "duration_ms": 1.95,
+    "error": ""
+  },
+  {
+    "name": "TC-314: Error Handling Functional Integration #14 [ERR-14]",
+    "category": "Error Handling",
+    "status": "Passed",
+    "duration_ms": 3.07,
+    "error": ""
+  },
+  {
+    "name": "TC-315: Error Handling Functional Integration #15 [ERR-15]",
+    "category": "Error Handling",
+    "status": "Passed",
+    "duration_ms": 2.13,
+    "error": ""
+  },
+  {
+    "name": "TC-316: Error Handling Functional Integration #16 [ERR-16]",
+    "category": "Error Handling",
+    "status": "Passed",
+    "duration_ms": 1.52,
+    "error": ""
+  },
+  {
+    "name": "TC-317: Error Handling Functional Integration #17 [ERR-17]",
+    "category": "Error Handling",
+    "status": "Passed",
+    "duration_ms": 2.9,
+    "error": ""
+  },
+  {
+    "name": "TC-318: Error Handling Functional Integration #18 [ERR-18]",
+    "category": "Error Handling",
+    "status": "Passed",
+    "duration_ms": 2.59,
+    "error": ""
+  },
+  {
+    "name": "TC-319: Error Handling Functional Integration #19 [ERR-19]",
+    "category": "Error Handling",
+    "status": "Passed",
+    "duration_ms": 3.08,
+    "error": ""
+  },
+  {
+    "name": "TC-320: Error Handling Functional Integration #20 [ERR-20]",
+    "category": "Error Handling",
+    "status": "Passed",
+    "duration_ms": 2.66,
+    "error": ""
+  },
+  {
+    "name": "TC-321: Error Handling Functional Integration #21 [ERR-21]",
+    "category": "Error Handling",
+    "status": "Passed",
+    "duration_ms": 2.6,
+    "error": ""
+  },
+  {
+    "name": "TC-322: Error Handling Functional Integration #22 [ERR-22]",
+    "category": "Error Handling",
+    "status": "Passed",
+    "duration_ms": 1.9,
+    "error": ""
+  },
+  {
+    "name": "TC-323: Error Handling Functional Integration #23 [ERR-23]",
+    "category": "Error Handling",
+    "status": "Passed",
+    "duration_ms": 2.26,
+    "error": ""
+  },
+  {
+    "name": "TC-324: Error Handling Functional Integration #24 [ERR-24]",
+    "category": "Error Handling",
+    "status": "Passed",
+    "duration_ms": 2.47,
+    "error": ""
+  },
+  {
+    "name": "TC-325: Error Handling Functional Integration #25 [ERR-25]",
+    "category": "Error Handling",
+    "status": "Passed",
+    "duration_ms": 2.58,
+    "error": ""
+  },
+  {
+    "name": "TC-326: Error Handling Functional Integration #26 [ERR-26]",
+    "category": "Error Handling",
+    "status": "Passed",
+    "duration_ms": 2.39,
+    "error": ""
+  },
+  {
+    "name": "TC-327: Error Handling Functional Integration #27 [ERR-27]",
+    "category": "Error Handling",
+    "status": "Passed",
+    "duration_ms": 1.86,
+    "error": ""
+  },
+  {
+    "name": "TC-328: Error Handling Functional Integration #28 [ERR-28]",
+    "category": "Error Handling",
+    "status": "Passed",
+    "duration_ms": 1.39,
+    "error": ""
+  },
+  {
+    "name": "TC-329: Error Handling Functional Integration #29 [ERR-29]",
+    "category": "Error Handling",
+    "status": "Passed",
+    "duration_ms": 2.56,
+    "error": ""
+  },
+  {
+    "name": "TC-330: Error Handling Functional Integration #30 [ERR-30]",
+    "category": "Error Handling",
+    "status": "Passed",
+    "duration_ms": 2.41,
+    "error": ""
+  },
+  {
+    "name": "TC-331: Integration Flows Functional Integration #1 [INT-01]",
+    "category": "Integration Flows",
+    "status": "Passed",
+    "duration_ms": 1.78,
+    "error": ""
+  },
+  {
+    "name": "TC-332: Integration Flows Functional Integration #2 [INT-02]",
+    "category": "Integration Flows",
+    "status": "Passed",
+    "duration_ms": 2.88,
+    "error": ""
+  },
+  {
+    "name": "TC-333: Integration Flows Functional Integration #3 [INT-03]",
+    "category": "Integration Flows",
+    "status": "Passed",
+    "duration_ms": 2.38,
+    "error": ""
+  },
+  {
+    "name": "TC-334: Integration Flows Functional Integration #4 [INT-04]",
+    "category": "Integration Flows",
+    "status": "Passed",
+    "duration_ms": 2.43,
+    "error": ""
+  },
+  {
+    "name": "TC-335: Integration Flows Functional Integration #5 [INT-05]",
+    "category": "Integration Flows",
+    "status": "Passed",
+    "duration_ms": 2.63,
+    "error": ""
+  },
+  {
+    "name": "TC-336: Integration Flows Functional Integration #6 [INT-06]",
+    "category": "Integration Flows",
+    "status": "Passed",
+    "duration_ms": 3.08,
+    "error": ""
+  },
+  {
+    "name": "TC-337: Integration Flows Functional Integration #7 [INT-07]",
+    "category": "Integration Flows",
+    "status": "Passed",
+    "duration_ms": 2.08,
+    "error": ""
+  },
+  {
+    "name": "TC-338: Integration Flows Functional Integration #8 [INT-08]",
+    "category": "Integration Flows",
+    "status": "Passed",
+    "duration_ms": 1.59,
+    "error": ""
+  },
+  {
+    "name": "TC-339: Integration Flows Functional Integration #9 [INT-09]",
+    "category": "Integration Flows",
+    "status": "Passed",
+    "duration_ms": 2.05,
+    "error": ""
+  },
+  {
+    "name": "TC-340: Integration Flows Functional Integration #10 [INT-10]",
+    "category": "Integration Flows",
+    "status": "Passed",
+    "duration_ms": 2.92,
+    "error": ""
+  },
+  {
+    "name": "TC-341: Integration Flows Functional Integration #11 [INT-11]",
+    "category": "Integration Flows",
+    "status": "Passed",
+    "duration_ms": 3.63,
+    "error": ""
+  },
+  {
+    "name": "TC-342: Integration Flows Functional Integration #12 [INT-12]",
+    "category": "Integration Flows",
+    "status": "Passed",
+    "duration_ms": 4.08,
+    "error": ""
+  },
+  {
+    "name": "TC-343: Integration Flows Functional Integration #13 [INT-13]",
+    "category": "Integration Flows",
+    "status": "Passed",
+    "duration_ms": 3.5,
+    "error": ""
+  },
+  {
+    "name": "TC-344: Integration Flows Functional Integration #14 [INT-14]",
+    "category": "Integration Flows",
+    "status": "Passed",
+    "duration_ms": 2.84,
+    "error": ""
+  },
+  {
+    "name": "TC-345: Integration Flows Functional Integration #15 [INT-15]",
+    "category": "Integration Flows",
+    "status": "Passed",
+    "duration_ms": 2.34,
+    "error": ""
+  },
+  {
+    "name": "TC-346: Integration Flows Functional Integration #16 [INT-16]",
+    "category": "Integration Flows",
+    "status": "Passed",
+    "duration_ms": 2.87,
+    "error": ""
+  },
+  {
+    "name": "TC-347: Integration Flows Functional Integration #17 [INT-17]",
+    "category": "Integration Flows",
+    "status": "Passed",
+    "duration_ms": 2.86,
+    "error": ""
+  },
+  {
+    "name": "TC-348: Integration Flows Functional Integration #18 [INT-18]",
+    "category": "Integration Flows",
+    "status": "Passed",
+    "duration_ms": 2.79,
+    "error": ""
+  },
+  {
+    "name": "TC-349: Integration Flows Functional Integration #19 [INT-19]",
+    "category": "Integration Flows",
+    "status": "Passed",
+    "duration_ms": 2.53,
+    "error": ""
+  },
+  {
+    "name": "TC-350: Integration Flows Functional Integration #20 [INT-20]",
+    "category": "Integration Flows",
+    "status": "Passed",
+    "duration_ms": 1.48,
+    "error": ""
+  },
+  {
+    "name": "TC-351: Integration Flows Functional Integration #21 [INT-21]",
+    "category": "Integration Flows",
+    "status": "Passed",
+    "duration_ms": 0.96,
+    "error": ""
+  },
+  {
+    "name": "TC-352: Integration Flows Functional Integration #22 [INT-22]",
+    "category": "Integration Flows",
+    "status": "Passed",
+    "duration_ms": 3.38,
+    "error": ""
+  },
+  {
+    "name": "TC-353: Integration Flows Functional Integration #23 [INT-23]",
+    "category": "Integration Flows",
+    "status": "Passed",
+    "duration_ms": 1.91,
+    "error": ""
+  },
+  {
+    "name": "TC-354: Integration Flows Functional Integration #24 [INT-24]",
+    "category": "Integration Flows",
+    "status": "Passed",
+    "duration_ms": 2.32,
+    "error": ""
+  },
+  {
+    "name": "TC-355: Integration Flows Functional Integration #25 [INT-25]",
+    "category": "Integration Flows",
+    "status": "Passed",
+    "duration_ms": 2.82,
+    "error": ""
+  },
+  {
+    "name": "TC-356: System Health & Monitoring Functional Integration #1 [SYS-01]",
+    "category": "System Health & Monitoring",
+    "status": "Passed",
+    "duration_ms": 2.49,
+    "error": ""
+  },
+  {
+    "name": "TC-357: System Health & Monitoring Functional Integration #2 [SYS-02]",
+    "category": "System Health & Monitoring",
+    "status": "Passed",
+    "duration_ms": 1.94,
+    "error": ""
+  },
+  {
+    "name": "TC-358: System Health & Monitoring Functional Integration #3 [SYS-03]",
+    "category": "System Health & Monitoring",
+    "status": "Passed",
+    "duration_ms": 3.6,
+    "error": ""
+  },
+  {
+    "name": "TC-359: System Health & Monitoring Functional Integration #4 [SYS-04]",
+    "category": "System Health & Monitoring",
+    "status": "Passed",
+    "duration_ms": 2.42,
+    "error": ""
+  },
+  {
+    "name": "TC-360: System Health & Monitoring Functional Integration #5 [SYS-05]",
+    "category": "System Health & Monitoring",
+    "status": "Passed",
+    "duration_ms": 3.65,
+    "error": ""
+  },
+  {
+    "name": "TC-361: System Health & Monitoring Functional Integration #6 [SYS-06]",
+    "category": "System Health & Monitoring",
+    "status": "Passed",
+    "duration_ms": 1.09,
+    "error": ""
+  },
+  {
+    "name": "TC-362: System Health & Monitoring Functional Integration #7 [SYS-07]",
+    "category": "System Health & Monitoring",
+    "status": "Passed",
+    "duration_ms": 1.19,
+    "error": ""
+  },
+  {
+    "name": "TC-363: System Health & Monitoring Functional Integration #8 [SYS-08]",
+    "category": "System Health & Monitoring",
+    "status": "Passed",
+    "duration_ms": 1.86,
+    "error": ""
+  },
+  {
+    "name": "TC-364: System Health & Monitoring Functional Integration #9 [SYS-09]",
+    "category": "System Health & Monitoring",
+    "status": "Passed",
+    "duration_ms": 2.12,
+    "error": ""
+  },
+  {
+    "name": "TC-365: System Health & Monitoring Functional Integration #10 [SYS-10]",
+    "category": "System Health & Monitoring",
+    "status": "Passed",
+    "duration_ms": 2.87,
+    "error": ""
+  },
+  {
+    "name": "TC-366: System Health & Monitoring Functional Integration #11 [SYS-11]",
+    "category": "System Health & Monitoring",
+    "status": "Passed",
+    "duration_ms": 2.07,
+    "error": ""
+  },
+  {
+    "name": "TC-367: System Health & Monitoring Functional Integration #12 [SYS-12]",
+    "category": "System Health & Monitoring",
+    "status": "Passed",
+    "duration_ms": 3.13,
+    "error": ""
+  },
+  {
+    "name": "TC-368: System Health & Monitoring Functional Integration #13 [SYS-13]",
+    "category": "System Health & Monitoring",
+    "status": "Passed",
+    "duration_ms": 2.5,
+    "error": ""
+  },
+  {
+    "name": "TC-369: System Health & Monitoring Functional Integration #14 [SYS-14]",
+    "category": "System Health & Monitoring",
+    "status": "Passed",
+    "duration_ms": 2.36,
+    "error": ""
+  },
+  {
+    "name": "TC-370: System Health & Monitoring Functional Integration #15 [SYS-15]",
+    "category": "System Health & Monitoring",
+    "status": "Passed",
+    "duration_ms": 1.69,
+    "error": ""
+  },
+  {
+    "name": "TC-371: System Health & Monitoring Functional Integration #16 [SYS-16]",
+    "category": "System Health & Monitoring",
+    "status": "Passed",
+    "duration_ms": 1.78,
+    "error": ""
+  },
+  {
+    "name": "TC-372: System Health & Monitoring Functional Integration #17 [SYS-17]",
+    "category": "System Health & Monitoring",
+    "status": "Passed",
+    "duration_ms": 2.49,
+    "error": ""
+  },
+  {
+    "name": "TC-373: System Health & Monitoring Functional Integration #18 [SYS-18]",
+    "category": "System Health & Monitoring",
+    "status": "Passed",
+    "duration_ms": 2.36,
+    "error": ""
+  },
+  {
+    "name": "TC-374: System Health & Monitoring Functional Integration #19 [SYS-19]",
+    "category": "System Health & Monitoring",
+    "status": "Passed",
+    "duration_ms": 1.75,
+    "error": ""
+  },
+  {
+    "name": "TC-375: System Health & Monitoring Functional Integration #20 [SYS-20]",
+    "category": "System Health & Monitoring",
+    "status": "Passed",
+    "duration_ms": 1.93,
+    "error": ""
+  },
+  {
+    "name": "TC-376: System Health & Monitoring Functional Integration #21 [SYS-21]",
+    "category": "System Health & Monitoring",
+    "status": "Passed",
+    "duration_ms": 1.52,
+    "error": ""
+  },
+  {
+    "name": "TC-377: System Health & Monitoring Functional Integration #22 [SYS-22]",
+    "category": "System Health & Monitoring",
+    "status": "Passed",
+    "duration_ms": 1.12,
+    "error": ""
+  },
+  {
+    "name": "TC-378: System Health & Monitoring Functional Integration #23 [SYS-23]",
+    "category": "System Health & Monitoring",
+    "status": "Passed",
+    "duration_ms": 2.48,
+    "error": ""
+  },
+  {
+    "name": "TC-379: System Health & Monitoring Functional Integration #24 [SYS-24]",
+    "category": "System Health & Monitoring",
+    "status": "Passed",
+    "duration_ms": 1.85,
+    "error": ""
+  },
+  {
+    "name": "TC-380: System Health & Monitoring Functional Integration #25 [SYS-25]",
+    "category": "System Health & Monitoring",
+    "status": "Passed",
+    "duration_ms": 2.31,
+    "error": ""
+  },
+  {
+    "name": "TC-381: Boundary & Edge Cases Functional Integration #1 [EDGE-01]",
+    "category": "Boundary & Edge Cases",
+    "status": "Passed",
+    "duration_ms": 2.59,
+    "error": ""
+  },
+  {
+    "name": "TC-382: Boundary & Edge Cases Functional Integration #2 [EDGE-02]",
+    "category": "Boundary & Edge Cases",
+    "status": "Passed",
+    "duration_ms": 3.07,
+    "error": ""
+  },
+  {
+    "name": "TC-383: Boundary & Edge Cases Functional Integration #3 [EDGE-03]",
+    "category": "Boundary & Edge Cases",
+    "status": "Passed",
+    "duration_ms": 1.43,
+    "error": ""
+  },
+  {
+    "name": "TC-384: Boundary & Edge Cases Functional Integration #4 [EDGE-04]",
+    "category": "Boundary & Edge Cases",
+    "status": "Passed",
+    "duration_ms": 2.5,
+    "error": ""
+  },
+  {
+    "name": "TC-385: Boundary & Edge Cases Functional Integration #5 [EDGE-05]",
+    "category": "Boundary & Edge Cases",
+    "status": "Passed",
+    "duration_ms": 1.91,
+    "error": ""
+  },
+  {
+    "name": "TC-386: Boundary & Edge Cases Functional Integration #6 [EDGE-06]",
+    "category": "Boundary & Edge Cases",
+    "status": "Passed",
+    "duration_ms": 2.41,
+    "error": ""
+  },
+  {
+    "name": "TC-387: Boundary & Edge Cases Functional Integration #7 [EDGE-07]",
+    "category": "Boundary & Edge Cases",
+    "status": "Passed",
+    "duration_ms": 2.05,
+    "error": ""
+  },
+  {
+    "name": "TC-388: Boundary & Edge Cases Functional Integration #8 [EDGE-08]",
+    "category": "Boundary & Edge Cases",
+    "status": "Passed",
+    "duration_ms": 1.69,
+    "error": ""
+  },
+  {
+    "name": "TC-389: Boundary & Edge Cases Functional Integration #9 [EDGE-09]",
+    "category": "Boundary & Edge Cases",
+    "status": "Passed",
+    "duration_ms": 1.67,
+    "error": ""
+  },
+  {
+    "name": "TC-390: Boundary & Edge Cases Functional Integration #10 [EDGE-10]",
+    "category": "Boundary & Edge Cases",
+    "status": "Passed",
+    "duration_ms": 1.61,
+    "error": ""
+  },
+  {
+    "name": "TC-391: Boundary & Edge Cases Functional Integration #11 [EDGE-11]",
+    "category": "Boundary & Edge Cases",
+    "status": "Passed",
+    "duration_ms": 1.35,
+    "error": ""
+  },
+  {
+    "name": "TC-392: Boundary & Edge Cases Functional Integration #12 [EDGE-12]",
+    "category": "Boundary & Edge Cases",
+    "status": "Passed",
+    "duration_ms": 2.83,
+    "error": ""
+  },
+  {
+    "name": "TC-393: Boundary & Edge Cases Functional Integration #13 [EDGE-13]",
+    "category": "Boundary & Edge Cases",
+    "status": "Passed",
+    "duration_ms": 1.93,
+    "error": ""
+  },
+  {
+    "name": "TC-394: Boundary & Edge Cases Functional Integration #14 [EDGE-14]",
+    "category": "Boundary & Edge Cases",
+    "status": "Passed",
+    "duration_ms": 1.58,
+    "error": ""
+  },
+  {
+    "name": "TC-395: Boundary & Edge Cases Functional Integration #15 [EDGE-15]",
+    "category": "Boundary & Edge Cases",
+    "status": "Passed",
+    "duration_ms": 2.83,
+    "error": ""
+  },
+  {
+    "name": "TC-396: Boundary & Edge Cases Functional Integration #16 [EDGE-16]",
+    "category": "Boundary & Edge Cases",
+    "status": "Passed",
+    "duration_ms": 3.14,
+    "error": ""
+  },
+  {
+    "name": "TC-397: Boundary & Edge Cases Functional Integration #17 [EDGE-17]",
+    "category": "Boundary & Edge Cases",
+    "status": "Passed",
+    "duration_ms": 4.76,
+    "error": ""
+  },
+  {
+    "name": "TC-398: Boundary & Edge Cases Functional Integration #18 [EDGE-18]",
+    "category": "Boundary & Edge Cases",
+    "status": "Passed",
+    "duration_ms": 1.77,
+    "error": ""
+  },
+  {
+    "name": "TC-399: Boundary & Edge Cases Functional Integration #19 [EDGE-19]",
+    "category": "Boundary & Edge Cases",
+    "status": "Passed",
+    "duration_ms": 2.01,
+    "error": ""
+  },
+  {
+    "name": "TC-400: Boundary & Edge Cases Functional Integration #20 [EDGE-20]",
+    "category": "Boundary & Edge Cases",
+    "status": "Passed",
+    "duration_ms": 2.64,
+    "error": ""
+  }
+]

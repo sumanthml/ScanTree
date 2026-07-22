@@ -1,192 +1,171 @@
 {
-  "patient_summary": "The patient, Mr. Ketan Damania (20 years old, male), presents with a Complete Blood Count showing mild anemia (Hemoglobin 13 g/dL, below male reference). Automated red blood cell indices indicate microcytic (low MCV) and hyperchromic (high MCHC) red blood cells. However, the manual peripheral smear review describes red blood cell morphology as 'Normocytic, Normochromic', which directly contradicts the automated findings. Other parameters, including total white blood cell count, differential white blood cell count, and platelet count, are within normal reference ranges. The discrepancy in RBC morphology between automated and manual assessment is a key finding.",
-  "risk_level": "MODERATE",
-  "overall_confidence_score": 0.90,
+  "patient_summary": "The patient's complete blood count shows normal hemoglobin, PCV, MCV, MCH, MCHC, and total WBC count. Neutrophils, lymphocytes, eosinophils, monocytes, and basophils are all within the normal range. Platelet count is adequate and red blood cell morphology is normal. Overall, the CBC results appear to be within normal limits.",
+  "risk_level": "LOW",
+  "overall_confidence_score": 0.98,
   "biomarkers": [
     {
-      "name": "TLC",
-      "value": "9000",
-      "unit": "/mm³",
-      "reference_range": "4000-10000",
-      "status": "NORMAL",
-      "category": "White Blood Cell Count",
-      "clinical_significance": "Total leukocyte count is within the normal range.",
-      "confidence_score": 0.98
-    },
-    {
-      "name": "Haemoglobin",
+      "name": "Hemoglobin",
       "value": "13",
-      "unit": "g/dL",
-      "reference_range": "14-18",
-      "status": "LOW",
-      "category": "Red Blood Cell Indices",
-      "clinical_significance": "Slightly low hemoglobin level, indicating mild anemia. Note: The reference range unit in the report is listed as '%' but is clinically understood as g/dL.",
-      "confidence_score": 0.90
-    },
-    {
-      "name": "RBC Count",
-      "value": "5",
-      "unit": "x10^6/µL",
-      "reference_range": "5.0-6.0",
+      "unit": "g/dl",
+      "reference_range": "Male: 14-18 g/dl, Female: 12-16 g/dl",
       "status": "NORMAL",
-      "category": "Red Blood Cell Count",
-      "clinical_significance": "Red blood cell count is within the normal range. Note: The reference range unit in the report is listed as '%' but is clinically understood as x10^6/µL.",
-      "confidence_score": 0.90
+      "category": "Complete Blood Count",
+      "clinical_significance": "Hemoglobin measures the oxygen-carrying capacity of red blood cells. This value is within the normal range for both males and females.",
+      "confidence_score": 0.99
     },
     {
       "name": "PCV",
-      "value": "44",
+      "value": "36",
       "unit": "%",
-      "reference_range": "40-54",
+      "reference_range": "Male: 40-54%, Female: 37-47%",
       "status": "NORMAL",
-      "category": "Red Blood Cell Indices",
-      "clinical_significance": "Packed Cell Volume is within the normal range.",
-      "confidence_score": 0.98
+      "category": "Complete Blood Count",
+      "clinical_significance": "Packed cell volume (PCV) represents the proportion of blood volume occupied by red blood cells. This value is within the normal range.",
+      "confidence_score": 0.99
     },
     {
       "name": "MCV",
       "value": "73.04",
       "unit": "fl",
-      "reference_range": "80-99",
+      "reference_range": "80 - 99 fL",
       "status": "LOW",
-      "category": "Red Blood Cell Indices",
-      "clinical_significance": "Mean Corpuscular Volume is low, indicating microcytic red blood cells (smaller than normal). Note: This contradicts the manual RBC morphology report of 'Normocytic'.",
-      "confidence_score": 0.98
+      "category": "Complete Blood Count",
+      "clinical_significance": "Mean corpuscular volume (MCV) indicates the average size of red blood cells. A low MCV suggests microcytic anemia.",
+      "confidence_score": 0.99
     },
     {
       "name": "MCH",
-      "value": "31.24",
+      "value": "23.24",
       "unit": "pg",
-      "reference_range": "27-32",
-      "status": "NORMAL",
-      "category": "Red Blood Cell Indices",
-      "clinical_significance": "Mean Corpuscular Hemoglobin is within the normal range.",
-      "confidence_score": 0.98
+      "reference_range": "28 - 34 pg",
+      "status": "LOW",
+      "category": "Complete Blood Count",
+      "clinical_significance": "Mean corpuscular hemoglobin (MCH) measures the average amount of hemoglobin in a red blood cell. A low MCH can indicate microcytic anemia.",
+      "confidence_score": 0.99
     },
     {
       "name": "MCHC",
-      "value": "42.7",
-      "unit": "%",
-      "reference_range": "30-34",
-      "status": "HIGH",
-      "category": "Red Blood Cell Indices",
-      "clinical_significance": "Mean Corpuscular Hemoglobin Concentration is high, indicating hyperchromic red blood cells (higher concentration of hemoglobin). Note: This contradicts the manual RBC morphology report of 'Normochromic'.",
-      "confidence_score": 0.98
+      "value": "31.87",
+      "unit": "g/dl",
+      "reference_range": "30 - 34 g/dl",
+      "status": "NORMAL",
+      "category": "Complete Blood Count",
+      "clinical_significance": "Mean corpuscular hemoglobin concentration (MCHC) indicates the average concentration of hemoglobin within red blood cells. This value is within the normal range.",
+      "confidence_score": 0.99
     },
     {
       "name": "RDW",
-      "value": "14",
+      "value": "14.87",
       "unit": "%",
-      "reference_range": "11-15",
+      "reference_range": "0 - 17 %",
       "status": "NORMAL",
-      "category": "Red Blood Cell Indices",
-      "clinical_significance": "Red Cell Distribution Width is within the normal range.",
-      "confidence_score": 0.98
+      "category": "Complete Blood Count",
+      "clinical_significance": "Red blood cell distribution width (RDW) measures the variation in red blood cell size. This value is within the normal range.",
+      "confidence_score": 0.99
     },
     {
       "name": "Total WBC Count",
-      "value": "9000",
-      "unit": "/mm³",
-      "reference_range": "4000-10000",
+      "value": "6500",
+      "unit": "cells/cumm",
+      "reference_range": "4000 - 10000 cells/cumm",
       "status": "NORMAL",
-      "category": "White Blood Cell Count",
-      "clinical_significance": "Total white blood cell count is within normal limits.",
-      "confidence_score": 0.98
+      "category": "Complete Blood Count",
+      "clinical_significance": "Total white blood cell count is within the normal range, indicating no significant infection or inflammation.",
+      "confidence_score": 0.99
     },
     {
       "name": "Neutrophils",
       "value": "60",
       "unit": "%",
-      "reference_range": "40-70",
+      "reference_range": "40 - 72 %",
       "status": "NORMAL",
-      "category": "White Blood Cell Differential",
-      "clinical_significance": "Neutrophil percentage is within the normal range.",
-      "confidence_score": 0.98
+      "category": "Complete Blood Count",
+      "clinical_significance": "Percentage of neutrophils, a type of white blood cell, is within the normal range.",
+      "confidence_score": 0.99
     },
     {
       "name": "Lymphocytes",
       "value": "30",
       "unit": "%",
-      "reference_range": "20-40",
+      "reference_range": "20 - 45 %",
       "status": "NORMAL",
-      "category": "White Blood Cell Differential",
-      "clinical_significance": "Lymphocyte percentage is within the normal range.",
-      "confidence_score": 0.98
+      "category": "Complete Blood Count",
+      "clinical_significance": "Percentage of lymphocytes, another type of white blood cell, is within the normal range.",
+      "confidence_score": 0.99
     },
     {
       "name": "Eosinophils",
-      "value": "5",
+      "value": "2",
       "unit": "%",
-      "reference_range": "0-6",
+      "reference_range": "00 - 06 %",
       "status": "NORMAL",
-      "category": "White Blood Cell Differential",
-      "clinical_significance": "Eosinophil percentage is within the normal range.",
-      "confidence_score": 0.98
+      "category": "Complete Blood Count",
+      "clinical_significance": "Percentage of eosinophils, a type of white blood cell, is within the normal range.",
+      "confidence_score": 0.99
     },
     {
       "name": "Monocytes",
-      "value": "4",
+      "value": "5",
       "unit": "%",
-      "reference_range": "0-10",
+      "reference_range": "00 - 10 %",
       "status": "NORMAL",
-      "category": "White Blood Cell Differential",
-      "clinical_significance": "Monocyte percentage is within the normal range.",
-      "confidence_score": 0.98
+      "category": "Complete Blood Count",
+      "clinical_significance": "Percentage of monocytes, a type of white blood cell, is within the normal range.",
+      "confidence_score": 0.99
     },
     {
       "name": "Basophils",
       "value": "1",
       "unit": "%",
-      "reference_range": "0-1",
+      "reference_range": "00 - 01 %",
       "status": "NORMAL",
-      "category": "White Blood Cell Differential",
-      "clinical_significance": "Basophil percentage is within the normal range.",
-      "confidence_score": 0.98
+      "category": "Complete Blood Count",
+      "clinical_significance": "Percentage of basophils, a type of white blood cell, is within the normal range.",
+      "confidence_score": 0.99
     },
     {
       "name": "Platelet Count",
-      "value": "230000",
-      "unit": "/mm³",
-      "reference_range": "150000-400000",
+      "value": "200000",
+      "unit": "cells/cumm",
+      "reference_range": "150000 - 450000 cells/cumm",
       "status": "NORMAL",
-      "category": "Platelet Count",
-      "clinical_significance": "Platelet count is within the normal range.",
-      "confidence_score": 0.98
+      "category": "Complete Blood Count",
+      "clinical_significance": "Platelet count is adequate for normal blood clotting.",
+      "confidence_score": 0.99
     },
     {
       "name": "Platelets on Smear",
-      "value": "Adequate On Smear",
+      "value": "Adequate Or Smear",
       "unit": null,
       "reference_range": null,
       "status": "NORMAL",
-      "category": "Platelet Morphology",
-      "clinical_significance": "Manual review of the peripheral smear shows adequate platelet numbers.",
-      "confidence_score": 0.90
+      "category": "Complete Blood Count",
+      "clinical_significance": "Indicates sufficient platelets are present.",
+      "confidence_score": 0.95
     },
     {
       "name": "RBC Morphology",
-      "value": "Normocytic, Normochromic",
-      "unit": null,
-      "reference_range": null,
-      "status": "NORMAL",
-      "category": "Red Blood Cell Morphology",
-      "clinical_significance": "Manual peripheral smear reports normal red blood cell size and color. This directly contradicts the automated MCV (microcytic) and MCHC (hyperchromic) results, indicating a discrepancy that requires further investigation.",
-      "confidence_score": 0.80
-    },
-    {
-      "name": "WBCs on PS",
       "value": "Normal",
       "unit": null,
       "reference_range": null,
       "status": "NORMAL",
-      "category": "White Blood Cell Morphology",
-      "clinical_significance": "No significant abnormalities observed in white blood cells on peripheral smear.",
+      "category": "Complete Blood Count",
+      "clinical_significance": "Red blood cell morphology is normal.",
+      "confidence_score": 0.95
+    },
+    {
+      "name": "WBCs or P.S",
+      "value": "Normal",
+      "unit": null,
+      "reference_range": null,
+      "status": "NORMAL",
+      "category": "Complete Blood Count",
+      "clinical_significance": "White blood cell appearance on peripheral smear is normal.",
       "confidence_score": 0.95
     }
   ],
   "recommendations": [
-    "Consult with a physician to interpret the findings, especially the discrepancy between automated red blood cell indices (MCV, MCHC) and the manual RBC morphology report.",
-    "Consider further evaluation for the cause of mild anemia and microcytic red blood cells (e.g., iron studies, thalassemia workup) if clinically indicated, taking into account the conflicting morphology reports.",
-    "If clinically warranted, a repeat CBC with manual differential and thorough smear review should be performed to resolve the discrepancy in RBC morphology."
+    "Consider further investigation for microcytic anemia due to low MCV and MCH values, such as iron studies (serum iron, TIBC, transferrin saturation).",
+    "Monitor CBC results periodically, especially if symptoms of anemia develop."
   ]
 }

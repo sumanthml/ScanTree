@@ -1,4 +1,4 @@
-name: 400 Selenium E2E Test Suite
+name: 400 Comprehensive Test Suite
 
 on:
   push:
@@ -11,9 +11,9 @@ permissions:
   contents: write
 
 jobs:
-  selenium-tests:
+  comprehensive-tests:
     runs-on: ubuntu-latest
-    name: Run 400 Selenium Test Cases
+    name: Run 400 Test Cases
 
     steps:
     - name: Checkout repository
@@ -27,11 +27,27 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install openpyxl requests selenium webdriver-manager
+        pip install openpyxl requests
 
-    - name: Run 400 Selenium E2E Test Cases
+    - name: Run 400 Comprehensive Test Cases
       run: |
-        python tests/selenium_test_suite.py
+        python tests/comprehensive_test_suite.py
+
+    - name: Stage Reports for GitHub Pages
+      if: always()
+      run: |
+        mkdir -p deploy_reports/reports/latest
+        mkdir -p deploy_reports/reports/history/build-400-${{ github.run_number }}
+        cp "Test Results/HTML/comprehensive-report.html" deploy_reports/reports/latest/
+        cp "Test Results/HTML/comprehensive-report.html" deploy_reports/reports/history/build-400-${{ github.run_number }}/
+
+    - name: Publish to GitHub Pages
+      if: always()
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./deploy_reports
+        keep_files: true
 
     - name: Publish Summary to GitHub Actions
       if: always()
@@ -41,37 +57,37 @@ jobs:
         from datetime import datetime
 
         results_dir = "Test Results"
-        results_path = os.path.join(results_dir, "selenium_results.json")
+        results_path = os.path.join(results_dir, "comprehensive_results.json")
         results = json.load(open(results_path)) if os.path.exists(results_path) else []
 
         total  = len(results)
         passed = sum(1 for r in results if r["status"] == "Passed")
         failed = total - passed
         rate   = (passed/total*100) if total else 0
-        icon   = "🌐" if rate == 100 else "⚠️"
+        icon   = "✅" if rate == 100 else "⚠️"
 
         SUMMARY = os.environ["GITHUB_STEP_SUMMARY"]
         run_num = os.environ.get("GITHUB_RUN_NUMBER", "N/A")
         ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
         with open(SUMMARY, "w") as f:
-            f.write(f"# 🌐 ScanTrace — 400 Selenium E2E Test Cases Report\n\n")
+            f.write(f"# 🔬 ScanTrace — 400 Comprehensive Integration Test Cases Report\n\n")
             f.write(f"> **Run:** #{run_num} | **Time:** {ts} | **Status:** {icon} All {passed}/{total} Passed\n\n")
             f.write("| Metric | Value |\n| :--- | :---: |\n")
-            f.write(f"| 🔢 Total Selenium E2E Tests | **{total}** |\n")
+            f.write(f"| 🔢 Total Test Cases | **{total}** |\n")
             f.write(f"| ✅ Passed | **{passed}** |\n")
             f.write(f"| ❌ Failed | **{failed}** |\n")
             f.write(f"| 📈 Pass Rate | **{rate:.2f}%** |\n")
 
-        print("Selenium test summary written.")
+        print("GHA summary written.")
         PYEOF
 
-    - name: Upload Selenium Test Artifacts
+    - name: Upload Comprehensive Test Results
       if: always()
       uses: actions/upload-artifact@v4
       with:
-        name: selenium-400-test-results
+        name: comprehensive-400-test-results
         path: |
-          Test Results/HTML/selenium-report.html
-          Test Results/Excel/Selenium_400_Tests.xlsx
-          Test Results/selenium_results.json
+          Test Results/HTML/comprehensive-report.html
+          Test Results/Excel/Comprehensive_400_Tests.xlsx
+          Test Results/comprehensive_results.json

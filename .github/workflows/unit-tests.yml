@@ -1,4 +1,4 @@
-name: 400 Vulnerability Test Suite
+name: 400 Unit Test Suite
 
 on:
   push:
@@ -11,9 +11,9 @@ permissions:
   contents: write
 
 jobs:
-  security-tests:
+  unit-tests:
     runs-on: ubuntu-latest
-    name: Run 400 Vulnerability Test Cases
+    name: Run 400 Unit Test Cases
 
     steps:
     - name: Checkout repository
@@ -27,53 +27,51 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install openpyxl requests httpx
+        pip install openpyxl requests
 
-    - name: Run 400 DevSecOps Vulnerability Test Cases
+    - name: Run 400 Unit Test Cases
       run: |
-        python tests/security_scan_suite.py
+        python tests/unit_test_suite.py
 
-    - name: Publish Security Job Summary
+    - name: Publish Summary to GitHub Actions
       if: always()
       run: |
         python3 - <<'PYEOF'
         import json, os
         from datetime import datetime
 
-        results_dir = "Vulnerability Test Results"
-        results_path = os.path.join(results_dir, "security_results.json")
+        results_dir = "Test Results"
+        results_path = os.path.join(results_dir, "unit_results.json")
         results = json.load(open(results_path)) if os.path.exists(results_path) else []
 
         total  = len(results)
         passed = sum(1 for r in results if r["status"] == "Passed")
         failed = total - passed
         rate   = (passed/total*100) if total else 0
-        icon   = "🛡️" if rate == 100 else "⚠️"
+        icon   = "✅" if rate == 100 else "⚠️"
 
         SUMMARY = os.environ["GITHUB_STEP_SUMMARY"]
         run_num = os.environ.get("GITHUB_RUN_NUMBER", "N/A")
         ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
         with open(SUMMARY, "w") as f:
-            f.write(f"# 🛡️ ScanTrace — 400 Vulnerability & DevSecOps Test Cases Report\n\n")
+            f.write(f"# 🧪 ScanTrace — 400 Unit Test Cases Report\n\n")
             f.write(f"> **Run:** #{run_num} | **Time:** {ts} | **Status:** {icon} All {passed}/{total} Passed\n\n")
             f.write("| Metric | Value |\n| :--- | :---: |\n")
-            f.write(f"| 🔢 Total Security Rules Evaluated | **{total}** |\n")
+            f.write(f"| 🔢 Total Unit Tests | **{total}** |\n")
             f.write(f"| ✅ Passed | **{passed}** |\n")
-            f.write(f"| ❌ Critical / High Vulnerabilities | **0** |\n")
+            f.write(f"| ❌ Failed | **{failed}** |\n")
             f.write(f"| 📈 Pass Rate | **{rate:.2f}%** |\n")
 
-        print("Security summary written.")
+        print("Unit test summary written.")
         PYEOF
 
-    - name: Upload Security Reports Artifacts
+    - name: Upload Unit Test Artifacts
       if: always()
       uses: actions/upload-artifact@v4
       with:
-        name: vulnerability-400-test-results
+        name: unit-400-test-results
         path: |
-          Vulnerability Test Results/security-review.md
-          Vulnerability Test Results/executive-summary.md
-          Vulnerability Test Results/dependency-report.md
-          Vulnerability Test Results/findings.xlsx
-          Vulnerability Test Results/security_results.json
+          Test Results/HTML/unit-report.html
+          Test Results/Excel/Unit_400_Tests.xlsx
+          Test Results/unit_results.json
