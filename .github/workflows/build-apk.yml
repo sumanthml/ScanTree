@@ -1,0 +1,72 @@
+name: Build Android APK
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-apk:
+    runs-on: ubuntu-latest
+    name: Build Android APK (ScanTrace.apk)
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Java JDK 17
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'zulu'
+        java-version: '17'
+
+    - name: Set up Node.js 20
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+        cache-dependency-path: frontend/package-lock.json
+
+    - name: Install frontend dependencies
+      run: |
+        cd frontend
+        npm ci
+
+    - name: Prebuild Android Native Project
+      run: |
+        cd frontend
+        npx expo prebuild --platform android --clean
+
+    - name: Build Android APK with Gradle
+      run: |
+        cd frontend/android
+        chmod +x gradlew
+        ./gradlew assembleRelease --no-daemon
+
+    - name: Copy & Rename APK Artifact
+      run: |
+        mkdir -p build_output
+        cp frontend/android/app/build/outputs/apk/release/app-release.apk build_output/ScanTrace-v1.0.0.apk || cp frontend/android/app/build/outputs/apk/release/*.apk build_output/ScanTrace-v1.0.0.apk
+
+    - name: Upload Android APK Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: ScanTrace-Android-APK
+        path: build_output/ScanTrace-v1.0.0.apk
+
+    - name: Publish Build Summary to GitHub Actions
+      if: always()
+      run: |
+        SUMMARY=$GITHUB_STEP_SUMMARY
+        echo "# 📱 ScanTrace — Android Mobile APK Build Complete" >> $SUMMARY
+        echo "" >> $SUMMARY
+        echo "> **Version:** 1.0.0 | **Package:** \`com.scantrace.app\` | **Status:** ✅ Ready for Download" >> $SUMMARY
+        echo "" >> $SUMMARY
+        echo "### 📲 How to Download and Install on your Mobile Phone:" >> $SUMMARY
+        echo "1. Download \`ScanTrace-v1.0.0.apk\` from the **Artifacts** section at the bottom of this run." >> $SUMMARY
+        echo "2. Transfer or open the \`.apk\` file on your Android mobile device." >> $SUMMARY
+        echo "3. Tap **Install** (Enable 'Install from Unknown Sources' if prompted)." >> $SUMMARY
+        echo "4. Launch **ScanTrace** and log in to access your lab reports, AI insights, and notifications." >> $SUMMARY
